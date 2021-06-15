@@ -1,0 +1,149 @@
+@import '../../local_modules/normalize.css/normalize';
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+a {
+  display: inline-block;
+
+  text-decoration: none;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:focus-visible {
+    @include outline;
+  }
+}
+
+img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+select {
+  appearance: none;
+  border: none;
+  font: inherit;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:focus-visible {
+    @include outline;
+  }
+}
+
+textarea {
+  font: inherit;
+
+  border: none;
+  resize: none;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:focus-visible {
+    @include outline;
+  }
+}
+
+input {
+  font: inherit;
+
+  border: none;
+  background: none;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:focus-visible {
+    @include outline;
+  }
+}
+
+input[type='button'] {
+  padding: 0;
+
+  cursor: pointer;
+}
+
+button {
+  font: inherit;
+
+  padding: 0;
+
+  cursor: pointer;
+
+  border: none;
+  background: none;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:focus-visible {
+    @include outline;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+
+  font-size: 62.5%;
+
+  @include media-tablet-lg {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: $font-primary;
+  font-size: 1.6rem;
+
+  margin: 0;
+
+  color: $color-primary-gamma;
+}
+
+.container {
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}

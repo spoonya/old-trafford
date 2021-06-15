@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Museo';
+  src: url('../fonts/Museo300.eot');
+  src: url('../fonts/Museo300.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Museo300.ttf') format('truetype'),
+    url('../fonts/Museo300.woff') format('woff'),
+    url('../fonts/Museo300.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Trajan';
+  src: url('../fonts/Trajan.eot');
+  src: url('../fonts/Trajan.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Trajan.ttf') format('truetype'),
+    url('../fonts/Trajan.woff') format('woff'),
+    url('../fonts/Trajan.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}

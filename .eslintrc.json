@@ -1,0 +1,15 @@
+{
+  "env": {
+    "jquery": true
+  },
+  "overrides": [
+    {
+      "files": ["src/**/*.js"],
+      "extends": ["airbnb-base", "prettier"],
+      "rules": {
+        "semi": ["error", "always"],
+        "quotes": ["error", "single"]
+      }
+    }
+  ]
+}
