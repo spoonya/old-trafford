@@ -1,4 +1,35 @@
 header.header
-  .container
-    h1.header__title Аутсорсинг бухгалтерии с ООО «ОлдТраффорд» это
-    p Повышение рентабельности любого бизнеса, так или иначе, затрагивает минимизацию затрат. Любому предпринимателю важно снизить себестоимость продукции или услуг, где не последнее место в списке расходов занимают затраты на содержание административного персонала, в том числе и  бухгалтерии.
+    .header__top.container
+      nav.header__menu
+        ul
+          li: a.active(href="index.html") Главная
+          li: a(href="about.html") О нас
+          li: a(href="services.html") Услуги
+          li: a(href="cost.html") Стоимость
+          li: a(href="contacts.html") Контакты
+      a.header__mail(href="mailto:buhsale@mail.ru")
+        +icon('header__icon', 'message')
+        |buhsale@mail.ru
+    .header__decorator
+    .header__bottom
+      .header__inner.container
+        img.header__logo(src="../../images/header/logo.svg", alt="Олд Траффорд")
+        h2.header__subtitle Бухгалтерское обслуживание бизнеса и физических лиц
+        address.header__info
+          .header__location
+            a.header__address(href="#")
+              +icon('header__icon', 'location')
+              |Минск, ул. Энгельса, дом 34, офис 305
+            p.header__adress.header__address--txt
+              |Октябрьская
+          .header__phones
+            a.header__phone(href="tel:+375173920279")
+              +icon('header__icon', 'phone')
+              |+375 (17) 392-02-79
+            a.header__phone(href="tel:+375296109165")
+              |+375 (29) 610-91-65
+            a.header__phone(href="tel:+375298787656")
+              |+375 (29) 878-76-56
+        button.header__callback Обратный звонок
+        .header__club
+          img.header__club-img(src="../../images/header/club.svg", alt="Minsk Reds Supporters Club")

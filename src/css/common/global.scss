@@ -124,6 +124,8 @@ button {
 
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   font-size: 62.5%;
 
@@ -139,6 +141,7 @@ body {
   margin: 0;
 
   color: $color-primary-gamma;
+  background-color: $color-primary-beta;
 }
 
 .container {

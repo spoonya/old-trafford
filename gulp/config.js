@@ -1,14 +1,14 @@
-const path = require('path')
+const path = require('path');
 
-const root = path.join(__dirname, '../')
-const src = path.join(root, 'src')
+const root = path.join(__dirname, '../');
+const src = path.join(root, 'src');
 
 module.exports = {
   root,
   src,
   buildPath: path.join(root, '/build'),
   pug2html: {
-    beautifyHtml: false
+    beautifyHtml: true
   },
   lighthouse: {
     reportPath: path.join(root, 'reports'),
@@ -26,4 +26,4 @@ module.exports = {
   copyDependencies: {
     dist: path.join(src, 'local_modules')
   }
-}
+};

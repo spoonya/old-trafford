@@ -1,3 +1,150 @@
-.header__title {
-  font-family: $font-secondary;
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__menu {
+  ul {
+    display: flex;
+
+    a {
+      padding: 2rem 2.4rem;
+
+      color: $color-secondary-gamma;
+      font-size: 14px;
+
+      transition: color 0.1s linear;
+
+      &:hover {
+        color: $color-primary-alpha;
+      }
+
+      &.active {
+        background-color: $color-primary-alpha;
+        color: $color-primary-beta;
+      }
+    }
+  }
+}
+
+.header__mail {
+  color: $color-secondary-gamma;
+
+  transition: color 0.1s linear;
+
+  &:hover {
+    color: $color-primary-alpha;
+  }
+}
+
+.header__icon {
+  vertical-align: middle;
+
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+
+  fill: $color-secondary-gamma;
+}
+
+.header__decorator {
+  height: 6px;
+
+  border-top: 2px solid $color-primary-psi;
+  border-bottom: 2px solid $color-primary-alpha;
+}
+
+.header__bottom {
+  position: relative;
+
+  padding: 2rem 0;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__info {
+  display: flex;
+  align-items: center;
+
+  margin-right: 2rem;
+
+  font-style: normal;
+
+  .header__icon {
+    margin-right: 1.2rem;
+  }
+}
+
+.header__location {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__address {
+  font-size: 14px;
+  color: $color-primary-gamma;
+
+  margin-bottom: 5px;
+
+  &--txt {
+    color: $color-primary-psi;
+    font-size: 13px;
+  }
+}
+
+.header__phones {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__phone {
+  color: $color-primary-gamma;
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+.header__location {
+  margin-right: 3.2rem;
+}
+
+.header__logo {
+  max-width: 132px;
+
+  margin-right: 3.8rem;
+}
+
+.header__subtitle {
+  max-width: 19.6rem;
+
+  margin-right: 8.2rem;
+
+  font-size: 14px;
+  color: $color-primary-omega;
+
+  line-height: 1.4;
+}
+
+.header__callback {
+  @include button;
+}
+
+.header__club {
+  position: absolute;
+  right: 0;
+
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.07);
+  border-radius: 10px 0px 0px 10px;
+}
+
+.header__club-img {
+  max-width: 8rem;
+
+  padding: 1.6rem;
 }

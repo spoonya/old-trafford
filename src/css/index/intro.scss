@@ -1,0 +1,41 @@
+.intro {
+  padding: 23.5rem 0 23.4rem;
+}
+
+.intro__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro__title {
+  margin-bottom: 2.3rem;
+
+  text-align: center;
+  font-size: 3.8rem;
+  font-family: $font-secondary;
+}
+
+.intro__subtitle {
+  font-size: 2rem;
+  text-align: center;
+
+  margin-bottom: 4.6rem;
+}
+
+.intro__link {
+  @include button;
+
+  &:not(:last-child) {
+    margin-right: 3rem;
+  }
+}
+
+.intro__link--outline {
+  color: $color-primary-alpha;
+  background-color: none;
+
+  &:hover {
+    color: $color-primary-beta;
+  }
+}
