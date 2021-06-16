@@ -1,0 +1,18 @@
+@mixin phones($flexDir, $marginRight: 0) {
+  display: flex;
+  flex-direction: $flexDir;
+
+  .phones__item {
+    margin-right: $marginRight;
+
+    color: $color-primary-gamma;
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    line-height: 1.4;
+  }
+
+  .phones__icon {
+    margin-right: 1.2rem;
+  }
+}

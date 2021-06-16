@@ -5,17 +5,20 @@
 @import 'mixins/outline';
 @import 'mixins/button';
 @import 'mixins/decorator';
+@import 'mixins/phones';
 
 @import 'common/global';
 @import 'common/header';
 @import 'common/footer';
+@import 'common/consult';
+@import 'common/icon';
 
 @import 'index/intro';
 @import 'index/descrip';
 @import 'index/provider';
 @import 'index/pluses';
-@import 'index/consult';
+@import 'index/fee';
 @import 'index/company';
 @import 'index/features';
 @import 'index/clients';
-@import 'index/work.scss';
+@import 'index/work';

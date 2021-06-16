@@ -9,7 +9,7 @@ header.header
         li: a(href="cost.html") Стоимость
         li: a(href="contacts.html") Контакты
     a.header__mail(href="mailto:buhsale@mail.ru")
-      +icon('header__icon', 'message')
+      +icon('header__icon icon', 'message')
       |buhsale@mail.ru
   .decorator
   .header__bottom
@@ -19,18 +19,11 @@ header.header
       address.header__info
         .header__location
           a.header__address(href="#")
-            +icon('header__icon', 'location')
+            +icon('header__icon icon', 'location')
             |Минск, ул. Энгельса, дом 34, офис 305
           p.header__address.header__address--txt
             |Октябрьская
-        .header__phones
-          a.header__phone(href="tel:+375173920279")
-            +icon('header__icon', 'phone')
-            |+375 (17) 392-02-79
-          a.header__phone(href="tel:+375296109165")
-            |+375 (29) 610-91-65
-          a.header__phone(href="tel:+375298787656")
-            |+375 (29) 878-76-56
+        +phones
       button.header__callback Обратный звонок
       .header__club
         img.header__club-img(src="../../images/index/header/club.svg", alt="Minsk Reds Supporters Club")

@@ -1,0 +1,49 @@
+.consult {
+  display: flex;
+  align-items: center;
+
+  padding-top: 10px;
+
+  background: linear-gradient(
+    94.28deg,
+    #fcfcfc 0%,
+    rgba(245, 245, 245, 0) 99.73%
+  );
+
+  border-radius: 20px;
+  border: 1px solid $color-primary-alpha;
+}
+
+.consult__img {
+  max-width: 40.2rem;
+
+  margin-right: 10.8rem;
+}
+
+.consult__info {
+  text-align: center;
+
+  .phones {
+    @include phones('row', 3rem);
+  }
+}
+
+.consult__title {
+  margin-bottom: 1.5rem;
+
+  font-family: $font-secondary;
+  font-size: 2.8rem;
+  color: $color-primary-alpha;
+}
+
+.consult__subtitle {
+  margin-bottom: 3rem;
+
+  font-size: 1.8rem;
+}
+
+.consult__callback {
+  @include button(1.5em, 4.75em);
+
+  margin-bottom: 2.8rem;
+}

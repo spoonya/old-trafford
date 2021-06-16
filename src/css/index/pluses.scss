@@ -1,5 +1,5 @@
 .pluses {
-  padding: 2.25rem 0 3.65rem;
+  padding-bottom: 6.3rem;
 }
 
 .pluses__title {
@@ -49,6 +49,8 @@
 }
 
 .pluses__txt {
-  line-height: 1.5;
   margin-bottom: 10px;
+  max-width: 47rem;
+
+  line-height: 1.5;
 }

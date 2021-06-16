@@ -10,8 +10,8 @@ mixin descripItem(arrTitle, icon, arrTxt, arrList)
           p= text
         if arrList
           ul
-          for text in arrList
-            li= text
+            for text in arrList
+              li= text
 
 mixin providerItem(txt)
   .provider__item
@@ -22,3 +22,11 @@ mixin plusesItem(txt)
   .pluses__item
     +icon('pluses__icon', 'plus')
     p.pluses__txt= txt
+
+mixin feeItem(link, img, num, txt)
+  a.fee__item(href= link)
+    .fee__img-wrapper
+      img.fee__img(src=`../../images/index/fee/${img}`, alt="")
+    .fee__title-wrapper
+      span.fee__num= num
+      h3.fee__title= txt

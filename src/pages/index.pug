@@ -52,4 +52,18 @@ block content
           +plusesItem('Расширенный функционал бухгалтера.')
           +plusesItem('Наличие дополнительных услуг.')
 
+    //Fee
+    section.fee
+      +feeItem('#', 'fee-1.jpg', '01', 'Комплексное бухгалтерское обслуживание')
+      +feeItem('#', 'fee-2.jpg', '02', 'Налоговое консультирование и разовые услуги')
+      +feeItem('#', 'fee-3.jpg', '03', 'Восстановление бухгалтерского и налогового учета')
+      +feeItem('#', 'fee-4.jpg', '04', 'Юридические услуги, кадровый учет')
+
     //Consult
+    section.consult.container
+      img.consult__img(src="../../images/index/consult/phone.png", alt="")
+      .consult__info
+        h2.consult__title Нужна консультация?
+        h3.consult__subtitle Оставьте свою заявку и мы ответим на все ваши вопросы.
+        button.consult__callback Оставить заявку
+        +phones
