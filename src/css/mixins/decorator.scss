@@ -1,0 +1,6 @@
+@mixin decorator {
+  height: 6px;
+
+  border-top: 2px solid $color-primary-psi;
+  border-bottom: 2px solid $color-primary-alpha;
+}

@@ -1,0 +1,24 @@
+mixin descripItem(arrTitle, icon, arrTxt, arrList)
+  .descrip__wrapper
+    .descrip__item
+      .descrip__feat
+        p= arrTitle[0]
+        +icon('descrip__icon', icon)
+        p= arrTitle[1]
+      .descrip__txt
+        for text in arrTxt
+          p= text
+        if arrList
+          ul
+          for text in arrList
+            li= text
+
+mixin providerItem(txt)
+  .provider__item
+    +icon('provider__icon', 'checked')
+    p.provider__txt= txt
+
+mixin plusesItem(txt)
+  .pluses__item
+    +icon('pluses__icon', 'plus')
+    p.pluses__txt= txt

@@ -1,5 +1,5 @@
-@mixin button {
-  padding: 2rem 3.4rem;
+@mixin button($height, $width) {
+  padding: $height $width;
 
   background-color: $color-primary-alpha;
   border-radius: 3px;
@@ -7,7 +7,7 @@
 
   text-transform: uppercase;
   color: $color-primary-beta;
-  font-size: 13px;
+  font-size: 1.6rem;
   font-weight: 600;
 
   transition: background-color 0.1s linear, border-color 0.1s linear,

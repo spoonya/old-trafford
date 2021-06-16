@@ -1,0 +1,47 @@
+.provider {
+  padding: 3.7rem 0 2.25rem;
+}
+
+.provider__title {
+  margin-bottom: 3.5rem;
+
+  font-size: 2.2rem;
+  text-align: center;
+  font-family: $font-secondary;
+}
+
+.provider__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.provider__item {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  width: 23%;
+
+  padding: 2.35rem 3rem;
+  margin-bottom: 3.6rem;
+
+  background-color: $color-tertiary-beta;
+  border-radius: 5px;
+}
+
+.provider__icon {
+  position: absolute;
+
+  top: -1.75rem;
+  left: 3rem;
+
+  width: 35px;
+  height: 35px;
+}
+
+.provider__txt {
+  font-size: 14px;
+  line-height: 1.5;
+}

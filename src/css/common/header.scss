@@ -1,3 +1,18 @@
+.header__title {
+  position: absolute;
+
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+
+  width: 1px;
+  height: 1px;
+  padding: 0;
+
+  border: 0;
+
+  clip-path: inset(0px 0px 99.9% 99.9%);
+}
+
 .header__top {
   display: flex;
   justify-content: space-between;
@@ -32,10 +47,6 @@
   color: $color-secondary-gamma;
 
   transition: color 0.1s linear;
-
-  &:hover {
-    color: $color-primary-alpha;
-  }
 }
 
 .header__icon {
@@ -48,11 +59,8 @@
   fill: $color-secondary-gamma;
 }
 
-.header__decorator {
-  height: 6px;
-
-  border-top: 2px solid $color-primary-psi;
-  border-bottom: 2px solid $color-primary-alpha;
+.decotator {
+  @include decorator;
 }
 
 .header__bottom {
@@ -132,7 +140,9 @@
 }
 
 .header__callback {
-  @include button;
+  @include button(2rem, 3.4rem);
+
+  font-size: 13px;
 }
 
 .header__club {

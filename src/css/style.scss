@@ -4,9 +4,18 @@
 @import 'mixins/media';
 @import 'mixins/outline';
 @import 'mixins/button';
-@import 'common/global';
+@import 'mixins/decorator';
 
+@import 'common/global';
 @import 'common/header';
 @import 'common/footer';
 
 @import 'index/intro';
+@import 'index/descrip';
+@import 'index/provider';
+@import 'index/pluses';
+@import 'index/consult';
+@import 'index/company';
+@import 'index/features';
+@import 'index/clients';
+@import 'index/work.scss';

@@ -1,5 +1,9 @@
 .intro {
   padding: 23.5rem 0 23.4rem;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .intro__inner {
@@ -24,7 +28,7 @@
 }
 
 .intro__link {
-  @include button;
+  @include button(1.47em, 4.625em);
 
   &:not(:last-child) {
     margin-right: 3rem;
@@ -32,6 +36,8 @@
 }
 
 .intro__link--outline {
+  @include button(1.47em, 1.75em);
+
   color: $color-primary-alpha;
   background-color: none;
 
