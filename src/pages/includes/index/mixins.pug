@@ -30,3 +30,9 @@ mixin feeItem(link, img, num, txt)
     .fee__title-wrapper
       span.fee__num= num
       h3.fee__title= txt
+
+mixin featuresItem(icon, title, txt)
+  .features__item
+    +icon('features__icon', icon)
+    h3.features__item-title= title
+    p.features__item-txt= txt

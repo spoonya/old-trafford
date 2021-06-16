@@ -1,5 +1,8 @@
-@mixin decorator {
+@mixin decorator($width: 100%) {
   height: 6px;
+  width: $width;
+
+  margin: 0 auto;
 
   border-top: 2px solid $color-primary-psi;
   border-bottom: 2px solid $color-primary-alpha;
