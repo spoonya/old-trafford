@@ -33,15 +33,6 @@ mixin descripItem(arrTitle, icon, arrTxt, arrList)
             for text in arrList
               li= text
 
-mixin consult
-  section.consult.container
-    img.consult__img(src="../../images/index/consult/phone.png", alt="")
-    .consult__info
-      h2.consult__title Нужна консультация?
-      h3.consult__subtitle Оставьте свою заявку и мы ответим на все ваши вопросы.
-      +callbackBtn
-      +phones
-
 mixin providerItem(txt)
   .provider__item
     +icon('provider__icon', 'checked')

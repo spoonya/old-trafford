@@ -1,7 +1,7 @@
 .map {
   position: relative;
 
-  @include location(column, 16px, 600, 16px);
+  @include location(column, 16px, 500, 16px);
 }
 
 .map__info {
@@ -44,7 +44,7 @@
 
 .map__mail {
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 500;
   color: $color-primary-gamma;
 }
 

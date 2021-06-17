@@ -12,3 +12,12 @@ mixin phones
     a.phones__item(href="tel:+375298787656")
       +icon('phones__icon icon', 'mts')
       |+375 (29) 878-76-56
+
+mixin consult
+  section.consult.container
+    img.consult__img(src="../../images/index/consult/phone.png", alt="")
+    .consult__info
+      h2.consult__title Нужна консультация?
+      h3.consult__subtitle Оставьте свою заявку и мы ответим на все ваши вопросы.
+      +callbackBtn
+      +phones

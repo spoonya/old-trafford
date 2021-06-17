@@ -10,12 +10,34 @@
 }
 
 @font-face {
+  font-family: 'Museo';
+  src: url('../../fonts/Museo500.eot');
+  src: url('../../fonts/Museo500.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/Museo500.ttf') format('truetype'),
+    url('../../fonts/Museo500.woff') format('woff'),
+    url('../../fonts/Museo500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Trajan';
-  src: url('../../fonts/Trajan.eot');
-  src: url('../../fonts/Trajan.eot?#iefix') format('embedded-opentype'),
-    url('../../fonts/Trajan.ttf') format('truetype'),
-    url('../../fonts/Trajan.woff') format('woff'),
-    url('../../fonts/Trajan.woff2') format('woff2');
+  src: url('../../fonts/Trajan400.eot');
+  src: url('../../fonts/Trajan400.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/Trajan400.ttf') format('truetype'),
+    url('../../fonts/Trajan400.woff') format('woff'),
+    url('../../fonts/Trajan400.woff2') format('woff2');
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Trajan';
+  src: url('../../fonts/Trajan600.eot');
+  src: url('../../fonts/Trajan600.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/Trajan600.ttf') format('truetype'),
+    url('../../fonts/Trajan600.woff') format('woff'),
+    url('../../fonts/Trajan600.woff2') format('woff2');
+  font-weight: 600;
   font-style: normal;
 }
