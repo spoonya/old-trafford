@@ -1,0 +1,56 @@
+.map {
+  position: relative;
+
+  @include location(column, 16px, 600, 16px);
+}
+
+.map__info {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  max-width: 47rem;
+  width: 100%;
+
+  background-color: $color-primary-beta;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.03);
+
+  padding: 3.8rem 10.4rem 4.1rem 7rem;
+
+  .phones {
+    @include phones(column);
+
+    font-size: 1.8rem;
+  }
+}
+
+.map__item {
+  margin-bottom: 1.6rem;
+}
+
+.map__title {
+  max-width: 27.5rem;
+
+  margin-bottom: 1.9rem;
+
+  font-family: $font-secondary;
+  line-height: 1.6;
+}
+
+.map__item-title {
+  margin-bottom: 8px;
+}
+
+.map__mail {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: $color-primary-gamma;
+}
+
+.map__link {
+  font-size: 1.8rem;
+  color: $color-primary-alpha;
+
+  border-bottom: 1px solid $color-primary-alpha;
+}

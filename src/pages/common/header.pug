@@ -11,18 +11,13 @@ header.header
     a.header__mail(href="mailto:buhsale@mail.ru")
       +icon('header__icon icon', 'message')
       |buhsale@mail.ru
-  .decorator
+  +decorator
   .header__bottom
     .header__inner.container
       img.header__logo(src="../../images/index/header/logo.svg", alt="Олд Траффорд")
       h2.header__subtitle Бухгалтерское обслуживание бизнеса и физических лиц
       address.header__info
-        .header__location
-          a.header__address(href="#")
-            +icon('header__icon icon', 'location')
-            |Минск, ул. Энгельса, дом 34, офис 305
-          p.header__address.header__address--txt
-            |Октябрьская
+        +location
         +phones
       button.header__callback Обратный звонок
       .header__club

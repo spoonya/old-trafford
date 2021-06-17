@@ -1,3 +1,23 @@
+mixin decorator(modif= none)
+  .decorator(class= modif)
+
+mixin title(title)
+  h2.title= title
+  +decorator('decorator--small')
+
+mixin callbackBtn
+  button.callback Оставить заявку
+
+mixin location(isLocationIcon= true)
+  .location
+    a.location__address(href="https://yandex.ru/maps/?um=constructor%3A2a696978720ea53ebd9e73ad180c28869d75ec04b1c62260721b4917e3c98ebd&source=constructorLink" target="_blank")
+      if isLocationIcon
+        +icon('location__icon icon', 'location')
+      |Минск, ул. Энгельса, дом 34, офис 305
+    .location__metro
+      p.location__metro-item Октябрьская
+      p.location__metro-item Купаловская
+
 mixin descripItem(arrTitle, icon, arrTxt, arrList)
   .descrip__wrapper
     .descrip__item
@@ -12,6 +32,15 @@ mixin descripItem(arrTitle, icon, arrTxt, arrList)
           ul
             for text in arrList
               li= text
+
+mixin consult
+  section.consult.container
+    img.consult__img(src="../../images/index/consult/phone.png", alt="")
+    .consult__info
+      h2.consult__title Нужна консультация?
+      h3.consult__subtitle Оставьте свою заявку и мы ответим на все ваши вопросы.
+      +callbackBtn
+      +phones
 
 mixin providerItem(txt)
   .provider__item
@@ -36,3 +65,13 @@ mixin featuresItem(icon, title, txt)
     +icon('features__icon', icon)
     h3.features__item-title= title
     p.features__item-txt= txt
+
+mixin clientsItem(img)
+  img.clients__item(src=`../../images/index/clients/${img}`, alt="")
+
+mixin workItem(icon, num, txt)
+  .work__item
+    .work__img
+      +icon('work__icon', icon)
+      span.work__num= num
+    p.work__txt= txt

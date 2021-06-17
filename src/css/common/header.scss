@@ -1,3 +1,7 @@
+.header {
+  @include location(row, 14px, 400, 13px);
+}
+
 .header__title {
   position: absolute;
 
@@ -49,10 +53,6 @@
   transition: color 0.1s linear;
 }
 
-.decorator {
-  @include decorator;
-}
-
 .header__bottom {
   position: relative;
 
@@ -84,27 +84,6 @@
 
 .header__icon {
   margin-right: 6px;
-}
-
-.header__location {
-  display: flex;
-  flex-direction: column;
-}
-
-.header__address {
-  font-size: 14px;
-  color: $color-primary-gamma;
-
-  margin-bottom: 5px;
-
-  &--txt {
-    color: $color-primary-psi;
-    font-size: 13px;
-  }
-}
-
-.header__location {
-  margin-right: 3.2rem;
 }
 
 .header__logo {

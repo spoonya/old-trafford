@@ -1,0 +1,11 @@
+@mixin num {
+  position: absolute;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: 4.8rem;
+  font-family: $font-secondary;
+  font-weight: 600;
+}

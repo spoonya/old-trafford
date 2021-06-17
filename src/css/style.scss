@@ -4,15 +4,19 @@
 @import 'mixins/media';
 @import 'mixins/outline';
 @import 'mixins/button';
-@import 'mixins/decorator';
 @import 'mixins/phones';
+@import 'mixins/num';
+@import 'mixins/location';
 
 @import 'common/global';
 @import 'common/header';
 @import 'common/footer';
-@import 'common/consult';
-@import 'common/icon';
+@import 'common/includes/callback';
+@import 'common/includes/consult';
+@import 'common/includes/icon';
 
+@import 'index/includes/decorator';
+@import 'index/includes/title';
 @import 'index/intro';
 @import 'index/descrip';
 @import 'index/provider';
@@ -22,3 +26,4 @@
 @import 'index/features';
 @import 'index/clients';
 @import 'index/work';
+@import 'index/map';

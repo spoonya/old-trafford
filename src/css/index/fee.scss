@@ -59,15 +59,9 @@
 }
 
 .fee__num {
-  position: relative;
-
-  top: 30px;
+  top: -4rem;
 
   z-index: 1;
-
-  font-size: 4.8rem;
-  font-family: $font-secondary;
-  font-weight: 600;
 
   background: linear-gradient(
     180deg,
@@ -75,9 +69,7 @@
     rgba(29, 29, 29, 0) 64.18%
   );
 
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  @include num;
 }
 
 .fee__title {

@@ -1,0 +1,41 @@
+@mixin location($flexDir, $fsAddress, $fwAddress, $fsMetro) {
+  .location {
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 3.2rem;
+
+    margin-bottom: 5px;
+  }
+
+  .location__address {
+    margin-bottom: 8px;
+
+    font-size: $fsAddress;
+    color: $color-primary-gamma;
+    font-weight: $fwAddress;
+  }
+
+  .location__metro {
+    display: flex;
+    flex-direction: $flexDir;
+  }
+
+  .location__metro-item {
+    margin-right: 12px;
+
+    font-size: $fsMetro;
+
+    &:first-child {
+      color: $color-primary-psi;
+    }
+
+    &:last-child {
+      color: $color-primary-alpha;
+    }
+  }
+}
+
+.location__icon {
+  margin-right: 6px;
+}

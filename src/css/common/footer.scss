@@ -1,0 +1,35 @@
+.footer {
+  padding: 3.2rem 0;
+
+  background-color: $color-tertiary-beta;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__item {
+  display: flex;
+  align-items: center;
+
+  font-size: 14px;
+}
+
+.footer__txt {
+  margin-right: 1.6rem;
+  color: $color-tertiary-omega;
+}
+
+.footer__btn {
+  color: $color-tertiary-omega;
+
+  border-bottom: 1px solid $color-tertiary-omega;
+
+  transition: color 0.1s linear;
+
+  &:hover {
+    color: darken($color-tertiary-omega, 30);
+  }
+}

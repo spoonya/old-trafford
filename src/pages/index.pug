@@ -38,10 +38,10 @@ block content
     //Pluses
     section.pluses
       .container
-        .pluses__title
+        h2.pluses__title
           span Плюсы&nbsp;
           |работы с нами
-        .decorator
+        +decorator
         .pluses__inner
           +plusesItem('Стоимость услуг может быть ниже, чем зарплата штатного бухгалтера')
           +plusesItem('Мы постоянно учимся и ежегодно повышаем квалификацию за свой счёт.')
@@ -60,13 +60,7 @@ block content
       +feeItem('#', 'fee-4.jpg', '04', 'Юридические услуги, кадровый учет')
 
     //Consult
-    section.consult.container
-      img.consult__img(src="../../images/index/consult/phone.png", alt="")
-      .consult__info
-        h2.consult__title Нужна консультация?
-        h3.consult__subtitle Оставьте свою заявку и мы ответим на все ваши вопросы.
-        button.consult__callback Оставить заявку
-        +phones
+    +consult
 
     //Company
     section.company(style="background-image: url(images/index/company/bg.jpg)")
@@ -87,11 +81,9 @@ block content
               p Я отдельно благодарю каждого клиента, хочу сказать спасибо каждому партнеру за  то, что Вы выбрали нас.  А также,  хочу пригласить новых клиентов оценить качество, оперативность, точность оказываемых ООО «ОлдТраффорд» бухгалтерских услуг, комфорт и слаженность работы всей нашей команды.
 
     //Features
-    //TODO: decorator classes
     section.features
       .container
-        h2.features__title Оцените наши преимущества
-        .decorator
+        +title('Оцените наши преимущества')
         .features__inner
           +featuresItem('like', 'Профессионализм', 'Наши специалисты имеют многолетний опыт обслуживания различных сфер деятельности, постоянно проходят курсы повышения квалификации, участвуют в тематических конференциях и семинарах.')
           +featuresItem('avatar', 'Индивидуальный подход', 'Индивидуальный план работ для каждого клиента, бухгалтер всегда на связи.')
@@ -99,3 +91,49 @@ block content
           +featuresItem('protection', 'Риски застрахованы', 'Страховая сумма обеспечивает дополнительную гарантию для наших клиентов')
           +featuresItem('bank', 'Комплексное обслуживание', 'Мы оказываем полный спектр услуг для бизнеса, если какой-то вопрос находится вне сферы деятельность бухгалтера, то мы подключим другого специалиста нашей команды? юриста, специалиста по кадрам,')
           +featuresItem('insurance', 'Конфиденциальность', 'Наша компания гарантирует конфиденциальность корпоративной информации')
+
+    //Clients
+    section.clients
+      .container
+        +title('Нам уже доверили свою бухгалтерию')
+        .clients__inner
+          +clientsItem('client-1.jpg')
+          +clientsItem('client-2.jpg')
+          +clientsItem('client-3.jpg')
+          +clientsItem('client-4.jpg')
+          +clientsItem('client-5.jpg')
+          +clientsItem('client-6.jpg')
+          +clientsItem('client-7.jpg')
+          +clientsItem('client-8.jpg')
+          +clientsItem('client-9.jpg')
+          +clientsItem('client-10.jpg')
+          +clientsItem('client-11.jpg')
+          +clientsItem('client-12.jpg')
+
+    //Work
+    section.work
+      .container
+        +title('Работать с нами просто')
+        .work__inner
+          .work__content
+            +workItem('work-1', '01', 'Свяжитесь с нами любым удобным способом')
+            +workItem('work-2', '02', 'Получите консультацию по всем вопросам')
+            +workItem('work-3', '03', 'Заключите договор на необходимые услуги')
+            +workItem('work-4', '04', 'Предоставьте документацию бухгалтеру')
+          +callbackBtn
+
+    //Map
+    section.map
+      script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2a696978720ea53ebd9e73ad180c28869d75ec04b1c62260721b4917e3c98ebd&amp;width=100%25&amp;height=700&amp;lang=ru_RU&amp;scroll=false")
+      .map__info
+        h2.map__title Контакты ООО "ОлдТраффорд"
+        .map__item
+          h3.map__item-title Телефон:
+          +phones
+        .map__item
+          h3.map__item-title E-mail:
+          a.map__mail(href="mailto:buhsale@mail.ru") buhsale@mail.ru
+        .map__item
+          h3.map__item-title Адрес:
+          +location(false)
+        a.map__link(href="#") Подробнее

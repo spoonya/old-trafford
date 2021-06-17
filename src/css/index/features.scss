@@ -1,9 +1,5 @@
 .features {
   padding: 8.2rem 0 10.4rem;
-
-  .decorator {
-    @include decorator(12rem);
-  }
 }
 
 .features__inner {
@@ -12,14 +8,6 @@
   justify-content: space-between;
 
   padding-top: 5.5rem;
-}
-
-.features__title {
-  text-align: center;
-  font-size: 3.2rem;
-  font-family: $font-secondary;
-
-  margin-bottom: 2.2rem;
 }
 
 .features__item {
