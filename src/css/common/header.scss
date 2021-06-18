@@ -48,9 +48,16 @@
 }
 
 .header__mail {
-  color: $color-secondary-gamma;
+  display: flex;
+  align-items: center;
 
-  transition: color 0.1s linear;
+  .header__icon {
+    margin-right: 6px;
+  }
+
+  p {
+    color: $color-secondary-gamma;
+  }
 }
 
 .header__bottom {

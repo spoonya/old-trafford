@@ -3,6 +3,9 @@
   flex-direction: $flexDir;
 
   .phones__item {
+    display: flex;
+    align-items: center;
+
     margin-right: $marginRight;
 
     color: $color-primary-gamma;
@@ -13,6 +16,21 @@
   }
 
   .phones__icon {
-    margin-right: 1.2rem;
+    &--a1 {
+      position: relative;
+      right: 3px;
+
+      width: 23px;
+      height: 23px;
+
+      margin-right: 7px;
+    }
+
+    &--mts {
+      width: 13px;
+      height: 18px;
+
+      margin-right: 17px;
+    }
   }
 }

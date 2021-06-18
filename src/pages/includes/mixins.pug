@@ -5,13 +5,13 @@ mixin phones
   .phones
     a.phones__item(href="tel:+375173920279")
       +icon('phones__icon icon', 'phone')
-      |+375 (17) 392-02-79
+      p.phones__num +375 (17) 392-02-79
     a.phones__item(href="tel:+375296109165")
-      +icon('phones__icon icon', 'a1')
-      |+375 (29) 610-91-65
+      img.phones__icon.phones__icon--a1.icon(src="../../images/index/header/a1.png", alt="")
+      p.phones__num +375 (29) 610-91-65
     a.phones__item(href="tel:+375298787656")
-      +icon('phones__icon icon', 'mts')
-      |+375 (29) 878-76-56
+      img.phones__icon.phones__icon--mts.icon(src="../../images/index/header/mts.png", alt="")
+      p.phones__num +375 (29) 878-76-56
 
 mixin consult
   section.consult.container

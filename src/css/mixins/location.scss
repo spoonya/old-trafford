@@ -1,14 +1,21 @@
-@mixin location($flexDir, $fsAddress, $fwAddress, $fsMetro) {
+@mixin location(
+  $flexDirMetro,
+  $fsAddress,
+  $fwAddress,
+  $fsMetro,
+  $flexDirMetroItem: row
+) {
   .location {
     display: flex;
     flex-direction: column;
 
     margin-right: 3.2rem;
-
-    margin-bottom: 5px;
   }
 
   .location__address {
+    display: flex;
+    align-items: center;
+
     margin-bottom: 8px;
 
     font-size: $fsAddress;
@@ -18,20 +25,26 @@
 
   .location__metro {
     display: flex;
-    flex-direction: $flexDir;
+    flex-direction: $flexDirMetro;
+    align-items: center;
   }
 
   .location__metro-item {
-    margin-right: 12px;
+    display: flex;
+    flex-direction: $flexDirMetroItem;
 
-    font-size: $fsMetro;
+    p {
+      margin-right: 12px;
 
-    &:first-child {
-      color: $color-primary-psi;
-    }
+      font-size: $fsMetro;
 
-    &:last-child {
-      color: $color-primary-alpha;
+      &:first-of-type {
+        color: $color-primary-psi;
+      }
+
+      &:last-of-type {
+        color: $color-primary-alpha;
+      }
     }
   }
 }

@@ -124,16 +124,18 @@ block content
 
     //Map
     section.map
-      script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2a696978720ea53ebd9e73ad180c28869d75ec04b1c62260721b4917e3c98ebd&amp;width=100%25&amp;height=700&amp;lang=ru_RU&amp;scroll=false")
-      .map__info
-        h2.map__title Контакты ООО "ОлдТраффорд"
-        .map__item
-          h3.map__item-title Телефон:
-          +phones
-        .map__item
-          h3.map__item-title E-mail:
-          a.map__mail(href="mailto:buhsale@mail.ru") buhsale@mail.ru
-        .map__item
-          h3.map__item-title Адрес:
-          +location(false)
-        a.map__link(href="#") Подробнее
+      .container
+        .map__info
+          h2.map__title Контакты ООО "ОлдТраффорд"
+          .map__item
+            h3.map__item-title Телефон:
+            +phones
+          .map__item
+            h3.map__item-title E-mail:
+            a.map__mail(href="mailto:buhsale@mail.ru") buhsale@mail.ru
+          .map__item
+            h3.map__item-title Адрес:
+            +location(false, true)
+          a.map__link(href="#") Подробнее
+      .map__wrapper
+        script(async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2a696978720ea53ebd9e73ad180c28869d75ec04b1c62260721b4917e3c98ebd&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=false")
