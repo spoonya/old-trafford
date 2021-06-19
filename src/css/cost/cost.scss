@@ -1,0 +1,61 @@
+.cost__inner {
+  padding: 6.6rem 0;
+}
+
+.cost__block {
+  &:not(:last-child) {
+    margin-bottom: 7rem;
+  }
+}
+
+.cost__title {
+  margin-bottom: 2.7rem;
+
+  font-size: 2.2rem;
+  color: $color-primary-alpha;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.cost__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  &:not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
+}
+
+.cost__txt {
+  display: flex;
+
+  white-space: nowrap;
+  max-width: 80rem;
+
+  padding-right: 4rem;
+
+  line-height: 1.4;
+  color: $color-primary-omega;
+}
+
+.cost__price {
+  min-width: fit-content;
+
+  color: $color-tertiary-gamma;
+  font-weight: 500;
+  text-align: right;
+}
+
+.cost__decorator {
+  position: relative;
+  bottom: 3px;
+
+  height: 2px;
+  min-width: 5rem;
+  width: 100%;
+
+  margin-right: 2.7rem;
+
+  background-color: $color-tertiary-beta;
+}

@@ -30,6 +30,8 @@
   background-color: $color-primary-beta;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.03);
 
+  border-radius: 7px;
+
   .phones {
     @include phones(column);
 

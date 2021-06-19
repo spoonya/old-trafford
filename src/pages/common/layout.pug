@@ -3,18 +3,19 @@ html(lang="ru")
   block head
     head
       meta(charset="utf-8")
+      meta(name="description" content="ООО ОлдТраффорд - Оказание полного спектра бухгалтерских услуг для бизнеса и физических лиц")
       block title
         title ООО ОлдТраффорд
       meta(content="width=device-width, initial-scale=1" name="viewport")
       meta(content="ie=edge" http-equiv="x-ua-compatible")
       link(rel="stylesheet" href="css/style.min.css")
   body
-    include ../includes/mixins
-    include ../includes/index/mixins
-    block header
-      include header
-    block content
-    block footer
-      include footer
+    include ../includes/common/mixins
+    .page
+      block header
+        include header
+      block content
+      block footer
+        include footer
     block scripts
       script(src='scripts/main.min.js')

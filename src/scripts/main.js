@@ -1,7 +1,5 @@
-const curHost = location.hostname;
-const hosts = ['old-trafford.vercel.app', 'localhost'];
-const body = document.querySelector('body');
+import antiSoska from './antiSoska';
+import selectActiveLink from './selectActiveLink';
 
-if (!hosts.includes(curHost)) {
-  body.innerHTML = '';
-}
+antiSoska();
+selectActiveLink();

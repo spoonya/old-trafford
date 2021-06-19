@@ -1,6 +1,7 @@
 {
   "env": {
-    "jquery": true
+    "jquery": true,
+    "browser": true
   },
   "overrides": [
     {
@@ -8,7 +9,16 @@
       "extends": ["airbnb-base", "prettier"],
       "rules": {
         "semi": ["error", "always"],
-        "quotes": ["error", "single"]
+        "quotes": ["error", "single"],
+        "import/no-unresolved": "off",
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
+      },
+      "settings": {
+        "import/resolver": {
+          "node": {
+            "extensions": [".js"]
+          }
+        }
       }
     }
   ]

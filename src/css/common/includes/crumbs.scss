@@ -1,0 +1,33 @@
+.crumbs {
+  margin-bottom: 4.8rem;
+
+  ul {
+    display: flex;
+    align-items: center;
+  }
+
+  li {
+    a {
+      color: lighten($color-primary-gamma, 30);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &:not(:last-of-type) {
+      a::after {
+        display: inline-block;
+        content: '/';
+        margin: 0 2rem;
+        color: $color-primary-gamma;
+      }
+    }
+
+    &:last-of-type {
+      a {
+        font-weight: 500;
+      }
+    }
+  }
+}

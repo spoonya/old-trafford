@@ -1,13 +1,13 @@
-const gulp = require("gulp");
-const plumber = require("gulp-plumber");
-const webpack = require("webpack-stream");
-const CircularDependencyPlugin = require("circular-dependency-plugin");
-const DuplicatePackageCheckerPlugin = require("duplicate-package-checker-webpack-plugin");
-const eslint = require("gulp-eslint");
+const gulp = require('gulp');
+const plumber = require('gulp-plumber');
+const webpack = require('webpack-stream');
+const CircularDependencyPlugin = require('circular-dependency-plugin');
+const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin');
+const eslint = require('gulp-eslint');
 
 module.exports = function script() {
   return gulp
-    .src("src/scripts/main.js")
+    .src('src/scripts/main.js')
     .pipe(plumber())
     .pipe(eslint())
     .pipe(eslint.format())
@@ -15,7 +15,7 @@ module.exports = function script() {
       webpack({
         mode: process.env.NODE_ENV,
         output: {
-          filename: "[name].min.js",
+          filename: '[name].min.js'
         },
         module: {
           rules: [
@@ -23,19 +23,19 @@ module.exports = function script() {
               test: /\.m?js$/,
               exclude: /(node_modules|bower_components)/,
               use: {
-                loader: "babel-loader",
+                loader: 'babel-loader',
                 options: {
-                  presets: ["@babel/preset-env"],
-                },
-              },
-            },
-          ],
+                  presets: ['@babel/preset-env']
+                }
+              }
+            }
+          ]
         },
         plugins: [
           new CircularDependencyPlugin(),
-          new DuplicatePackageCheckerPlugin(),
-        ],
+          new DuplicatePackageCheckerPlugin()
+        ]
       })
     )
-    .pipe(gulp.dest("build/scripts"));
+    .pipe(gulp.dest('build/scripts'));
 };

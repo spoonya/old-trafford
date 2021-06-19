@@ -1,0 +1,22 @@
+.remark {
+  display: flex;
+
+  &::before {
+    position: relative;
+
+    display: inline-block;
+
+    content: '*';
+
+    top: -5px;
+    margin-right: 1.8rem;
+
+    font-size: 2.4rem;
+    color: $color-primary-alpha;
+  }
+}
+
+.remark__txt {
+  color: $color-primary-omega;
+  line-height: 1.5;
+}

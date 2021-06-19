@@ -14,6 +14,9 @@
 @import 'common/includes/callback';
 @import 'common/includes/consult';
 @import 'common/includes/icon';
+@import 'common/includes/title-page';
+@import 'common/includes/crumbs';
+@import 'common/includes/remark';
 
 @import 'index/includes/decorator';
 @import 'index/includes/title';
@@ -27,3 +30,5 @@
 @import 'index/clients';
 @import 'index/work';
 @import 'index/map';
+
+@import 'cost/cost';

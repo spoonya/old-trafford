@@ -1,0 +1,8 @@
+mixin costBlock(title, arrItems)
+  .cost__block
+    .cost__title= title
+    for item in arrItems
+      .cost__item
+        p.cost__txt= item.service
+        .cost__decorator
+        p.cost__price= item.price

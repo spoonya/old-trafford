@@ -7,17 +7,31 @@ mixin phones
       +icon('phones__icon icon', 'phone')
       p.phones__num +375 (17) 392-02-79
     a.phones__item(href="tel:+375296109165")
-      img.phones__icon.phones__icon--a1.icon(src="../../images/index/header/a1.png", alt="")
+      img.phones__icon.phones__icon--a1.icon(src="images/index/header/a1.png", alt="")
       p.phones__num +375 (29) 610-91-65
     a.phones__item(href="tel:+375298787656")
-      img.phones__icon.phones__icon--mts.icon(src="../../images/index/header/mts.png", alt="")
+      img.phones__icon.phones__icon--mts.icon(src="images/index/header/mts.png", alt="")
       p.phones__num +375 (29) 878-76-56
 
 mixin consult
   section.consult.container
-    img.consult__img(src="../../images/index/consult/phone.png", alt="")
+    img.consult__img(src="images/index/consult/phone.png", alt="")
     .consult__info
       h2.consult__title Нужна консультация?
       h3.consult__subtitle Оставьте свою заявку и мы ответим на все ваши вопросы.
       +callbackBtn
       +phones
+
+mixin crumbs(arrLinks)
+  nav.crumbs.container
+    ul
+      li: a(href='index.html') Главная
+      for link in arrLinks
+        li: a(href=`${link.href}.html`)= link.name
+
+mixin titlePage(title)
+  h2.title-page.container= title
+
+mixin remark(remark)
+  .remark.container
+    p.remark__txt= remark
