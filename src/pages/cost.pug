@@ -3,7 +3,7 @@ extends common/layout
 include includes/cost/mixins
 
 block title
-  title ООО ОлдТраффорд - Стоимость
+  title ООО ОлдТраффорд - Стоимость услуг
 
 block content
   main
@@ -41,4 +41,4 @@ block content
             {service: 'Составление квартальных годовых отчетов (на основании предоставленных документов без проверки)', price: 'от 44'},
           ])
     //Consult
-    +consult
+    +consult('Нужна консультация?', 'Оставьте свою заявку и мы ответим на все ваши вопросы.')

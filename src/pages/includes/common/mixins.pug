@@ -28,12 +28,15 @@ mixin phones
       img.phones__icon.phones__icon--mts.icon(src="images/index/header/mts.png", alt="")
       p.phones__num +375 (29) 878-76-56
 
-mixin consult
+mixin callbackBtn
+  button.callback Оставить заявку
+
+mixin consult(title, subtitle)
   section.consult.container
     img.consult__img(src="images/index/consult/phone.png", alt="")
     .consult__info
-      h2.consult__title Нужна консультация?
-      h3.consult__subtitle Оставьте свою заявку и мы ответим на все ваши вопросы.
+      h2.consult__title= title
+      h3.consult__subtitle= subtitle
       +callbackBtn
       +phones
 
@@ -46,6 +49,9 @@ mixin crumbs(arrLinks)
 
 mixin titlePage(title)
   h2.title-page= title
+
+mixin descripPage(descrip)
+  p.descrip-page= descrip
 
 mixin remark(remark)
   .remark

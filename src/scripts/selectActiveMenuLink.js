@@ -1,4 +1,4 @@
-export default function selectMenuActiveLink() {
+export default function selectActiveMenuLink() {
   const curLocation = window.location.href;
   const origin = `${window.location.origin}/`;
   const menuLinks = document.querySelectorAll('.header__menu a');

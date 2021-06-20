@@ -1,0 +1,16 @@
+mixin repairDescripList(modif, icon, title, arrItems, txt= null)
+  .repair__descrip-list
+    h4.repair__descrip-list-title= title
+    ul
+      for item in arrItems
+        li.repair__descrip-item
+          +icon(`repair__descrip-icon ${modif}`, icon)
+          p= item
+
+    if txt
+      p.repair__descrip-txt= txt
+
+mixin repairReasonsItem(img, txt)
+  .repair__reasons-item
+    img.repair__reasons-item-img(src=`images/service-repair/${img}`, alt="")
+    p.repair__reasons-item-txt= txt
