@@ -3,11 +3,12 @@
   $fsAddress,
   $fwAddress,
   $fsMetro,
-  $flexDirMetroItem: row
+  $flexDirMetroItem: row,
+  $flexDirLocation: column
 ) {
   .location {
     display: flex;
-    flex-direction: column;
+    flex-direction: $flexDirLocation;
 
     margin-right: 3.2rem;
   }
@@ -50,5 +51,7 @@
 }
 
 .location__icon {
+  fill: $color-secondary-beta;
+
   margin-right: 6px;
 }

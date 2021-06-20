@@ -103,6 +103,10 @@ input[type='button'] {
   cursor: pointer;
 }
 
+::placeholder {
+  color: $color-quaternary-omega;
+}
+
 button {
   font: inherit;
 
@@ -150,12 +154,4 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
-}
-
-.page {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  min-height: 100vh;
 }

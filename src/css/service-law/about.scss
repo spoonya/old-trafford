@@ -1,0 +1,23 @@
+.law__inner {
+  padding: 3.3rem 0 5.1rem;
+}
+
+.law__about {
+  padding-bottom: 5.1rem;
+}
+
+.law__subtitle {
+  font-size: 2.2rem;
+  color: $color-secondary-psi;
+  margin-bottom: 3rem;
+}
+
+.law__about-txt {
+  line-height: 1.5;
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+}

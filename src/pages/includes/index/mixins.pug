@@ -8,21 +8,6 @@ mixin title(title)
 mixin callbackBtn
   button.callback Оставить заявку
 
-mixin location(isLocationIcon= true, isMetroIconLarge = false)
-  .location
-    a.location__address(href="https://yandex.ru/maps/?um=constructor%3A2a696978720ea53ebd9e73ad180c28869d75ec04b1c62260721b4917e3c98ebd&source=constructorLink" rel="noreferrer" target="_blank")
-      if isLocationIcon
-        +icon('location__icon icon', 'location')
-      p Минск, ул. Энгельса, дом 34, офис 305
-    .location__metro
-      if isMetroIconLarge
-        img.location__icon.icon.icon--large(src="images/index/header/metro-lg.png", alt="")
-      else
-        img.location__icon.icon(src="images/index/header/metro.png", alt="")
-      .location__metro-item
-        p Октябрьская
-        p Купаловская
-
 mixin descripItem(arrTitle, icon, arrTxt, arrList)
   .descrip__wrapper
     .descrip__item

@@ -1,33 +1,33 @@
-const gulp = require("gulp");
-const plumber = require("gulp-plumber");
-const sass = require("gulp-sass");
-const cleanCSS = require("gulp-clean-css");
-const sourcemaps = require("gulp-sourcemaps");
-const shorthand = require("gulp-shorthand");
-const autoprefixer = require("gulp-autoprefixer");
-const gulpStylelint = require("gulp-stylelint");
-const rename = require("gulp-rename");
+const gulp = require('gulp');
+const plumber = require('gulp-plumber');
+const sass = require('gulp-sass');
+const cleanCSS = require('gulp-clean-css');
+const sourcemaps = require('gulp-sourcemaps');
+const shorthand = require('gulp-shorthand');
+const autoprefixer = require('gulp-autoprefixer');
+const gulpStylelint = require('gulp-stylelint');
+const rename = require('gulp-rename');
 
 module.exports = function styles() {
   return gulp
-    .src("src/css/*.scss")
+    .src('src/css/*.scss')
     .pipe(plumber())
     .pipe(
       gulpStylelint({
         failAfterError: false,
         reporters: [
           {
-            formatter: "string",
-            console: true,
-          },
-        ],
+            formatter: 'string',
+            console: true
+          }
+        ]
       })
     )
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(
       autoprefixer({
-        cascade: false,
+        cascade: false
       })
     )
     .pipe(shorthand())
@@ -35,7 +35,7 @@ module.exports = function styles() {
       cleanCSS(
         {
           debug: true,
-          compatibility: "*",
+          compatibility: '*'
         },
         (details) => {
           console.log(
@@ -45,6 +45,6 @@ module.exports = function styles() {
       )
     )
     .pipe(sourcemaps.write())
-    .pipe(rename({ suffix: ".min" }))
-    .pipe(gulp.dest("build/css"));
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest('build/css'));
 };

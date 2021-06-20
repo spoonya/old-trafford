@@ -11,11 +11,10 @@ html(lang="ru")
       link(rel="stylesheet" href="css/style.min.css")
   body
     include ../includes/common/mixins
-    .page
-      block header
-        include header
-      block content
-      block footer
-        include footer
+    block header
+      include header
+    block content
+    block footer
+      include footer
     block scripts
       script(src='scripts/main.min.js')

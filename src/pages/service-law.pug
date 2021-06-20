@@ -1,0 +1,76 @@
+extends common/layout
+
+include includes/service-law/mixins
+
+block title
+  title ОлдТраффорд - Юридические услуги, кадровый учёт
+
+block content
+  main
+    //Law
+    section.law
+      .container
+        +crumbs([
+          {href: '#', name: 'Услуги'},
+          {href: 'service-law', name: 'Юридические услуги, кадровый учет'}
+        ])
+        +titlePage('Юридические услуги, кадровый учет')
+        +remark('Услуги профессионального юриста')
+        .law__inner
+          .law__about
+            h3.law__subtitle Консультации, разовые услуги и абонентское юридическое обслуживание по выгодным тарифам.
+            .law__about-txt
+              p Любой бизнес это сложный процесс, включающий в себя не только бухгалтерский учет, но и  договорные отношения с партнерами, поставщиками, подрядчиками, клиентами и т. д., в течение которого могут возникнуть различные спорные ситуации не только между их участниками, но и контролирующими органами.
+              p Каждая стадия, от регистрация предприятия, разработки его учредительной документации и текущей документации требуют юридической грамотности, чтобы исключить возможные ошибки и недочеты, которые могут привести к серьезным проблемам в будущей деятельности.
+              p Многие крупные компании содержат в штате команду юристов, а представители среднего и малого бизнеса не могут позволить себе такие финансовые вложения. Оптимальный выход в такой ситуации – использовать юридические услуги на аутсорсинге.
+              p ООО «ОлдТраффорд» предлагает воспользоваться услугами нашего партнера - профессионального юриста, обладающего отличными знаниями и богатым опытом работы в правовой сфере
+          .law__form-content
+            .law__form-inner
+              form#law-form.law__form
+                img.law__form-img(src="images/service-law/veto.png", alt="")
+                p.law__form-txt Получите бесплатную юридическую консультацию
+                .law__form-control
+                  span.law__form-error
+                  input#law-form-name.law__form-input(name="law-name" type="text" placeholder="Ваше имя")
+                .law__form-control
+                  span.law__form-error
+                  input#law-form-phone.law__form-input(name="law-phone" type="text" placeholder="Контактный телефон")
+                .law__form-control
+                  span.law__form-error
+                  input#law-form-email.law__form-input(name="law-email" type="email" placeholder="Ваш e-mail (необязательно)")
+                .law__form-control
+                  span.law__form-error
+                  textarea#law-form-message.law__form-input(name="law-message" maxlength="250" placeholder="Опишите проблему (необязательно)")
+                button.law__form-btn Оставить заявку
+              .law__content
+                ul.law__fees
+                  +serviceLawItem('Регистрация, реорганизация, ликвидация юридических лиц и предпринимателей')
+                  +serviceLawItem('Взыскание долгов')
+                  +serviceLawItem('Составление претензий, жалоб и заявлений ')
+                  +serviceLawItem('Помощь в оформлении покупки и продажи бизнеса')
+                  +serviceLawItem('Внесение изменений и дополнений в учредительные документы')
+                  +serviceLawItem('Кадровое делопроизводство')
+                  +serviceLawItem('Юридические консультации')
+                  +serviceLawItem('Абонентское юридическое обслуживание')
+                  +serviceLawItem('Правовая экспертиза документов и хозяйственной деятельности юрлиц и предпринимателей')
+                +remark('Приведенный перечень юридических услуг не является исчерпывающим.')
+            +remark('Юридические услуги оказываются индивидуальным предпринимателем Малиновским Андреем Леонидовичем,  регистрационный номер (УНП) 191645591')
+            p.law__form-permission
+              a(href="#") Специальное разрешение (лицензия)
+              |&nbsp;на право осуществления деятельности  по оказанию юридических услуг № 02240/1775, выдана Министерством юстиции Республики Беларусь.
+    //Law contacts
+    section.law-contacts
+      .container
+        h2.law-contacts__title Контакты:
+        .law-contacts__inner
+          .law-contacts__item
+            +icon('law-contacts__icon', 'law-phone')
+            a(href="tel:+375296087535") +375 (29) 608-76-35
+          .law-contacts__item
+            +icon('law-contacts__icon', 'message')
+            a(href="mailto:veto.by@mail.ru") veto.by@mail.ru
+          .law-contacts__item
+            +location
+        .law-contacts__info
+          p С подробной информацией можно ознакомиться на сайте
+          a(href="veto.by") veto.by
