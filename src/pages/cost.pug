@@ -7,10 +7,11 @@ block title
 
 block content
   main
+    //Crumbs
+    +crumbs([{href: 'cost', name: 'Стоимость'}])
     //Cost
     section.cost
       .container
-        +crumbs([{href: 'cost', name: 'Стоимость'}])
         +titlePage('Стоимость услуг')
         +remark('Стоимость формируется для каждого Клиента индивидуально в зависимости от объема документооборота, количества банковских операций, набора бухгалтерских услуг, штата, наличия ВЭД сделок')
         .cost__inner

@@ -18,6 +18,8 @@
 @import 'common/includes/descrip-page';
 @import 'common/includes/crumbs';
 @import 'common/includes/remark';
+@import 'common/includes/service-descrip-list';
+@import 'common/includes/service-list';
 
 @import 'index/includes/decorator';
 @import 'index/includes/title';
@@ -39,3 +41,10 @@
 @import 'service-law/contacts';
 
 @import 'service-repair/repair';
+
+@import 'service-onetime/onetime';
+@import 'service-onetime/faces';
+@import 'service-onetime/callback';
+@import 'service-onetime/info';
+@import 'service-onetime/title';
+@import 'service-onetime/fee';

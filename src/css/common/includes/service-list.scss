@@ -1,0 +1,26 @@
+.service-list {
+  li {
+    border-bottom: 1px solid $color-tertiary-beta;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.service-list__content {
+  display: flex;
+
+  padding-bottom: 10px;
+}
+
+.service-list__icon {
+  position: relative;
+
+  margin-right: 2rem;
+
+  min-width: 20px;
+  min-height: 20px;
+  max-width: 20px;
+  max-height: 20px;
+}

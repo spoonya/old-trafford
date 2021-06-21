@@ -1,0 +1,35 @@
+mixin onetimeFacesList(arrItems)
+  ul.onetime__faces
+    for item in arrItems
+      li
+        +icon('onetime__faces-icon', item.icon)
+        .onetime__faces-content
+          p= item.txt
+          a(href= item.link) узнать подробнее
+
+mixin onetimeCallback(title, txt)
+  .onetime__callback
+    h3.onetime__callback-title= title
+    p.onetime__callback-txt= txt
+    +callbackBtn
+
+mixin onetimeTitle(title, isLarge= null)
+  if isLarge
+    h3.onetime__info-title.onetime__info-title--large= title
+  else
+    h3.onetime__info-title= title
+
+mixin onetimeInfo(title, arrItems, isLarge= null)
+  .onetime__info
+    +onetimeTitle(title, isLarge)
+    for item in arrItems
+      p= item
+
+mixin onetimeFeeList(arrItems)
+  ul
+    for item in arrItems
+      li
+        h3.onetime__fee-title= item.title
+        a.onetime__fee-link(href= item.link)
+          |Подробнее
+          +icon('onetime__fee-icon', 'arrow-down')

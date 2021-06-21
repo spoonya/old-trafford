@@ -1,0 +1,22 @@
+.onetime__info {
+  padding-bottom: 4rem;
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: 2.5rem;
+    }
+
+    line-height: 1.5;
+  }
+
+  a {
+    margin-right: 5px;
+
+    color: $color-primary-alpha;
+    border-bottom: 1px dashed $color-primary-alpha;
+  }
+}
+
+.onetime__service-list {
+  padding-bottom: 2.9rem;
+}

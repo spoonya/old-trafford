@@ -6,6 +6,12 @@
   padding-bottom: 9.4rem;
 }
 
+.fee__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .fee__item {
   position: relative;
 

@@ -2,20 +2,22 @@
   padding-bottom: 11.3rem;
 }
 
-.clients__inner {
+.clients__list {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
 
   padding-top: 5.5rem;
 }
 
 .clients__item {
+  padding: 0 2rem;
+  margin-bottom: 3.7rem;
   max-width: 100%;
   width: auto;
-  padding: 0 2rem;
+}
 
+.clients__img {
   object-fit: contain;
-
-  margin-bottom: 3.7rem;
 }

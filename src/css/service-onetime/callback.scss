@@ -1,0 +1,24 @@
+.onetime__callback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 2rem 0 6.5rem;
+}
+
+.onetime__callback-title {
+  margin-bottom: 8px;
+
+  line-height: 1.7;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: $color-primary-alpha;
+}
+
+.onetime__callback-txt {
+  margin-bottom: 3.1rem;
+
+  line-height: 1.7;
+  text-align: center;
+  font: size 1.8rem;
+}

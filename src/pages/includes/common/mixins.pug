@@ -9,9 +9,9 @@ mixin location(isLocationIcon= true, isMetroIconLarge = false)
       p Минск, ул. Энгельса, дом 34, офис 305
     .location__metro
       if isMetroIconLarge
-        img.location__icon.icon.icon--large(src="images/index/header/metro-lg.png", alt="")
+        img.location__icon.icon.icon--large(src="images/common/metro-lg.png", alt="")
       else
-        img.location__icon.icon(src="images/index/header/metro.png", alt="")
+        img.location__icon.icon(src="images/common/metro.png", alt="")
       .location__metro-item
         p Октябрьская
         p Купаловская
@@ -22,10 +22,10 @@ mixin phones
       +icon('phones__icon icon', 'phone')
       p.phones__num +375 (17) 392-02-79
     a.phones__item(href="tel:+375296109165")
-      img.phones__icon.phones__icon--a1.icon(src="images/index/header/a1.png", alt="")
+      img.phones__icon.phones__icon--a1.icon(src="images/common/a1.png", alt="")
       p.phones__num +375 (29) 610-91-65
     a.phones__item(href="tel:+375298787656")
-      img.phones__icon.phones__icon--mts.icon(src="images/index/header/mts.png", alt="")
+      img.phones__icon.phones__icon--mts.icon(src="images/common/mts.png", alt="")
       p.phones__num +375 (29) 878-76-56
 
 mixin callbackBtn
@@ -41,7 +41,7 @@ mixin consult(title, subtitle)
       +phones
 
 mixin crumbs(arrLinks)
-  nav.crumbs
+  nav.crumbs.container
     ul
       li: a(href='index.html') Главная
       for link in arrLinks
@@ -56,3 +56,23 @@ mixin descripPage(descrip)
 mixin remark(remark)
   .remark
     p.remark__txt= remark
+
+mixin descripList(modif, icon, title, arrItems, arrTxt= null)
+  .descrip-list
+    h4.descrip-list__title= title
+    ul
+      for item in arrItems
+        li.descrip-list__item
+          +icon(`descrip-list__icon ${modif}`, icon)
+          p= item
+    if arrTxt
+      for txt in arrTxt
+        p.descrip-list__txt= txt
+
+mixin serviceList(arrItems)
+  ul.service-list
+    for item in arrItems
+      li
+        .service-list__content
+          +icon('service-list__icon', 'tick')
+          p= item.txt

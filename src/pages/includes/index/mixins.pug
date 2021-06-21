@@ -6,8 +6,8 @@ mixin title(title)
   +decorator('decorator--small')
 
 mixin descripItem(arrTitle, icon, arrTxt, arrList)
-  .descrip__wrapper
-    .descrip__item
+  li.descrip__item
+    .descrip__wrapper
       .descrip__feat
         p= arrTitle[0]
         +icon('descrip__icon', icon)
@@ -21,12 +21,12 @@ mixin descripItem(arrTitle, icon, arrTxt, arrList)
               li= text
 
 mixin providerItem(txt)
-  .provider__item
+  li.provider__item
     +icon('provider__icon', 'checked')
     p.provider__txt= txt
 
 mixin plusesItem(txt)
-  .pluses__item
+  li.pluses__item
     +icon('pluses__icon', 'plus')
     p.pluses__txt= txt
 
@@ -39,16 +39,17 @@ mixin feeItem(link, img, num, txt)
       h3.fee__title= txt
 
 mixin featuresItem(icon, title, txt)
-  .features__item
+  li.features__item
     +icon('features__icon', icon)
     h3.features__item-title= title
     p.features__item-txt= txt
 
 mixin clientsItem(img)
-  img.clients__item(src=`images/index/clients/${img}`, alt="")
+  li.clients__item
+    img.clients__img(src=`images/index/clients/${img}`, alt="")
 
 mixin workItem(icon, num, txt)
-  .work__item
+  li.work__item
     .work__img
       +icon('work__icon', icon)
       span.work__num= num

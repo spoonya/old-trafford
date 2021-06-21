@@ -7,13 +7,14 @@ block title
 
 block content
   main
+    //Crumbs
+    +crumbs([
+      {href: '#', name: 'Услуги'},
+      {href: 'service-law', name: 'Юридические услуги, кадровый учет'}
+    ])
     //Law
     section.law
       .container
-        +crumbs([
-          {href: '#', name: 'Услуги'},
-          {href: 'service-law', name: 'Юридические услуги, кадровый учет'}
-        ])
         +titlePage('Юридические услуги, кадровый учет')
         +remark('Услуги профессионального юриста')
         .law__inner
@@ -73,4 +74,4 @@ block content
             +location
         .law-contacts__info
           p С подробной информацией можно ознакомиться на сайте
-          a(href="veto.by") veto.by
+          a(href="https://veto.by/") veto.by

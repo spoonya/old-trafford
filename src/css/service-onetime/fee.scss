@@ -1,0 +1,47 @@
+.onetime__fee {
+  padding-bottom: 4.2rem;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding: 3.9rem 3rem 2.9rem 3rem;
+
+    width: 31%;
+
+    border: 2px solid $color-primary-alpha;
+    border-radius: 10px;
+  }
+}
+
+.onetime__fee-title {
+  margin-bottom: 2.4rem;
+
+  line-height: 1.5;
+  text-align: center;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.onetime__fee-link {
+  margin-right: 1rem;
+
+  text-align: center;
+  font-weight: 500;
+  color: $color-primary-alpha;
+}
+
+.onetime__fee-icon {
+  vertical-align: middle;
+
+  width: 20px;
+  height: 20px;
+}

@@ -17,7 +17,7 @@
   text-align: center;
 }
 
-.repair__reasons {
+.repair__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -29,9 +29,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 
   width: 19%;
+
+  text-align: center;
 }
 
 .repair__reasons-item-img {
@@ -53,56 +54,6 @@
 
   text-align: center;
   line-height: 1.7;
-}
-
-.repair__descrip-list {
-  margin-bottom: 3.5rem;
-
-  ul {
-    margin-bottom: 3rem;
-  }
-}
-
-.repair__descrip-item {
-  display: flex;
-
-  padding-left: 2rem;
-
-  line-height: 1.5;
-
-  &:not(:last-child) {
-    margin-bottom: 1.5rem;
-  }
-}
-
-.repair__descrip-icon {
-  position: relative;
-
-  margin-right: 1.1rem;
-
-  &--check {
-    top: 5px;
-
-    min-width: 14px;
-    max-width: 14px;
-    min-height: 14px;
-    max-height: 14px;
-  }
-
-  &--round {
-    top: 10px;
-
-    min-width: 5px;
-    max-width: 5px;
-    min-height: 5px;
-    max-height: 5px;
-  }
-}
-
-.repair__descrip-list-title {
-  margin-bottom: 2rem;
-
-  font-weight: 500;
 }
 
 .repair__descrip-txt {

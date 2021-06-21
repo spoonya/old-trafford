@@ -1,7 +1,7 @@
 import antiSoska from './antiSoska';
-import selectMenuActiveLink from './selectActiveMenuLink';
+import selectActiveMenuLink from './selectActiveMenuLink';
 import validateFormVeta from './validateFormVeta';
 
 antiSoska();
-selectMenuActiveLink();
+selectActiveMenuLink();
 validateFormVeta();

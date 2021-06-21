@@ -1,0 +1,46 @@
+.onetime__faces {
+  padding-bottom: 5.9rem;
+}
+
+.onetime__faces {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-left: 3rem;
+
+  li {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2.4rem 10rem;
+
+    background-color: $color-tertiary-beta;
+    border-radius: 10px;
+  }
+}
+
+.onetime__faces-content {
+  p {
+    font-size: 1.8rem;
+    line-height: 1.5;
+  }
+
+  a {
+    font-size: 14px;
+    color: $color-primary-alpha;
+    border-bottom: 1px dashed $color-primary-alpha;
+  }
+}
+
+.onetime__faces-icon {
+  position: absolute;
+
+  left: -3rem;
+
+  width: 100px;
+  height: 80px;
+}

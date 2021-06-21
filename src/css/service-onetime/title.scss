@@ -1,0 +1,12 @@
+.onetime__info-title {
+  margin-bottom: 2.4rem;
+
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.5;
+
+  &--large {
+    font-size: 2.2rem;
+    color: $color-primary-alpha;
+  }
+}
