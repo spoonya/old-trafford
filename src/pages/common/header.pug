@@ -6,21 +6,21 @@ header.header
     nav.header__menu
       ul
         li: a(href="index.html") Главная
-        li: a(href="about.html") О нас
-        li: a(href="services.html") Услуги
+        li: a(href="#") О нас
+        li: a(href="index.html#services") Услуги
         li: a(href="cost.html") Стоимость
-        li: a(href="contacts.html") Контакты
+        li: a(href="index.html#contacts") Контакты
     a.header__mail(href="mailto:buhsale@mail.ru")
       +icon('header__icon icon', 'message')
       p buhsale@mail.ru
   +decorator
   .header__bottom
     .header__inner.container
-      img.header__logo(src="../../images/index/header/logo.svg", alt="Олд Траффорд")
+      img.header__logo(src="images/index/header/logo.svg", alt="Олд Траффорд")
       h2.header__subtitle Бухгалтерское обслуживание бизнеса и физических лиц
       address.header__info
         +location
         +phones
       button.header__callback Обратный звонок
       .header__club
-        img.header__club-img(src="../../images/index/header/club.svg", alt="Minsk Reds Supporters Club")
+        img.header__club-img(src="images/index/header/club.svg", alt="Minsk Reds Supporters Club")

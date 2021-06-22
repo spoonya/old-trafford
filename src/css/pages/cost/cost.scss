@@ -30,10 +30,9 @@
 .cost__txt {
   display: flex;
 
-  white-space: nowrap;
   max-width: 80rem;
 
-  padding-right: 4rem;
+  padding-right: 2rem;
 
   line-height: 1.4;
   color: $color-primary-omega;
@@ -48,12 +47,13 @@
 }
 
 .cost__decorator {
+  flex: 1;
+
   position: relative;
   bottom: 3px;
 
   height: 2px;
   min-width: 5rem;
-  width: 100%;
 
   margin-right: 2.7rem;
 

@@ -31,7 +31,7 @@ mixin plusesItem(txt)
     p.pluses__txt= txt
 
 mixin feeItem(link, img, num, txt)
-  a.fee__item(href= link)
+  a.fee__item(href= `${link}.html`)
     .fee__img-wrapper
       img.fee__img(src=`images/index/fee/${img}`, alt="")
     .fee__title-wrapper

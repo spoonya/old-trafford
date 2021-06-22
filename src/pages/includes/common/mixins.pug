@@ -48,7 +48,7 @@ mixin crumbs(arrLinks)
     ul
       li: a(href='index.html') Главная
       for link in arrLinks
-        li: a(href=`${link.href}.html`)= link.name
+        li: a(href= link.href)= link.name
 
 mixin titlePage(title)
   h2.title-page= title
