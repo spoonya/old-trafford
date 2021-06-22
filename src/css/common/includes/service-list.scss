@@ -4,7 +4,16 @@
 
     &:not(:last-child) {
       margin-bottom: 8px;
+
+      a {
+        color: $color-primary-alpha;
+        border-bottom: 1px solid $color-primary-alpha;
+      }
     }
+  }
+
+  li.borderless {
+    border: none;
   }
 }
 

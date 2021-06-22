@@ -12,21 +12,24 @@ mixin location(isLocationIcon= true, isMetroIconLarge = false)
         img.location__icon.icon.icon--large(src="images/common/metro-lg.png", alt="")
       else
         img.location__icon.icon(src="images/common/metro.png", alt="")
-      .location__metro-item
-        p Октябрьская
-        p Купаловская
+      ul.location__metro-list
+        li Октябрьская
+        li Купаловская
 
 mixin phones
-  .phones
-    a.phones__item(href="tel:+375173920279")
-      +icon('phones__icon icon', 'phone')
-      p.phones__num +375 (17) 392-02-79
-    a.phones__item(href="tel:+375296109165")
-      img.phones__icon.phones__icon--a1.icon(src="images/common/a1.png", alt="")
-      p.phones__num +375 (29) 610-91-65
-    a.phones__item(href="tel:+375298787656")
-      img.phones__icon.phones__icon--mts.icon(src="images/common/mts.png", alt="")
-      p.phones__num +375 (29) 878-76-56
+  ul.phones
+    li
+      a.phones__item(href="tel:+375173920279")
+        +icon('phones__icon icon', 'phone')
+        p.phones__num +375 (17) 392-02-79
+    li
+      a.phones__item(href="tel:+375296109165")
+        img.phones__icon.phones__icon--a1.icon(src="images/common/a1.png", alt="")
+        p.phones__num +375 (29) 610-91-65
+    li
+      a.phones__item(href="tel:+375298787656")
+        img.phones__icon.phones__icon--mts.icon(src="images/common/mts.png", alt="")
+        p.phones__num +375 (29) 878-76-56
 
 mixin callbackBtn
   button.callback Оставить заявку
@@ -69,10 +72,13 @@ mixin descripList(modif, icon, title, arrItems, arrTxt= null)
       for txt in arrTxt
         p.descrip-list__txt= txt
 
-mixin serviceList(arrItems)
+mixin serviceList(arrItems, modif=null)
   ul.service-list
     for item in arrItems
-      li
+      li(class= modif)
         .service-list__content
           +icon('service-list__icon', 'tick')
-          p= item.txt
+          if item.href
+            a(href= `${item.href}.html`)= item.txt
+          else
+            p= item.txt

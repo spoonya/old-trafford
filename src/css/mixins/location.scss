@@ -30,11 +30,11 @@
     align-items: center;
   }
 
-  .location__metro-item {
+  .location__metro-list {
     display: flex;
     flex-direction: $flexDirMetroItem;
 
-    p {
+    li {
       margin-right: 12px;
 
       font-size: $fsMetro;

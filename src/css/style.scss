@@ -34,17 +34,19 @@
 @import 'index/work';
 @import 'index/map';
 
-@import 'cost/cost';
+@import 'pages/cost/cost';
 
-@import 'service-law/about';
-@import 'service-law/form';
-@import 'service-law/contacts';
+@import 'pages/service-law/about';
+@import 'pages/service-law/form';
+@import 'pages/service-law/contacts';
 
-@import 'service-repair/repair';
+@import 'pages/service-repair/repair';
 
-@import 'service-onetime/onetime';
-@import 'service-onetime/faces';
-@import 'service-onetime/callback';
-@import 'service-onetime/info';
-@import 'service-onetime/title';
-@import 'service-onetime/fee';
+@import 'pages/service-onetime/onetime';
+@import 'pages/service-onetime/faces';
+@import 'pages/service-onetime/callback';
+@import 'pages/service-onetime/info';
+@import 'pages/service-onetime/title';
+@import 'pages/service-onetime/fee';
+
+@import 'pages/service-complex/complex';
