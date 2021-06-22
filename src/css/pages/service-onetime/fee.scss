@@ -32,6 +32,8 @@
 }
 
 .onetime__fee-link {
+  display: flex;
+
   margin-right: 1rem;
 
   text-align: center;
@@ -40,8 +42,14 @@
 }
 
 .onetime__fee-icon {
+  margin-left: 1rem;
+
+  min-width: 20px;
+  min-height: 20px;
+  max-width: 20px;
+  max-height: 20px;
+
   vertical-align: middle;
 
-  width: 20px;
-  height: 20px;
+  fill: $color-primary-alpha;
 }
