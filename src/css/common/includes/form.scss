@@ -1,0 +1,90 @@
+.form {
+  textarea {
+    height: 12rem;
+  }
+}
+
+.law__form-img {
+  margin: 0 auto;
+
+  max-width: 15.5rem;
+  margin-bottom: 1rem;
+}
+
+.law__form-txt {
+  margin: 0 auto 2.3rem;
+
+  max-width: 31rem;
+
+  text-align: center;
+  color: $color-primary-omega;
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+
+.form__control {
+  position: relative;
+
+  margin-bottom: 20px;
+
+  &:last-of-type {
+    margin-bottom: 2rem;
+  }
+}
+
+.form__control.error {
+  .form__error {
+    visibility: visible;
+  }
+
+  .form__input {
+    border-color: $color-form-error;
+  }
+}
+
+.form__control.success {
+  .form__input {
+    border-color: $color-form-success;
+  }
+}
+
+.form__error {
+  position: absolute;
+  top: -17px;
+  left: 0;
+
+  font-size: 14px;
+
+  color: $color-form-error;
+
+  visibility: hidden;
+}
+
+.form__input {
+  padding: 1.19em 1.25em;
+
+  width: 100%;
+
+  border-radius: 5px;
+  border: 1px solid $color-secondary-omega;
+}
+
+.form__btn {
+  width: 100%;
+
+  padding: 1.5em 5.25em;
+
+  border: 2px solid $color-secondary-psi;
+  border-radius: 5px;
+
+  text-transform: uppercase;
+  font-weight: 500;
+  color: $color-secondary-psi;
+
+  transition: color 0.1s linear, background-color 0.1s linear;
+
+  &:hover {
+    color: $color-primary-beta;
+    background-color: $color-secondary-psi;
+  }
+}

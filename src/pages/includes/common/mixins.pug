@@ -50,8 +50,11 @@ mixin crumbs(arrLinks)
       for link in arrLinks
         li: a(href= link.href)= link.name
 
-mixin titlePage(title)
-  h2.title-page= title
+mixin titlePage(title, isContainer= false)
+  if isContainer
+    h2.title-page.container= title
+  else
+    h2.title-page= title
 
 mixin descripPage(descrip)
   p.descrip-page= descrip
@@ -86,3 +89,20 @@ mixin serviceList(arrItems, modif=null)
             a(href= `${item.href}.html`)= item.txt
           else
             p= item.txt
+
+mixin form(formID, placeholders, names, btnTxt)
+  form(id= formID method= "POST",).form
+    .form__inner
+      .form__control
+        span.form__error
+        input#form-name.form__input(name= names.name type="text" placeholder= placeholders.name)
+      .form__control
+        span.form__error
+        input#form-phone.form__input(name= names.phone type="text" placeholder= placeholders.phone)
+      .form__control
+        span.form__error
+        input#form-email.form__input(name= names.email type="email" placeholder= placeholders.email)
+    .form__control
+      span.form__error
+      textarea#form-message.form__input(name= names.msg maxlength="250" placeholder= placeholders.msg)
+    button.form__btn= btnTxt

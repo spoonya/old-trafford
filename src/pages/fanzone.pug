@@ -1,0 +1,51 @@
+extends common/layout
+
+include includes/fanzone/mixins
+
+block title
+  title ООО ОлдТраффорд - MU Fanzone
+
+block content
+  main
+    //Crumbs
+    +crumbs([{href: 'funzone.html', name: 'MU Fanzone'}])
+
+    //Funzone
+    section.fanzone
+      +titlePage('Manchester United Fanzone', true)
+      img.fanzone__img.container(src="images/fanzone/stadium.jpg", alt="")
+      .fanzone__txt.container
+        p
+          span Многие клиенты задаются вопросом, почему наша компания называется  «ОлдТраффорд».  Ответ прост, мы любим футбол и болеем за самый лучший в мире футбольный клуб Manchester United!
+        p Поэтому мы и решили назвать компанию своей мечты в честь легендарного стадиона Old Trafford (известного также как Театр Мечты (англ. Theatre of Dreams) на котором Manchester United уже более ста лет проводит свои домашние матчи.
+        p У нас также часто интересуются организовываем ли мы поездки в Англию на матчи Manchester United, продаем ли билеты, сколько может такая поездка и т.п. К сожалению нет, наша компания занимается только оказанием бухгалтерских услуг. Но Вы всегда сможете получить массу актуальной и полезной информации, познакомиться с единомышленниками и  поделимся своим опытом самостоятельных поездок на объединенной площадке русскоязычного фан-движения manutd.one, а также вступив ряды официального фан-клуба Манчестер Юнайтед в Беларуси -  United Belarus.
+      .fanzone__clubs
+        h3.fanzone__title Фан-клубы в беларуси
+        .fanzone__inner
+          img.fanzone__footballer-img(src="images/fanzone/footballer-1.png", alt="")
+          ul.fanzone__list
+            +fanzoneItem(['minsk-reds', 'red-army'], 'Минск', [
+              {name: 'Владимир', phone: '+375 29 637-06-14', phoneSpaceless: '+375296370614'},
+              {name: 'Александр', phone: '+375 29 220 76 18', phoneSpaceless: '+375292207618'},
+              ])
+            +fanzoneItem(['brest-reds'], 'Брест', [
+              {name: 'Игорь', phone: '+375 29 220-76-18', phoneSpaceless: '+375292207618'},
+              ])
+            +fanzoneItem(['gomel-reds'], 'Гомель', [
+              {name: 'Игорь', phone: '+375 29 328-42-55', phoneSpaceless: '+375293284255'},
+              ])
+            +fanzoneItem(['grodno-reds'], 'Гродно', [
+              {name: 'Виталий', phone: '+375 29 265-40-03', phoneSpaceless: '+375292654003'},
+              ])
+            +fanzoneItem(['vitebsk-reds'], 'Витебск', [
+              {name: 'Игорь', phone: '+375 29 896-68-88', phoneSpaceless: '+375298966888'},
+              ])
+            +fanzoneItem(['mogilev-reds'], 'Могилёв', [
+              {name: 'Денис', phone: '+375 29 528-62-61', phoneSpaceless: '+375295286261'},
+              ])
+          img.fanzone__footballer-img(src="images/fanzone/footballer-2.png", alt="")
+      .fanzone__txt.container
+        p Не важно,  хотите ли Вы заключить договор на бухгалтерское обслуживание,  получить разовую услугу, просто проконсультироваться или болеете за другой футбольный клуб, мы – профессионалы и ценим каждого клиента как первого, поэтому  все они знают, что мы сделаем все, чтобы их бизнес достиг успеха, постоянного роста и процветания.
+        p А если Вы являетесь официальным членом фан-клуба Manchester United  (Official Membership) мы обязательно предоставим Вам дополнительную скидку.
+        p
+          span Glory Glory Man United!

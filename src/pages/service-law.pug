@@ -28,24 +28,12 @@ block content
               p ООО «ОлдТраффорд» предлагает воспользоваться услугами нашего партнера - профессионального юриста, обладающего отличными знаниями и богатым опытом работы в правовой сфере
           .law__form-content
             .law__form-inner
-              form#law-form.law__form
+              .law__form-wrapper
                 img.law__form-img(src="images/service-law/veto.png", alt="")
                 p.law__form-txt Получите бесплатную юридическую консультацию
-                .law__form-control
-                  span.law__form-error
-                  input#law-form-name.law__form-input(name="law-name" type="text" placeholder="Ваше имя")
-                .law__form-control
-                  span.law__form-error
-                  input#law-form-phone.law__form-input(name="law-phone" type="text" placeholder="Контактный телефон")
-                .law__form-control
-                  span.law__form-error
-                  input#law-form-email.law__form-input(name="law-email" type="email" placeholder="Ваш e-mail (необязательно)")
-                .law__form-control
-                  span.law__form-error
-                  textarea#law-form-message.law__form-input(name="law-message" maxlength="250" placeholder="Опишите проблему (необязательно)")
-                button.law__form-btn Оставить заявку
+                +form('law-form', {name: 'Ваше имя', phone: 'Контактный телефон', email: 'Ваш e-mail (необязательно)', msg:'Опишите проблему (необязательно)'}, {name: 'law-name', phone: 'law-phone', email: 'law-email', msg: 'law-msg'}, 'Оставить заявку')
               .law__content
-                ul.law__fees
+                ul.law__list
                   +serviceLawItem('Регистрация, реорганизация, ликвидация юридических лиц и предпринимателей')
                   +serviceLawItem('Взыскание долгов')
                   +serviceLawItem('Составление претензий, жалоб и заявлений ')
@@ -57,7 +45,7 @@ block content
                   +serviceLawItem('Правовая экспертиза документов и хозяйственной деятельности юрлиц и предпринимателей')
                 +remark('Приведенный перечень юридических услуг не является исчерпывающим.')
             +remark('Юридические услуги оказываются индивидуальным предпринимателем Малиновским Андреем Леонидовичем,  регистрационный номер (УНП) 191645591')
-            p.law__form-permission
+            p.law__permission
               a(href="#") Специальное разрешение (лицензия)
               |&nbsp;на право осуществления деятельности  по оказанию юридических услуг № 02240/1775, выдана Министерством юстиции Республики Беларусь.
 

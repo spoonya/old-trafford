@@ -1,0 +1,10 @@
+mixin fanzoneItem(arrImg, title, arrInfo)
+  li.fanzone__item
+    .fanzone__item-images
+      for img in arrImg
+        img.fanzone__item-img(src=`images/fanzone/${img}.png`, alt="")
+    h4.fanzone__item-title= title
+    for info in arrInfo
+      .fanzone__item-info
+        p= info.name
+        a(href= info.phoneSpaceless)= info.phone

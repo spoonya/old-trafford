@@ -1,0 +1,41 @@
+extends common/layout
+
+include includes/service-onetime/mixins
+
+block title
+  title ОлдТраффорд - Контакты
+
+block content
+  main
+    //Crumbs
+    +crumbs([
+      {href: 'contacts.html', name: 'Контакты'}
+    ])
+
+    //Contacts
+    section.contacts
+      .container
+        +titlePage('Контакты')
+        .contacts__inner
+          .contacts__item
+            h3.contacts__title Телефоны:
+            +phones
+          .contacts__item
+            h3.contacts__title E-mail:
+            a.contacts__mail(href="mailto:buhsale@mail.ru") buhsale@mail.ru
+          .contacts__item
+            h3.contacts__title Адрес:
+            +location(false)
+          .contacts__item
+            h3.contacts__title График работы:
+            .contacts__work-time
+              p С 09:00 до 18:00
+              p Понедельник - Пятница
+      .map
+        .map__wrapper
+          script(async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2a696978720ea53ebd9e73ad180c28869d75ec04b1c62260721b4917e3c98ebd&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=false" rel="noreferrer")
+
+    //Form
+    section.contacts-form.container
+      h3.contacts-form__title Обратная связь:
+      +form('contacts-form', {name: 'Ваше имя', phone: 'Ваш телефон', email: 'Ваш e-mail', msg:'Ваше сообщение'}, {name: 'contacts-name', phone: 'contacts-phone', email: 'contacts-email', msg: 'contacts-msg'}, 'Отправить сообщение')

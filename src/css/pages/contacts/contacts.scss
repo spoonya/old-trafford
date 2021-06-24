@@ -1,0 +1,38 @@
+.contacts {
+  padding-bottom: 5rem;
+
+  @include phones(column, 0, 300);
+
+  .phones__item {
+    margin-bottom: 0.8rem;
+  }
+
+  @include location(row, 1.6rem, 300, 13px);
+
+  line-height: 1.4;
+}
+
+.contacts__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  max-width: 107.7rem;
+
+  padding: 1.5rem 0 4.1rem;
+}
+
+.contacts__item {
+  margin-bottom: 1.5rem;
+}
+
+.contacts__title {
+  margin-bottom: 2rem;
+
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.contacts__mail {
+  color: $color-primary-gamma;
+}

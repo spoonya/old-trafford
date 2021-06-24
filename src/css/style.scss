@@ -11,6 +11,7 @@
 @import 'common/global';
 @import 'common/header';
 @import 'common/footer';
+@import 'common/includes/form';
 @import 'common/includes/callback';
 @import 'common/includes/consult';
 @import 'common/includes/icon';
@@ -50,3 +51,9 @@
 @import 'pages/service-onetime/fee';
 
 @import 'pages/service-complex/complex';
+
+@import 'pages/contacts/contacts';
+
+@import 'pages/fanzone/fanzone';
+
+@import 'pages/contacts/form';

@@ -1,0 +1,112 @@
+.fanzone {
+  padding-bottom: 3.3rem;
+}
+
+.fanzone__img {
+  margin-bottom: 6rem;
+}
+
+.fanzone__txt {
+  padding-bottom: 7.3rem;
+
+  text-align: justify;
+  line-height: 1.5;
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+
+    span {
+      font-weight: 500;
+      color: $color-primary-alpha;
+    }
+  }
+}
+
+.fanzone__clubs {
+  padding-bottom: 5.2rem;
+}
+
+.fanzone__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fanzone__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin: 0 auto;
+
+  max-width: 87rem;
+  width: 100%;
+}
+
+.fanzone__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 31%;
+  padding: 3rem 0;
+
+  margin-bottom: 4rem;
+
+  border: 2px solid $color-primary-alpha;
+  border-radius: 10px;
+}
+
+.fanzone__item-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.fanzone__item-img {
+  max-width: 100%;
+  width: auto;
+
+  margin-bottom: 1.8rem;
+
+  &:not(:last-of-type) {
+    margin-right: 2.2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.fanzone__item-title {
+  margin-bottom: 1rem;
+
+  font-size: 2rem;
+  font-family: $font-secondary;
+}
+
+.fanzone__item-info {
+  line-height: 1.5;
+  text-align: center;
+
+  p {
+    font-weight: 500;
+  }
+
+  a {
+    color: $color-primary-gamma;
+  }
+}
+
+.fanzone__footballer-img {
+  max-width: 26.4rem;
+}
+
+.fanzone__title {
+  margin-bottom: 5rem;
+
+  text-align: center;
+  font-size: 2.4rem;
+  font-family: $font-secondary;
+}

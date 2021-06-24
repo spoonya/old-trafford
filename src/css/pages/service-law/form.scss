@@ -3,6 +3,17 @@
   flex-direction: column;
 }
 
+.law__form-wrapper {
+  padding: 2.8rem 4rem 5.2rem;
+  margin-right: 5.9rem;
+
+  max-width: 40rem;
+  width: 100%;
+
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.07);
+}
+
 .law__form-inner {
   display: flex;
   align-items: center;
@@ -10,33 +21,7 @@
   margin-bottom: 3.8rem;
 }
 
-.law__form {
-  padding: 2.8rem 4rem 5.2rem;
-  margin-right: 5.9rem;
-
-  border-radius: 10px;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.07);
-
-  textarea {
-    height: 12rem;
-  }
-}
-
-.law__form-img {
-  margin: 0 auto;
-
-  max-width: 15.5rem;
-}
-
-.law__form-txt {
-  margin-bottom: 2.3rem;
-
-  text-align: center;
-  font-size: 1.8rem;
-  line-height: 1.4;
-}
-
-.law__fees {
+.law__list {
   li {
     display: flex;
 
@@ -47,74 +32,7 @@
   }
 }
 
-.law__form-control {
-  position: relative;
-
-  margin-bottom: 20px;
-
-  &:last-of-type {
-    margin-bottom: 2rem;
-  }
-}
-
-.law__form-control.error {
-  .law__form-error {
-    visibility: visible;
-  }
-
-  .law__form-input {
-    border-color: $color-form-error;
-  }
-}
-
-.law__form-control.success {
-  .law__form-input {
-    border-color: $color-form-success;
-  }
-}
-
-.law__form-error {
-  position: absolute;
-  top: -17px;
-  left: 0;
-
-  font-size: 14px;
-
-  color: $color-form-error;
-
-  visibility: hidden;
-}
-
-.law__form-input {
-  padding: 1.19em 1.25em;
-
-  width: 100%;
-
-  border-radius: 5px;
-  border: 1px solid $color-quaternary-omega;
-}
-
-.law__form-btn {
-  width: 100%;
-
-  padding: 1.5em 5.25em;
-
-  border: 2px solid $color-secondary-psi;
-  border-radius: 5px;
-
-  text-transform: uppercase;
-  font-weight: 500;
-  color: $color-secondary-psi;
-
-  transition: color 0.1s linear, background-color 0.1s linear;
-
-  &:hover {
-    color: $color-primary-beta;
-    background-color: $color-secondary-psi;
-  }
-}
-
-.law__form-icon {
+.law__list-icon {
   min-width: 18px;
   max-width: 18px;
   min-height: 18px;
@@ -123,7 +41,7 @@
   margin-right: 2.3rem;
 }
 
-.law__form-permission {
+.law__permission {
   padding-left: 2.8rem;
   padding-top: 3.5rem;
 
