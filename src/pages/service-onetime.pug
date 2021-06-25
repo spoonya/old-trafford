@@ -2,6 +2,9 @@ extends common/layout
 
 include includes/service-onetime/mixins
 
+block menu
+  +menu
+
 block title
   title ОлдТраффорд - Разовые бухгалтерские услуги и отчетность
 
@@ -9,7 +12,6 @@ block content
   main
     //Crumbs
     +crumbs([
-      {href: 'index.html#services', name: 'Услуги'},
       {href: 'service-onetime.html', name: 'Разовые бухгалтерские услуги и отчетность'}
     ])
 

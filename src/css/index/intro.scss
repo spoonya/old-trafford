@@ -27,21 +27,23 @@
   margin-bottom: 4.6rem;
 }
 
+.intro__buttons {
+  .callback {
+    @include button(1.47em, 1.75em);
+
+    color: $color-primary-alpha;
+    background-color: none;
+
+    &:hover {
+      color: $color-primary-beta;
+    }
+  }
+}
+
 .intro__link {
   @include button(1.47em, 4.625em);
 
   &:not(:last-child) {
     margin-right: 3rem;
-  }
-}
-
-.intro__link--outline {
-  @include button(1.47em, 1.75em);
-
-  color: $color-primary-alpha;
-  background-color: none;
-
-  &:hover {
-    color: $color-primary-beta;
   }
 }

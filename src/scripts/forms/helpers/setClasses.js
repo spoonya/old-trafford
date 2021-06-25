@@ -1,4 +1,4 @@
-import { CLASSES } from '../constants';
+import { CLASSES } from '../../constants';
 
 function selectFormControl(input) {
   return input.closest(CLASSES.formControlEl);

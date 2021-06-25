@@ -12,6 +12,7 @@
         "js": "never"
       }
     ],
+    "func-names": "off",
     "semi": ["error", "always"],
     "quotes": ["error", "single"],
     "import/no-unresolved": "off",

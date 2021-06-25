@@ -1,11 +1,13 @@
+import { DOM_ELEMENTS } from './constants';
+
 export default function selectActiveMenuLink() {
   const curLocation = window.location.href;
   const curPathName = window.location.pathname;
   const origin = `${window.location.origin}/`;
   const { hash } = window.location;
-  const menuLinks = [...document.querySelectorAll('.header__menu a')];
 
   const indexPathName = '/index.html';
+  const contactsPathName = '/contacts.html';
   const servicePathNames = [
     '/service-onetime.html',
     '/service-complex.html',
@@ -14,7 +16,7 @@ export default function selectActiveMenuLink() {
   ];
 
   const findLinkByContent = (textContent) =>
-    menuLinks.find((link) => link.textContent === textContent);
+    DOM_ELEMENTS.menuLinks.find((link) => link.textContent === textContent);
 
   const setActive = (linkEl) => linkEl.classList.add('active');
 
@@ -34,6 +36,14 @@ export default function selectActiveMenuLink() {
     return false;
   };
 
+  const isContactsPage = () => {
+    if (contactsPathName === curPathName) {
+      return true;
+    }
+
+    return false;
+  };
+
   if (isIndexPage()) {
     setActive(findLinkByContent('Главная'));
 
@@ -46,9 +56,15 @@ export default function selectActiveMenuLink() {
     return;
   }
 
-  for (let i = 0; i < menuLinks.length; i++) {
-    if (!hash && menuLinks[i].href === curLocation) {
-      setActive(menuLinks[i]);
+  if (isContactsPage()) {
+    setActive(findLinkByContent('Контакты'));
+
+    return;
+  }
+
+  for (let i = 0; i < DOM_ELEMENTS.menuLinks.length; i++) {
+    if (!hash && DOM_ELEMENTS.menuLinks[i].href === curLocation) {
+      setActive(DOM_ELEMENTS.menuLinks[i]);
 
       return;
     }

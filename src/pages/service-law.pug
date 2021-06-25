@@ -2,6 +2,9 @@ extends common/layout
 
 include includes/service-law/mixins
 
+block menu
+  +menu
+
 block title
   title ОлдТраффорд - Юридические услуги, кадровый учёт
 
@@ -9,7 +12,6 @@ block content
   main
     //Crumbs
     +crumbs([
-      {href: 'index.html#services', name: 'Услуги'},
       {href: 'service-law.html', name: 'Юридические услуги, кадровый учет'}
     ])
 

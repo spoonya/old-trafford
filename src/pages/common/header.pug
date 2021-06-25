@@ -1,15 +1,9 @@
 include ../includes/index/mixins
 
-header.header
+header#header.header
   h1.header__title Олд Траффорд - Бухгалтерские услуги в Минске
   .header__top.container
-    nav.header__menu
-      ul
-        li: a(href="index.html") Главная
-        li: a(href="index.html#about") О нас
-        li: a(href="index.html#services") Услуги
-        li: a(href="cost.html") Стоимость
-        li: a(href="contacts.html") Контакты
+    block menu
     a.header__mail(href="mailto:buhsale@mail.ru")
       +icon('header__icon icon', 'message')
       p buhsale@mail.ru
@@ -21,6 +15,7 @@ header.header
       address.header__info
         +location
         +phones
-      button.header__callback Обратный звонок
-      .header__club
-        img.header__club-img(src="images/index/header/club.svg", alt="Minsk Reds Supporters Club")
+      +callbackBtn('Обратный звонок')
+      a(href="fanzone.html").header__club
+        img.header__club-img(src="images/index/header/club.png", alt="Minsk Reds Supporters Club")
+  +modalForm

@@ -155,3 +155,31 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.overlay {
+  position: fixed;
+
+  z-index: 10;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(3px);
+
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+
+    pointer-events: all;
+  }
+}
+
+.scroll-hidden {
+  overflow: hidden;
+}

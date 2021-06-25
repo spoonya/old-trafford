@@ -1,4 +1,22 @@
 .header {
+  background-color: $color-primary-beta;
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+      rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+    animation: dropDown 0.15s linear;
+
+    .header__bottom,
+    .decorator {
+      display: none;
+    }
+  }
+
   @include location(row, 14px, 300, 13px);
 }
 
@@ -27,16 +45,21 @@
   ul {
     display: flex;
 
+    li {
+      &:not(:last-of-type) {
+        margin-right: 2px;
+      }
+    }
+
     a {
       padding: 2rem 2.4rem;
 
       color: $color-secondary-gamma;
       font-size: 14px;
 
-      transition: color 0.1s linear;
-
       &:hover {
-        color: $color-primary-alpha;
+        background-color: $color-primary-alpha;
+        color: $color-primary-beta;
       }
 
       &.active {
@@ -67,6 +90,14 @@
   position: relative;
 
   padding: 2rem 0;
+
+  .callback {
+    @include button(2rem, 3rem);
+
+    margin: 0;
+
+    font-size: 13px;
+  }
 }
 
 .header__inner {
@@ -113,22 +144,36 @@
   line-height: 1.4;
 }
 
-.header__callback {
-  @include button(2rem, 3rem);
-
-  font-size: 13px;
-}
-
 .header__club {
   position: absolute;
   right: 0;
 
   box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.07);
   border-radius: 10px 0px 0px 10px;
+
+  &:hover {
+    .header__club-img {
+      opacity: 1;
+    }
+  }
 }
 
 .header__club-img {
   max-width: 8rem;
 
   padding: 1.6rem;
+
+  opacity: 0.6;
+
+  transition: opacity 0.1s linear;
+}
+
+@keyframes dropDown {
+  0% {
+    transform: translateY(-30%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }

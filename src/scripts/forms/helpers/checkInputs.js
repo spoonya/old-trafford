@@ -1,6 +1,6 @@
 import { setError, setSuccess } from './setClasses';
 import { validateEmail, validatePhone } from './validate';
-import { ERRORS } from '../constants';
+import { ERRORS } from '../../constants';
 
 function checkUsername(username, usernameValue) {
   if (!usernameValue) {
@@ -61,4 +61,18 @@ function checkUserMessage(userMessage, userMessageValue, isRequired = false) {
   }
 }
 
-export { checkUsername, checkUserPhone, checkUserEmail, checkUserMessage };
+function checkAgreement(checkbox) {
+  if (!checkbox.checked) {
+    setError(checkbox, ERRORS.unchecked);
+  } else {
+    setSuccess(checkbox);
+  }
+}
+
+export {
+  checkUsername,
+  checkUserPhone,
+  checkUserEmail,
+  checkUserMessage,
+  checkAgreement
+};

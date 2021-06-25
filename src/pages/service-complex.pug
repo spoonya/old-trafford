@@ -2,6 +2,9 @@ extends common/layout
 
 include includes/service-complex/mixins
 
+block menu
+  +menu
+
 block title
   title ОлдТраффорд - Комплексное бухгалтерское обслуживание
 
@@ -9,7 +12,6 @@ block content
   main
     //Crumbs
     +crumbs([
-      {href: 'index.html#services', name: 'Услуги'},
       {href: 'service-complex.html', name: 'Комплексное бухгалтерское обслуживание'}
     ])
 

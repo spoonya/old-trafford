@@ -11,7 +11,8 @@ const ERRORS = {
   emptyEmail: 'E-mail не может быть пустым',
   emptyMsg: 'Сообщение не может быть пустым',
   invalidEmail: 'Некорректный E-mail',
-  invalidPhone: 'Некорректный телефон',
+  invalidPhone: 'Некорректный номер',
+  unchecked: 'Поле должно быть отмечено',
   maxMessageLength: 'Сообщение не может превышать 250 символов',
   minMessageLength: 'Сообщение должо содержать не менее 16 символов'
 };
@@ -23,9 +24,29 @@ const FORM_ELEMENTS = {
   userMsg: document.querySelector('#form-message')
 };
 
-const FORMS = {
-  formVeto: document.querySelector('#law-form'),
-  formContacts: document.querySelector('#contacts-form')
+const FORM_MODAL_ELEMENTS = {
+  username: document.querySelector('#modal-form-name'),
+  userPhone: document.querySelector('#modal-form-phone'),
+  userAgreement: document.querySelector('#modal-form-agreement')
 };
 
-export { CLASSES, ERRORS, FORM_ELEMENTS, FORMS };
+const FORMS = {
+  formVeto: document.querySelector('#law-form'),
+  formContacts: document.querySelector('#contacts-form'),
+  formModal: document.querySelector('#modal-form')
+};
+
+const DOM_ELEMENTS = {
+  menuLinks: [...document.querySelectorAll('.header__menu a')],
+  header: document.querySelector('#header'),
+  introSection: document.querySelector('#intro')
+};
+
+export {
+  CLASSES,
+  ERRORS,
+  FORM_ELEMENTS,
+  FORM_MODAL_ELEMENTS,
+  FORMS,
+  DOM_ELEMENTS
+};

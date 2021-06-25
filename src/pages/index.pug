@@ -2,20 +2,23 @@ extends common/layout
 
 include includes/index/mixins
 
+block menu
+  +menu(true)
+
 block content
   main
     // Intro
-    section.intro(style="background-image: url(images/index/intro/bg.jpg)")
+    section#intro.intro(style="background-image: url(images/index/intro/bg.jpg)")
       .container
         .intro__inner
           h2.intro__title Профессиональные бухгалтерские услуги
           h3.intro__subtitle Полный спектр бухгалтерских услуг и налоговое консультирование любого вида деятельности
-          .intro__links
-            a.intro__link(href="#") Подробнее
-            a.intro__link.intro__link--outline(href="#") Рассчитать стоимость услуг
+          .intro__buttons
+            a.intro__link(href="#details") Подробнее
+            +callbackBtn('Рассчитать стоимость услуг')
 
     // Descrip
-    section.descrip
+    section#details.descrip
       .container
         h2.descrip__title Аутсорсинг бухгалтерии с ООО &laquo;ОлдТраффорд&raquo; это
         ul.descrip__list
@@ -125,7 +128,7 @@ block content
           +callbackBtn
 
     //Map
-    section.map
+    section#contacts.map
       .container
         .map__info
           h2.map__title Контакты ООО "ОлдТраффорд"
@@ -138,6 +141,6 @@ block content
           .map__item
             h3.map__item-title Адрес:
             +location(false, true)
-          a.map__link(href="#") Подробнее
+          a.map__link(href="contacts.html") Подробнее
       .map__wrapper
         script(async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2a696978720ea53ebd9e73ad180c28869d75ec04b1c62260721b4917e3c98ebd&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=false" rel="noreferrer")
