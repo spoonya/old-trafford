@@ -10,12 +10,13 @@ html(lang="ru")
       meta(content="ie=edge" http-equiv="x-ua-compatible")
       link(rel="stylesheet" href="css/style.min.css")
   body
-    #overlay.overlay
     include ../includes/common/mixins
     block header
       include header
     block content
     block footer
       include footer
+    +modalForm
+    #overlay.overlay
     block scripts
       script(src='scripts/main.min.js')
