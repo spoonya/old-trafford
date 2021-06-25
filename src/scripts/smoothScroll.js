@@ -1,4 +1,5 @@
 import $ from '../local_modules/jquery/dist/jquery.min';
+import { DOM_ELEMENTS } from './constants';
 
 function smoothScroll() {
   $('.header__menu a').on('click', function (e) {
@@ -6,7 +7,7 @@ function smoothScroll() {
 
     $('html, body').animate(
       {
-        scrollTop: $(href).offset().top
+        scrollTop: $(href).offset().top - DOM_ELEMENTS.header.offsetHeight
       },
       '300'
     );
