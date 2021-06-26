@@ -12,6 +12,11 @@
 
   border-radius: 10px;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.07);
+
+  @include media-tablet-sm {
+    margin-bottom: 5rem;
+    margin-right: 0;
+  }
 }
 
 .law__form-inner {
@@ -19,6 +24,10 @@
   align-items: center;
 
   margin-bottom: 3.8rem;
+
+  @include media-tablet-sm {
+    flex-direction: column;
+  }
 }
 
 .law__list {

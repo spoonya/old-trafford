@@ -1,25 +1,24 @@
-const overlay = document.querySelector('#overlay');
-const body = document.querySelector('body');
+import { CLASSES, DOM_ELEMENTS, DATA_ATTR } from './constants';
 
 function openModal(modal) {
   if (!modal) return;
 
-  body.classList.add('scroll-hidden');
-  modal.classList.add('active');
-  overlay.classList.add('active');
+  DOM_ELEMENTS.body.classList.add(CLASSES.scrollHidden);
+  modal.classList.add(CLASSES.active);
+  DOM_ELEMENTS.overlay.classList.add(CLASSES.active);
 }
 
 function closeModal(modal) {
   if (!modal) return;
 
-  body.classList.remove('scroll-hidden');
-  modal.classList.remove('active');
-  overlay.classList.remove('active');
+  DOM_ELEMENTS.body.classList.remove(CLASSES.scrollHidden);
+  modal.classList.remove(CLASSES.active);
+  DOM_ELEMENTS.overlay.classList.remove(CLASSES.active);
 }
 
 function controlModal() {
-  const openModalButtons = document.querySelectorAll('[data-modal-target]');
-  const closeModalButtons = document.querySelectorAll('[data-close-button]');
+  const openModalButtons = document.querySelectorAll(DATA_ATTR.modal);
+  const closeModalButtons = document.querySelectorAll(DATA_ATTR.modalClose);
 
   openModalButtons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -28,8 +27,10 @@ function controlModal() {
     });
   });
 
-  overlay.addEventListener('click', () => {
-    const modals = document.querySelectorAll('.modal.active');
+  DOM_ELEMENTS.overlay.addEventListener('click', () => {
+    const modals = document.querySelectorAll(
+      `.${CLASSES.modal}.${CLASSES.active}`
+    );
     modals.forEach((modal) => {
       closeModal(modal);
     });
@@ -37,7 +38,7 @@ function controlModal() {
 
   closeModalButtons.forEach((button) => {
     button.addEventListener('click', () => {
-      const modal = button.closest('.modal');
+      const modal = button.closest(`.${CLASSES.modal}`);
       closeModal(modal);
     });
   });

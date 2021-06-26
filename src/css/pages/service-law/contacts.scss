@@ -1,15 +1,55 @@
 .law-contacts {
   padding-bottom: 11.9rem;
 
+  @include media-tablet-lg {
+    padding-bottom: 5rem;
+  }
+
   @include location(row, 1.8rem, 300, 1.8rem, row, row);
+
+  .location {
+    margin-right: 0;
+  }
 
   .location__icon {
     fill: $color-secondary-psi;
+
+    min-height: 20px;
+    min-width: 20px;
+    max-height: 20px;
+    max-width: 20px;
   }
 
   .location__address {
     margin-bottom: 0;
     margin-right: 4rem;
+
+    @include media-tablet-lg {
+      min-width: 30rem;
+    }
+
+    @include media-smartphone-lg {
+      margin-bottom: 1rem;
+      margin-right: 0rem;
+
+      min-width: 45rem;
+    }
+
+    @include media-smartphone-sm {
+      min-width: 30rem;
+    }
+  }
+
+  .location__metro {
+    @include media-smartphone-lg {
+      padding-left: 3.5rem;
+    }
+  }
+
+  @include media-smartphone-lg {
+    .location {
+      flex-direction: column;
+    }
   }
 }
 
@@ -22,13 +62,20 @@
 
 .law-contacts__inner {
   display: flex;
+  flex-wrap: wrap;
 
-  margin-bottom: 2.8rem;
+  margin-bottom: 1.1rem;
+
+  @include media-smartphone-lg {
+    margin-bottom: 2.4rem;
+  }
 }
 
 .law-contacts__item {
   display: flex;
   align-items: center;
+
+  margin-bottom: 1.7rem;
 
   &:not(:last-child) {
     margin-right: 4rem;
@@ -38,11 +85,16 @@
     color: $color-secondary-gamma;
     font-size: 1.8rem;
   }
+
+  @include media-tablet-lg {
+  }
 }
 
 .law-contacts__icon {
-  height: 20px;
-  width: 20px;
+  min-height: 20px;
+  min-width: 20px;
+  max-height: 20px;
+  max-width: 20px;
 
   margin-right: 8px;
 
@@ -50,8 +102,6 @@
 }
 
 .law-contacts__info {
-  display: flex;
-
   p {
     color: $color-secondary-gamma;
     margin-right: 5px;

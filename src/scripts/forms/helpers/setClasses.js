@@ -1,12 +1,12 @@
 import { CLASSES } from '../../constants';
 
 function selectFormControl(input) {
-  return input.closest(CLASSES.formControlEl);
+  return input.closest(`.${CLASSES.formControlEl}`);
 }
 
 function setError(input, message) {
   const formControl = selectFormControl(input);
-  const error = formControl.querySelector(CLASSES.errorEl);
+  const error = formControl.querySelector(`.${CLASSES.errorEl}`);
 
   error.textContent = message;
   formControl.classList.remove(CLASSES.success);

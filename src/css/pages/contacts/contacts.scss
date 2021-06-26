@@ -19,11 +19,19 @@
 
   max-width: 107.7rem;
 
-  padding: 1.5rem 0 4.1rem;
+  padding: 1.5rem 0 2rem;
 }
 
 .contacts__item {
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
+
+  @include media-tablet-sm {
+    width: 48%;
+  }
+
+  @include media-smartphone-lg {
+    width: 100%;
+  }
 }
 
 .contacts__title {

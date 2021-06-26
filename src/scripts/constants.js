@@ -1,8 +1,11 @@
 const CLASSES = {
   success: 'success',
   error: 'error',
-  errorEl: '.form__error',
-  formControlEl: '.form__control'
+  scrollHidden: 'scroll-hidden',
+  active: 'active',
+  modal: 'modal',
+  errorEl: 'form__error',
+  formControlEl: 'form__control'
 };
 
 const ERRORS = {
@@ -39,7 +42,16 @@ const FORMS = {
 const DOM_ELEMENTS = {
   menuLinks: [...document.querySelectorAll('.header__menu a')],
   header: document.querySelector('#header'),
-  introSection: document.querySelector('#intro')
+  introSection: document.querySelector('#intro'),
+  overlay: document.querySelector('#overlay'),
+  body: document.querySelector('body'),
+  html: document.querySelector('html')
+};
+
+const DATA_ATTR = {
+  modal: '[data-modal-target]',
+  modalClose: '[data-close-button]',
+  scroll: '[data-scroll]'
 };
 
 export {
@@ -48,5 +60,6 @@ export {
   FORM_ELEMENTS,
   FORM_MODAL_ELEMENTS,
   FORMS,
-  DOM_ELEMENTS
+  DOM_ELEMENTS,
+  DATA_ATTR
 };

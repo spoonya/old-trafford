@@ -22,7 +22,11 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
-  margin-bottom: 5.7rem;
+  margin-bottom: 0.7rem;
+
+  @include media-laptop {
+    justify-content: center;
+  }
 }
 
 .repair__reasons-item {
@@ -32,7 +36,25 @@
 
   width: 19%;
 
+  margin-bottom: 5rem;
+
   text-align: center;
+
+  @include media-laptop {
+    width: 33.33333%;
+
+    padding: 0 1rem;
+  }
+
+  @include media-tablet-sm {
+    width: 47%;
+  }
+
+  @include media-smartphone-sm {
+    width: 100%;
+
+    padding: 0;
+  }
 }
 
 .repair__reasons-item-img {
@@ -45,6 +67,10 @@
   font-size: 14px;
   color: $color-primary-omega;
   line-height: 1.5;
+
+  @include media-smartphone-lg {
+    font-size: 12px;
+  }
 }
 
 .repair__reasons-txt {

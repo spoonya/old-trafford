@@ -1,3 +1,7 @@
 .onetime__inner {
   padding: 4.2rem 0 3.9rem;
+
+  @include media-tablet-lg {
+    padding-bottom: 1rem;
+  }
 }

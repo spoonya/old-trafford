@@ -10,11 +10,13 @@ header#header.header
   +decorator
   .header__bottom
     .header__inner.container
-      img.header__logo(src="images/index/header/logo.svg", alt="Олд Траффорд")
-      h2.header__subtitle Бухгалтерское обслуживание бизнеса и физических лиц
-      address.header__info
-        +location
-        +phones
+      .header__content
+        .header__logo-wrapper
+          img.header__logo(src="images/index/header/logo.svg", alt="Олд Траффорд")
+          h2.header__subtitle Бухгалтерское обслуживание бизнеса и физических лиц
+        address.header__info
+          +location
+          +phones
       +callbackBtn('Обратный звонок')
       a(href="fanzone.html").header__club
         img.header__club-img(src="images/index/header/club.png", alt="Minsk Reds Supporters Club")

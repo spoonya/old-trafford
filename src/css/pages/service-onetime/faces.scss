@@ -1,13 +1,16 @@
 .onetime__faces {
-  padding-bottom: 5.9rem;
+  padding-bottom: 3.5rem;
 }
 
 .onetime__faces {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 
   padding-left: 3rem;
+
+  @include media-tablet-lg {
+    flex-direction: column;
+  }
 
   li {
     position: relative;
@@ -17,9 +20,20 @@
     align-items: center;
 
     padding: 2.4rem 10rem;
+    margin-bottom: 2.4rem;
 
     background-color: $color-tertiary-beta;
     border-radius: 10px;
+
+    @include media-laptop {
+      width: 48%;
+
+      padding-right: 5rem;
+    }
+
+    @include media-tablet-lg {
+      width: 100%;
+    }
   }
 }
 

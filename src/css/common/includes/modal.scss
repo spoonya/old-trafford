@@ -11,16 +11,22 @@
 
   padding: 10px;
 
-  transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%);
 
-  transition: 0.2s ease-in-out;
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition: opacity 0.1s ease-in;
 
   border-radius: 10px;
   background-color: $color-primary-beta;
   box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.04);
 
   &.active {
-    transform: translate(-50%, -50%) scale(1);
+    pointer-events: all;
+
+    opacity: 1;
   }
 
   .form {

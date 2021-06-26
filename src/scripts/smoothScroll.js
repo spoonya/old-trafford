@@ -1,11 +1,11 @@
 import $ from '../local_modules/jquery/dist/jquery.min';
-import { DOM_ELEMENTS } from './constants';
+import { DOM_ELEMENTS, DATA_ATTR } from './constants';
 
 function smoothScroll() {
-  $('[data-scroll]').on('click', function (e) {
+  $(DATA_ATTR.scroll).on('click', function (e) {
     const href = $(this).attr('href');
 
-    $('html, body').animate(
+    $(DOM_ELEMENTS.html, DOM_ELEMENTS.body).animate(
       {
         scrollTop: $(href).offset().top - DOM_ELEMENTS.header.offsetHeight
       },

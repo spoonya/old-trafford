@@ -4,6 +4,19 @@
   @include location(row, 16px, 500, 16px, column);
 
   min-height: 70rem;
+
+  @include media-laptop {
+    min-height: 50rem;
+  }
+
+  @media only screen and (orientation: landscape) and (max-width: 991px) {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  @include media-smartphone-sm {
+    min-height: 45rem;
+  }
 }
 
 .map__wrapper {

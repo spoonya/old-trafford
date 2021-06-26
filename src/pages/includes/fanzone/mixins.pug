@@ -7,4 +7,4 @@ mixin fanzoneItem(arrImg, title, arrInfo)
     for info in arrInfo
       .fanzone__item-info
         p= info.name
-        a(href= info.phoneSpaceless)= info.phone
+        a(href= `tel:${info.phoneSpaceless}`)= info.phone

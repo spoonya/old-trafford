@@ -1,6 +1,10 @@
 .contacts-form {
   padding-bottom: 8.6rem;
 
+  @include media-tablet-lg {
+    padding-bottom: 5rem;
+  }
+
   .form {
     display: flex;
     flex-direction: column;
@@ -22,6 +26,10 @@
 
     .form__control {
       width: 31.5%;
+
+      @include media-tablet-sm {
+        width: 100%;
+      }
     }
   }
 

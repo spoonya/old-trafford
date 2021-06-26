@@ -1,5 +1,5 @@
 .onetime__fee {
-  padding-bottom: 4.2rem;
+  padding-bottom: 2.2rem;
 
   ul {
     display: flex;
@@ -14,11 +14,22 @@
     justify-content: flex-end;
 
     padding: 3.9rem 3rem 2.9rem 3rem;
+    margin-bottom: 2rem;
 
     width: 31%;
 
     border: 2px solid $color-primary-alpha;
     border-radius: 10px;
+
+    @include media-tablet-lg {
+      width: 49%;
+
+      padding: 3.9rem 1rem 2.9rem 1rem;
+    }
+
+    @include media-tablet-sm {
+      width: 100%;
+    }
   }
 }
 

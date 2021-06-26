@@ -17,12 +17,12 @@ mixin menu(isIndexPage=false)
       li: a(href= links[4] data-scroll) Отзывы
       li: a(href= links[5] data-scroll) Контакты
 
-mixin location(isLocationIcon= true, isMetroIconLarge = false)
+mixin location(isLocationIcon= true, isMetroIconLarge= false, txt= 'Минск, ул. Энгельса, дом 34, офис 305')
   .location
     a.location__address(href="https://yandex.ru/maps/?um=constructor%3A2a696978720ea53ebd9e73ad180c28869d75ec04b1c62260721b4917e3c98ebd&source=constructorLink" rel="noreferrer" target="_blank")
       if isLocationIcon
         +icon('location__icon icon', 'location')
-      p Минск, ул. Энгельса, дом 34, офис 305
+      p= txt
     .location__metro
       if isMetroIconLarge
         img.location__icon.icon.icon--large(src="images/common/metro-lg.png", alt="")
@@ -51,13 +51,14 @@ mixin callbackBtn(txt='Оставить заявку')
   button(data-modal-target="#modal").callback= txt
 
 mixin consult(title, subtitle)
-  section.consult.container
-    img.consult__img(src="images/index/consult/phone.png", alt="")
-    .consult__info
-      h2.consult__title= title
-      h3.consult__subtitle= subtitle
-      +callbackBtn
-      +phones
+  .container
+    section.consult
+      img.consult__img(src="images/index/consult/phone.png", alt="")
+      .consult__info
+        h2.consult__title= title
+        h3.consult__subtitle= subtitle
+        +callbackBtn
+        +phones
 
 mixin crumbs(arrLinks)
   nav.crumbs.container
