@@ -1,5 +1,11 @@
 import { CLASSES, DOM_ELEMENTS } from '../constants';
 
+const animationConfig = {
+  duration: 250,
+  easing: 'ease-in',
+  iterations: 1
+};
+
 function isMediaBreakpoint() {
   const mediaBreakpoint = 768;
 
@@ -10,37 +16,72 @@ function isMediaBreakpoint() {
   return false;
 }
 
-function toggleBurgerClasses() {
+function activateAnimation(onClose = false) {
+  const selectAnimeDir = () => {
+    if (!onClose) {
+      return [
+        {
+          transform: 'translateX(100%)'
+        },
+        {
+          transform: 'translateX(0%)'
+        }
+      ];
+    }
+    return [
+      {
+        transform: 'translateX(0%)'
+      },
+      {
+        transform: 'translateX(-100%)'
+      }
+    ];
+  };
+
+  DOM_ELEMENTS.headerTopWrapper.animate(selectAnimeDir(), {
+    ...animationConfig
+  });
+}
+
+function toggleBurger() {
   DOM_ELEMENTS.burger.addEventListener('click', () => {
+    activateAnimation();
     DOM_ELEMENTS.burger.classList.toggle(CLASSES.active);
     DOM_ELEMENTS.headerTopWrapper.classList.toggle(CLASSES.active);
     DOM_ELEMENTS.body.classList.toggle(CLASSES.scrollHidden);
   });
 }
 
-function removeBurgerClasses() {
-  if (isMediaBreakpoint()) return;
+function removeBurger() {
+  activateAnimation(true);
 
-  DOM_ELEMENTS.burger.classList.remove(CLASSES.active);
-  DOM_ELEMENTS.headerTopWrapper.classList.remove(CLASSES.active);
-  DOM_ELEMENTS.body.classList.remove(CLASSES.scrollHidden);
+  setTimeout(() => {
+    DOM_ELEMENTS.burger.classList.remove(CLASSES.active);
+    DOM_ELEMENTS.headerTopWrapper.classList.remove(CLASSES.active);
+    DOM_ELEMENTS.body.classList.remove(CLASSES.scrollHidden);
+  }, animationConfig.duration);
 }
 
 function moveHeaderInfoEl() {
   if (isMediaBreakpoint()) {
     DOM_ELEMENTS.headerTop.append(DOM_ELEMENTS.headerInfo);
   } else {
-    DOM_ELEMENTS.headerBotInner.append(DOM_ELEMENTS.headerInfo);
+    DOM_ELEMENTS.headerBot.append(DOM_ELEMENTS.headerInfo);
   }
 }
 
 function controlHeaderAdaptive() {
   moveHeaderInfoEl();
-  toggleBurgerClasses();
+  toggleBurger();
+
+  DOM_ELEMENTS.menuLinks.forEach((link) => {
+    link.addEventListener('click', removeBurger);
+  });
 
   window.addEventListener('resize', () => {
     moveHeaderInfoEl();
-    removeBurgerClasses();
+
+    if (isMediaBreakpoint()) removeBurger();
   });
 }
 

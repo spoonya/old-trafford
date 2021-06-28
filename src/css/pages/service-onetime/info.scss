@@ -7,6 +7,10 @@
     }
 
     line-height: 1.5;
+
+    @include media-tablet-lg {
+      text-align: justify;
+    }
   }
 
   a {

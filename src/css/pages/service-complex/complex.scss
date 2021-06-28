@@ -96,6 +96,10 @@
       margin-bottom: 2.5rem;
     }
   }
+
+  @include media-tablet-lg {
+    text-align: justify;
+  }
 }
 
 .complex__list {
@@ -112,6 +116,10 @@
 
     span {
       color: $color-primary-alpha;
+    }
+
+    @include media-tablet-lg {
+      text-align: justify;
     }
   }
 }

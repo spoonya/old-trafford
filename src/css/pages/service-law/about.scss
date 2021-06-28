@@ -19,5 +19,9 @@
     &:not(:last-child) {
       margin-bottom: 3rem;
     }
+
+    @include media-tablet-lg {
+      text-align: justify;
+    }
   }
 }

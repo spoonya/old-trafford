@@ -47,9 +47,9 @@ const DOM_ELEMENTS = {
   body: document.querySelector('body'),
   html: document.querySelector('html'),
   headerInfo: document.querySelector('#header-info'),
-  headerTop: document.querySelector('#header-top'),
   headerTopWrapper: document.querySelector('#header-top-wrapper'),
-  headerBotInner: document.querySelector('#header-bot-inner'),
+  headerTop: document.querySelector('#header-top'),
+  headerBot: document.querySelector('#header-bot'),
   burger: document.querySelector('#burger')
 };
 
