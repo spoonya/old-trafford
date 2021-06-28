@@ -1,17 +1,29 @@
-import antiSoska from './antiSoska';
-import selectActiveMenuLink from './selectActiveMenuLink';
-import validateFormVeto from './forms/validateFormVeto';
-import validateFormContacts from './forms/validateFormContacts';
-import validateFormModal from './forms/validateFormModal';
+import {
+  validateFormContacts,
+  validateFormModal,
+  validateFormVeto
+} from './forms';
+
+import {
+  selectActiveMenuLink,
+  lockHeader,
+  controlHeaderAdaptive
+} from './header';
+
 import controlModal from './modal';
 import smoothScroll from './smoothScroll';
-import lockHeader from './stickyHeader';
+import antiSoska from './antiSoska';
 
-antiSoska();
+controlHeaderAdaptive();
 lockHeader();
 selectActiveMenuLink();
+
 validateFormVeto();
 validateFormContacts();
 validateFormModal();
+
 controlModal();
+
 smoothScroll();
+
+antiSoska();

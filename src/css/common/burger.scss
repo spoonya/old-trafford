@@ -1,0 +1,63 @@
+.burger {
+  @include media-tablet-sm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  position: relative;
+
+  display: none;
+
+  width: 35px;
+  height: 35px;
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  span,
+  span::before,
+  span::after {
+    position: absolute;
+
+    width: 25px;
+    height: 2px;
+
+    background-color: $color-primary-gamma;
+  }
+
+  span {
+    &::before,
+    &::after {
+      display: block;
+
+      content: '';
+      transition: transform 0.15s;
+    }
+
+    &::before {
+      transform: translateY(-10px);
+    }
+
+    &::after {
+      transform: translateY(10px);
+    }
+  }
+
+  &.active {
+    span {
+      height: 0;
+
+      &::before {
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

@@ -1,5 +1,16 @@
 .header {
   background-color: $color-primary-beta;
+  display: flex;
+  flex-direction: column;
+
+  @include media-tablet-sm {
+    flex-direction: column-reverse;
+    margin-bottom: 20px;
+
+    .decorator {
+      display: none;
+    }
+  }
 
   &.sticky {
     position: fixed;
@@ -11,18 +22,18 @@
 
     animation: dropDown 0.15s linear;
 
-    .header__bottom,
-    .decorator {
-      display: none;
-    }
-  }
+    @include media-custom-mf(768px) {
+      .header__menu {
+        ul {
+          a {
+            padding: 1.4rem 1.8rem;
+          }
+        }
+      }
 
-  @include location(row, 14px, 300, 13px);
-
-  .location {
-    @include media-laptop {
-      .location {
-        margin-right: 2rem;
+      .header__bottom-wrapper,
+      .decorator {
+        display: none;
       }
     }
   }
@@ -43,24 +54,63 @@
   clip-path: inset(0px 0px 99.9% 99.9%);
 }
 
+.header__top-wrapper {
+  display: block;
+
+  &.active {
+    display: block;
+  }
+
+  @include media-tablet-sm {
+    display: none;
+
+    overflow: auto;
+    height: calc(100vh - 70px);
+
+    &.container {
+      padding: 0;
+    }
+  }
+}
+
 .header__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include media-tablet-sm {
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
 .header__menu {
+  width: 100%;
+
+  @include media-tablet-sm {
+    border-bottom: 1px solid $color-tertiary-beta;
+  }
+
   ul {
     display: flex;
 
+    @include media-tablet-sm {
+      flex-direction: column;
+      align-items: center;
+
+      padding: 40px 0;
+    }
+
     li {
-      &:not(:last-of-type) {
-        margin-right: 2px;
+      @include media-tablet-sm {
+        &:not(:last-of-type) {
+          margin-bottom: 5px;
+        }
       }
     }
 
     a {
-      padding: 2rem 2.4rem;
+      padding: 2rem 2.6rem;
 
       color: $color-secondary-gamma;
       font-size: 14px;
@@ -74,6 +124,12 @@
         background-color: $color-primary-alpha;
         color: $color-primary-beta;
       }
+
+      @include media-tablet-sm {
+        padding: 1rem 2rem;
+
+        font-size: 24px;
+      }
     }
   }
 }
@@ -81,6 +137,10 @@
 .header__mail {
   display: flex;
   align-items: center;
+
+  @include media-tablet-sm {
+    display: none;
+  }
 
   .header__icon {
     margin-right: 6px;
@@ -91,13 +151,20 @@
 
   p {
     color: $color-secondary-gamma;
+    font-size: 14px;
   }
 }
 
-.header__bottom {
+.header__bottom-wrapper {
   position: relative;
 
   padding: 2rem 0;
+
+  @include media-tablet-sm {
+    padding: 1rem 0;
+
+    border-bottom: 1px solid $color-quaternary-beta;
+  }
 
   .callback {
     @include button(1.75rem, 3.3rem);
@@ -116,49 +183,16 @@
   }
 }
 
-.header__content {
-  display: flex;
-  justify-content: space-between;
-
-  @include media-tablet-lg {
-    margin-bottom: 1rem;
-  }
-}
-
-.header__inner {
+.header__bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
+  width: 100%;
+
   @include media-tablet-lg {
-    flex-direction: column;
-    align-items: unset;
+    align-items: flex-start;
   }
-}
-
-.header__info {
-  display: flex;
-  align-items: center;
-
-  margin-right: 2rem;
-
-  font-style: normal;
-
-  .phones {
-    @include phones('column');
-  }
-
-  .header__icon {
-    margin-right: 1.2rem;
-  }
-
-  @include media-laptop {
-    margin-right: 1rem;
-  }
-}
-
-.header__icon {
-  margin-right: 6px;
 }
 
 .header__logo-wrapper {
@@ -174,6 +208,21 @@
   @include media-tablet-lg {
     margin-right: 1.5rem;
   }
+
+  @include media-tablet-sm {
+    width: 100%;
+
+    margin-right: 0;
+  }
+}
+
+.header__logo-content {
+  display: flex;
+  align-items: center;
+
+  @include media-tablet-sm {
+    width: 100%;
+  }
 }
 
 .header__logo {
@@ -182,9 +231,19 @@
   margin-right: 3.8rem;
 
   @include media-laptop {
-    margin-right: 1.5rem;
+    margin-right: 2.5rem;
 
     max-width: 100px;
+  }
+
+  @include media-tablet-sm {
+    margin-right: 1.5rem;
+
+    max-width: 70px;
+  }
+
+  @include media-smartphone-sm {
+    max-width: 60px;
   }
 }
 
@@ -195,6 +254,86 @@
   color: $color-primary-omega;
 
   line-height: 1.4;
+
+  @include media-laptop {
+    font-size: 12px;
+  }
+}
+
+.header__info {
+  display: flex;
+  align-items: center;
+
+  font-style: normal;
+
+  @include media-tablet-lg {
+    flex-direction: column;
+    align-items: unset;
+  }
+
+  @include media-tablet-sm {
+    align-items: center;
+
+    padding: 40px 0;
+  }
+
+  .phones {
+    @include phones('column');
+  }
+
+  .header__icon {
+    margin-right: 1.2rem;
+  }
+
+  .callback {
+    width: fit-content;
+  }
+}
+
+.header__info-inner {
+  display: flex;
+  align-items: center;
+
+  margin-right: 2rem;
+
+  @include media-tablet-lg {
+    margin-right: 0;
+
+    margin-bottom: 1rem;
+  }
+
+  @include media-tablet-sm {
+    flex-direction: column;
+
+    margin-bottom: 18px;
+  }
+
+  @include location(row, 14px, 300, 13px);
+
+  .location {
+    @include media-laptop {
+      margin-right: 2rem;
+    }
+
+    @include media-tablet-sm {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  .location__address {
+    @include media-laptop {
+      max-width: 25rem;
+    }
+
+    @include media-tablet-sm {
+      max-width: unset;
+    }
+  }
+}
+
+.header__icon {
+  margin-right: 6px;
 }
 
 .header__club {

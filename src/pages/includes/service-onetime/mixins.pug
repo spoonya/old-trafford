@@ -5,7 +5,7 @@ mixin onetimeFacesList(arrItems)
         +icon('onetime__faces-icon', item.icon)
         .onetime__faces-content
           p= item.txt
-          a(href= item.link) узнать подробнее
+          a(href= item.link data-scroll) узнать подробнее
 
 mixin onetimeCallback(title, txt)
   .onetime__callback
@@ -13,15 +13,15 @@ mixin onetimeCallback(title, txt)
     p.onetime__callback-txt= txt
     +callbackBtn
 
-mixin onetimeTitle(title, isLarge= null)
+mixin onetimeTitle(title, isLarge= false)
   if isLarge
     h3.onetime__info-title.onetime__info-title--large= title
   else
     h3.onetime__info-title= title
 
-mixin onetimeInfo(title, arrItems, isLarge= null)
-  .onetime__info
-    +onetimeTitle(title, isLarge)
+mixin onetimeInfo(title, arrItems, isLargeTitle, id= null)
+  .onetime__info(id= id)
+    +onetimeTitle(title, isLargeTitle)
     for item in arrItems
       p= item
 
@@ -30,7 +30,7 @@ mixin onetimeFeeList(arrItems)
     for item in arrItems
       li
         h3.onetime__fee-title= item.title
-        a.onetime__fee-link(href= item.link)
+        a.onetime__fee-link(href= item.link data-scroll)
           |Подробнее
           .onetime__fee-icon
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">

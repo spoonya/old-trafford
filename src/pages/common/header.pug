@@ -2,21 +2,25 @@ include ../includes/index/mixins
 
 header#header.header
   h1.header__title Олд Траффорд - Бухгалтерские услуги в Минске
-  .header__top.container
-    block menu
-    a.header__mail(href="mailto:buhsale@mail.ru")
-      +icon('header__icon icon', 'message')
-      p buhsale@mail.ru
+  #header-top-wrapper.header__top-wrapper.container
+    #header-top.header__top
+      block menu
+      a.header__mail(href="mailto:buhsale@mail.ru")
+        +icon('header__icon icon', 'message')
+        p buhsale@mail.ru
   +decorator
-  .header__bottom
-    .header__inner.container
-      .header__content
-        .header__logo-wrapper
+  .header__bottom-wrapper
+    #header-bot-inner.header__bottom.container
+      .header__logo-wrapper
+        .header__logo-content
           img.header__logo(src="images/index/header/logo.svg", alt="Олд Траффорд")
           h2.header__subtitle Бухгалтерское обслуживание бизнеса и физических лиц
-        address.header__info
+        button#burger.burger
+          span
+      address#header-info.header__info
+        .header__info-inner
           +location
           +phones
-      +callbackBtn('Обратный звонок')
+        +callbackBtn('Обратный звонок')
       a(href="fanzone.html").header__club
         img.header__club-img(src="images/index/header/club.png", alt="Minsk Reds Supporters Club")

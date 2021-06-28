@@ -54,6 +54,10 @@
 
     @include media-laptop {
       flex-direction: column;
+
+      .phones__item {
+        margin-right: 0;
+      }
     }
   }
 }

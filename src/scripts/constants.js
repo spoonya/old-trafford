@@ -9,10 +9,10 @@ const CLASSES = {
 };
 
 const ERRORS = {
-  emptyName: 'Имя не может быть пустым',
-  emptyPhone: 'Телефон не может быть пустым',
-  emptyEmail: 'E-mail не может быть пустым',
-  emptyMsg: 'Сообщение не может быть пустым',
+  emptyName: 'Заполните имя',
+  emptyPhone: 'Заполните телефон',
+  emptyEmail: 'Заполните E-mail',
+  emptyMsg: 'Введите сообщение',
   invalidEmail: 'Некорректный E-mail',
   invalidPhone: 'Некорректный номер',
   unchecked: 'Поле должно быть отмечено',
@@ -45,7 +45,12 @@ const DOM_ELEMENTS = {
   introSection: document.querySelector('#intro'),
   overlay: document.querySelector('#overlay'),
   body: document.querySelector('body'),
-  html: document.querySelector('html')
+  html: document.querySelector('html'),
+  headerInfo: document.querySelector('#header-info'),
+  headerTop: document.querySelector('#header-top'),
+  headerTopWrapper: document.querySelector('#header-top-wrapper'),
+  headerBotInner: document.querySelector('#header-bot-inner'),
+  burger: document.querySelector('#burger')
 };
 
 const DATA_ATTR = {

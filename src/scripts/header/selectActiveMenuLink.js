@@ -1,4 +1,4 @@
-import { DOM_ELEMENTS } from './constants';
+import { DOM_ELEMENTS } from '../constants';
 
 export default function selectActiveMenuLink() {
   const curLocation = window.location.href;

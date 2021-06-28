@@ -1,4 +1,4 @@
-import { DOM_ELEMENTS } from './constants';
+import { DOM_ELEMENTS } from '../constants';
 
 function lockHeader() {
   let offset;
