@@ -1,19 +1,19 @@
 import { CLASSES, DOM_ELEMENTS } from '../constants';
 
 const animationConfig = {
-  duration: 250,
+  duration: 150,
   easing: 'ease-in',
   iterations: 1
 };
 
 function isMediaBreakpoint() {
-  const mediaBreakpoint = 768;
+  const mediaBreakpoint = 767;
 
-  if (document.documentElement.clientWidth < mediaBreakpoint) {
-    return true;
+  if (document.documentElement.clientWidth > mediaBreakpoint) {
+    return false;
   }
 
-  return false;
+  return true;
 }
 
 function activateAnimation(onClose = false) {
@@ -21,19 +21,19 @@ function activateAnimation(onClose = false) {
     if (!onClose) {
       return [
         {
-          transform: 'translateX(100%)'
+          opacity: '0'
         },
         {
-          transform: 'translateX(0%)'
+          opacity: '1'
         }
       ];
     }
     return [
       {
-        transform: 'translateX(0%)'
+        opacity: '1'
       },
       {
-        transform: 'translateX(-100%)'
+        opacity: '0'
       }
     ];
   };
@@ -53,7 +53,7 @@ function toggleBurger() {
 }
 
 function removeBurger() {
-  activateAnimation(true);
+  if (isMediaBreakpoint()) activateAnimation(true);
 
   setTimeout(() => {
     DOM_ELEMENTS.burger.classList.remove(CLASSES.active);
@@ -81,7 +81,7 @@ function controlHeaderAdaptive() {
   window.addEventListener('resize', () => {
     moveHeaderInfoEl();
 
-    if (isMediaBreakpoint()) removeBurger();
+    if (!isMediaBreakpoint()) removeBurger();
   });
 }
 
