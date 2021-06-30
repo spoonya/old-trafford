@@ -19,6 +19,14 @@
 
     margin-bottom: 8px;
 
+    transition: color 0.05s linear;
+
+    &:hover {
+      p {
+        color: $color-primary-alpha;
+      }
+    }
+
     p {
       font-size: $fsAddress;
       color: $color-primary-gamma;

@@ -46,8 +46,8 @@
   transition: color 0.1s linear, border-color 0.1s linear;
 
   &:hover {
-    color: lighten($color-primary-gamma, 10);
-    border-color: lighten($color-primary-gamma, 10);
+    color: lighten($color-primary-gamma, 25);
+    border-color: lighten($color-primary-gamma, 25);
   }
 
   @include media-laptop {

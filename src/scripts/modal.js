@@ -1,4 +1,5 @@
 import { CLASSES, DOM_ELEMENTS, DATA_ATTR } from './constants';
+import { isBurgerOpen } from './header/burger';
 
 function openModal(modal) {
   if (!modal) return;
@@ -11,7 +12,10 @@ function openModal(modal) {
 function closeModal(modal) {
   if (!modal) return;
 
-  DOM_ELEMENTS.body.classList.remove(CLASSES.scrollHidden);
+  if (!isBurgerOpen()) {
+    DOM_ELEMENTS.body.classList.remove(CLASSES.scrollHidden);
+  }
+
   modal.classList.remove(CLASSES.active);
   DOM_ELEMENTS.overlay.classList.remove(CLASSES.active);
 }

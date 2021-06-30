@@ -1,16 +1,16 @@
 .burger {
-  @include media-tablet-sm {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
   position: relative;
 
   display: none;
 
   width: 35px;
   height: 35px;
+
+  @include media-tablet-sm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   span {
     display: flex;

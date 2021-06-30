@@ -9,8 +9,8 @@
     min-height: 50rem;
   }
 
-  @media only screen and (orientation: landscape) and (max-width: 991px) {
-    width: 95%;
+  @media only screen and (orientation: landscape) and (max-width: $media-lg) {
+    width: 85%;
     margin: 0 auto;
   }
 
@@ -70,9 +70,15 @@
 }
 
 .map__mail {
-  font-size: 1.8rem;
+  font-size: 16px;
   font-weight: 500;
   color: $color-primary-gamma;
+
+  transition: color 0.05s linear;
+
+  &:hover {
+    color: $color-primary-alpha;
+  }
 }
 
 .map__link {
@@ -80,4 +86,11 @@
   color: $color-primary-alpha;
 
   border-bottom: 1px solid $color-primary-alpha;
+
+  transition: color 0.1s linear, border-color 0.1s linear;
+
+  &:hover {
+    color: lighten($color-primary-alpha, 15);
+    border-color: lighten($color-primary-alpha, 15);
+  }
 }

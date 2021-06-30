@@ -4,7 +4,7 @@ import { DOM_ELEMENTS, DATA_ATTR } from './constants';
 function smoothScroll() {
   $(DATA_ATTR.scroll).on('click', function (e) {
     const href = $(this).attr('href');
-    const stickyHeaderHeight = 57;
+    const stickyHeaderHeight = 76;
 
     if (this.hash !== '' && this.pathname === window.location.pathname) {
       $(DOM_ELEMENTS.html, DOM_ELEMENTS.body).animate(

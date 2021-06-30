@@ -5,7 +5,6 @@
 
   @include media-tablet-sm {
     flex-direction: column-reverse;
-    margin-bottom: 20px;
 
     .decorator {
       display: none;
@@ -137,6 +136,14 @@
 .header__mail {
   display: flex;
   align-items: center;
+
+  transition: color 0.05s linear;
+
+  &:hover {
+    p {
+      color: $color-primary-alpha;
+    }
+  }
 
   @include media-tablet-sm {
     display: none;

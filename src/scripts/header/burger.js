@@ -7,7 +7,7 @@ const animationConfig = {
 };
 
 function isMediaBreakpoint() {
-  const mediaBreakpoint = 767;
+  const mediaBreakpoint = 767.98;
 
   if (document.documentElement.clientWidth > mediaBreakpoint) {
     return false;
@@ -85,4 +85,13 @@ function controlHeaderAdaptive() {
   });
 }
 
+function isBurgerOpen() {
+  if (!DOM_ELEMENTS.burger.classList.contains(CLASSES.active)) {
+    return false;
+  }
+
+  return true;
+}
+
 export default controlHeaderAdaptive;
+export { isBurgerOpen };

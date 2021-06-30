@@ -12,6 +12,12 @@
     font-size: 1.6rem;
     font-weight: $fw;
     line-height: 1.4;
+
+    transition: color 0.05s linear;
+
+    &:hover {
+      color: $color-primary-alpha;
+    }
   }
 
   .phones__icon {
