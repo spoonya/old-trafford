@@ -50,17 +50,25 @@
   text-align: center;
   font-weight: 500;
   color: $color-primary-alpha;
+
+  transition: transform 0.15s linear;
+
+  &:hover {
+    transform: translateY(2px);
+  }
 }
 
 .onetime__fee-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   margin-left: 1rem;
 
   min-width: 20px;
   min-height: 20px;
   max-width: 20px;
   max-height: 20px;
-
-  vertical-align: middle;
 
   fill: $color-primary-alpha;
 }

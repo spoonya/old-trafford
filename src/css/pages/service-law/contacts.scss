@@ -24,6 +24,12 @@
     margin-bottom: 0;
     margin-right: 4rem;
 
+    &:hover {
+      p {
+        color: $color-secondary-psi;
+      }
+    }
+
     @include media-tablet-lg {
       min-width: 30rem;
     }
@@ -77,11 +83,19 @@
 
   margin-bottom: 1.7rem;
 
+  transition: color 0.05s linear;
+
   &:not(:last-child) {
     margin-right: 4rem;
   }
 
-  a {
+  &:hover {
+    p {
+      color: $color-secondary-psi;
+    }
+  }
+
+  p {
     color: $color-secondary-gamma;
     font-size: 1.8rem;
   }

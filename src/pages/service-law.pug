@@ -56,12 +56,12 @@ block content
       .container
         h2.law-contacts__title Контакты:
         .law-contacts__inner
-          .law-contacts__item
+          a.law-contacts__item(href="tel:+375296087535")
             +icon('law-contacts__icon', 'law-phone')
-            a(href="tel:+375296087535") +375 (29) 608-76-35
-          .law-contacts__item
+            p +375 (29) 608-76-35
+          a.law-contacts__item(href="mailto:veto.by@mail.ru")
             +icon('law-contacts__icon', 'message')
-            a(href="mailto:veto.by@mail.ru") veto.by@mail.ru
+            p veto.by@mail.ru
           .law-contacts__item
             +location(true, false, '220030, г. Минск, ул. Энгельса, д. 34, офис 305')
         .law-contacts__info
