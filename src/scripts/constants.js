@@ -9,15 +9,15 @@ const CLASSES = {
 };
 
 const ERRORS = {
-  emptyName: 'Заполните имя',
-  emptyPhone: 'Заполните телефон',
-  emptyEmail: 'Заполните E-mail',
+  emptyName: 'Введите имя',
+  emptyPhone: 'Введите номер',
+  emptyEmail: 'Введите E-mail',
   emptyMsg: 'Введите сообщение',
   invalidEmail: 'Некорректный E-mail',
   invalidPhone: 'Некорректный номер',
   unchecked: 'Поле должно быть отмечено',
-  maxMessageLength: 'Сообщение не может превышать 250 символов',
-  minMessageLength: 'Сообщение должо содержать не менее 16 символов'
+  maxMessageLength: 'Не более 250 символов',
+  minMessageLength: 'Не менее 16 символов'
 };
 
 const FORM_ELEMENTS = {

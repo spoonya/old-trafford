@@ -1,35 +1,15 @@
-import {
-  checkUsername,
-  checkUserPhone,
-  checkUserEmail,
-  checkUserMessage
-} from './helpers/checkInputs';
-import { FORM_ELEMENTS, FORMS } from '../constants';
+import { FORMS, FORM_ELEMENTS } from '../constants';
+import Form from './form';
 
 function validateFormContacts() {
-  if (!FORMS.formContacts) return;
+  const form = new Form(FORMS.formContacts, FORM_ELEMENTS);
 
-  FORMS.formContacts.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    checkUsername(FORM_ELEMENTS.username, FORM_ELEMENTS.username.value.trim());
-
-    checkUserPhone(
-      FORM_ELEMENTS.userPhone,
-      FORM_ELEMENTS.userPhone.value.trim()
-    );
-
-    checkUserEmail(
-      FORM_ELEMENTS.userEmail,
-      FORM_ELEMENTS.userEmail.value.trim(),
-      true
-    );
-
-    checkUserMessage(
-      FORM_ELEMENTS.userMsg,
-      FORM_ELEMENTS.userMsg.value.trim(),
-      true
-    );
+  form.validate({
+    username: { isCheck: true },
+    userPhone: { isCheck: true },
+    userEmail: { isCheck: true, isRequired: true },
+    userMessage: { isCheck: true, isRequired: true },
+    userAgreement: { isCheck: false }
   });
 }
 

@@ -14,6 +14,9 @@
       }
     ],
     "func-names": "off",
+    "class-methods-use-this": "off",
+    "no-underscore-dangle": "off",
+    "no-param-reassign": "off",
     "semi": ["error", "always"],
     "quotes": ["error", "single"],
     "import/no-unresolved": "off",

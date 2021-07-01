@@ -121,7 +121,7 @@
 
   transition: opacity 0.1s linear;
 
-  border: 1px solid $color-quaternary-beta;
+  border: 1px solid $color-primary-omega;
   border-radius: 3px;
 
   &::before {
@@ -154,5 +154,5 @@
   font-size: 14px;
   line-height: 1.4;
 
-  color: #b8b8b8;
+  color: $color-primary-omega;
 }

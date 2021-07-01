@@ -134,7 +134,7 @@ mixin modalForm
                 </svg>
           .form__control
             span.form__error
-            input#modal-form-phone.form__input(name="form-phone" type="text" placeholder="Ваш телефон")
+            input#modal-form-phone.form__input(name="form-phone" type="tel" placeholder="Ваш телефон")
             label(for="modal-form-phone").modal__icon-wrapper
               +icon('modal__icon', 'calling')
           +callbackBtn('Отправить заявку')
@@ -155,7 +155,7 @@ mixin form(formID, placeholders, names, btnTxt)
         input#form-name.form__input(name= names.name type="text" placeholder= placeholders.name)
       .form__control
         span.form__error
-        input#form-phone.form__input(name= names.phone type="text" placeholder= placeholders.phone)
+        input#form-phone.form__input(name= names.phone type="tel" placeholder= placeholders.phone)
       .form__control
         span.form__error
         input#form-email.form__input(name= names.email type="email" placeholder= placeholders.email)

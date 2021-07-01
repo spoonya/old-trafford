@@ -1,27 +1,15 @@
-import {
-  checkUsername,
-  checkUserPhone,
-  checkAgreement
-} from './helpers/checkInputs';
-import { FORM_MODAL_ELEMENTS, FORMS } from '../constants';
+import { FORMS, FORM_MODAL_ELEMENTS } from '../constants';
+import Form from './form';
 
 function validateFormModal() {
-  if (!FORMS.formModal) return;
+  const form = new Form(FORMS.formModal, FORM_MODAL_ELEMENTS);
 
-  FORMS.formModal.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    checkUsername(
-      FORM_MODAL_ELEMENTS.username,
-      FORM_MODAL_ELEMENTS.username.value.trim()
-    );
-
-    checkUserPhone(
-      FORM_MODAL_ELEMENTS.userPhone,
-      FORM_MODAL_ELEMENTS.userPhone.value.trim()
-    );
-
-    checkAgreement(FORM_MODAL_ELEMENTS.userAgreement);
+  form.validate({
+    username: { isCheck: true },
+    userPhone: { isCheck: true },
+    userEmail: { isCheck: false },
+    userMessage: { isCheck: false },
+    userAgreement: { isCheck: true }
   });
 }
 

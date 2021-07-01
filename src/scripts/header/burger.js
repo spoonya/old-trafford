@@ -6,6 +6,14 @@ const animationConfig = {
   iterations: 1
 };
 
+function isBurgerOpen() {
+  if (!DOM_ELEMENTS.burger.classList.contains(CLASSES.active)) {
+    return false;
+  }
+
+  return true;
+}
+
 function isMediaBreakpoint() {
   const mediaBreakpoint = 767.98;
 
@@ -83,14 +91,6 @@ function controlHeaderAdaptive() {
 
     if (!isMediaBreakpoint()) removeBurger();
   });
-}
-
-function isBurgerOpen() {
-  if (!DOM_ELEMENTS.burger.classList.contains(CLASSES.active)) {
-    return false;
-  }
-
-  return true;
 }
 
 export default controlHeaderAdaptive;

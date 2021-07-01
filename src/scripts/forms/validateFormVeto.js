@@ -1,30 +1,15 @@
-import {
-  checkUsername,
-  checkUserPhone,
-  checkUserEmail,
-  checkUserMessage
-} from './helpers/checkInputs';
-import { FORM_ELEMENTS, FORMS } from '../constants';
+import { FORMS, FORM_ELEMENTS } from '../constants';
+import Form from './form';
 
 function validateFormVeto() {
-  if (!FORMS.formVeto) return;
+  const form = new Form(FORMS.formVeto, FORM_ELEMENTS);
 
-  FORMS.formVeto.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    checkUsername(FORM_ELEMENTS.username, FORM_ELEMENTS.username.value.trim());
-
-    checkUserPhone(
-      FORM_ELEMENTS.userPhone,
-      FORM_ELEMENTS.userPhone.value.trim()
-    );
-
-    checkUserEmail(
-      FORM_ELEMENTS.userEmail,
-      FORM_ELEMENTS.userEmail.value.trim()
-    );
-
-    checkUserMessage(FORM_ELEMENTS.userMsg, FORM_ELEMENTS.userMsg.value.trim());
+  form.validate({
+    username: { isCheck: true },
+    userPhone: { isCheck: true },
+    userEmail: { isCheck: true, isRequired: false },
+    userMessage: { isCheck: true, isRequired: false },
+    userAgreement: { isCheck: false }
   });
 }
 
