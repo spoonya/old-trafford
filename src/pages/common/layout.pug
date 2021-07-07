@@ -3,21 +3,30 @@ html(lang="ru")
   block head
     head
       meta(charset="utf-8")
-      meta(name="description" content="ООО ОлдТраффорд - Оказание полного спектра бухгалтерских услуг для бизнеса и физических лиц")
+      meta(name="description" content="ООО ОлдТраффорд - Оказание полного спектра бухгалтерских услуг для бизнеса и физических лиц в Минске и всей Беларуси")
       meta(content="width=device-width, initial-scale=1" name="viewport")
       meta(content="ie=edge" http-equiv="x-ua-compatible")
+      meta(name='msapplication-TileColor' content='#da532c')
+      meta(name='theme-color' content='#ffffff')
+      link(rel='apple-touch-icon' sizes='180x180' href='favicon/apple-touch-icon.png')
+      link(rel='icon' type='image/png' sizes='32x32' href='favicon/favicon-32x32.png')
+      link(rel='icon' type='image/png' sizes='16x16' href='favicon/favicon-16x16.png')
+      link(rel='manifest' href='favicon/site.webmanifest')
+      link(rel='mask-icon' href='favicon/safari-pinned-tab.svg' color='#5bbad5')
       block title
         title ООО ОлдТраффорд
+      link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
       link(rel="stylesheet" href="css/style.min.css")
   body
     include ../includes/common/mixins
+    block header
+      include header
     .page
-      block header
-        include header
       block content
       block footer
         include footer
       +modalForm
       #overlay.overlay
       block scripts
+        script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
         script(src='scripts/main.min.js')

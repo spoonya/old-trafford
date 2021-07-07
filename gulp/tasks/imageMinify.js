@@ -11,7 +11,7 @@ module.exports = function imageMinify() {
           quality: 90,
           progressive: true
         }),
-        imagemin.optipng({ optimizationLevel: 3 }),
+        imagemin.optipng({ optimizationLevel: 2 }),
         imagemin.svgo({
           plugins: [{ removeViewBox: true }, { cleanupIDs: false }]
         })

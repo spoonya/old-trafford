@@ -9,6 +9,12 @@
 
   @include location(row, 1.6rem, 300, 13px);
 
+  .location__address {
+    p {
+      font-size: 16px;
+    }
+  }
+
   line-height: 1.4;
 }
 
@@ -43,6 +49,7 @@
 
 .contacts__mail {
   color: $color-primary-gamma;
+  font-size: 16px;
 
   transition: color 0.05s linear;
 

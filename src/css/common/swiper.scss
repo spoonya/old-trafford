@@ -1,0 +1,27 @@
+.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.swiper-pagination {
+  display: none;
+
+  &-bullet {
+    height: 14px;
+    width: 14px;
+
+    background-color: $color-primary-alpha;
+    opacity: 0.2;
+
+    &-active {
+      opacity: 1;
+    }
+  }
+
+  @include media-tablet-sm {
+    display: block;
+  }
+}

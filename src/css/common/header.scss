@@ -346,29 +346,15 @@
 .header__club {
   position: absolute;
   right: 0;
-
-  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.07);
-  border-radius: 10px 0px 0px 10px;
-  background-color: $color-primary-beta;
-
-  &:hover {
-    .header__club-img {
-      opacity: 1;
-    }
-  }
 }
 
 .header__club-img {
-  max-width: 8rem;
+  max-width: 70px;
 
-  padding: 1.6rem;
-
-  opacity: 0.6;
-
-  transition: opacity 0.1s linear;
+  padding-right: 10px;
 
   @include media-custom(1365.98px) {
-    max-width: 6rem;
+    max-width: 55px;
   }
 
   @include media-custom(1299.98px) {

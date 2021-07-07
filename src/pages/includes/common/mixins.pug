@@ -2,8 +2,8 @@ mixin icon(className, name)
   svg(class= className): use(xlink:href="images/sprite.svg#" + name)
 
 mixin menu(isIndexPage=false)
-  - var indexPageLinks = ['index.html', '#about', '#services', 'cost.html', '#', '#contacts'];
-  - var outerPageLinks = ['index.html', 'index.html#about', 'index.html#services', 'cost.html', '#', 'index.html#contacts'];
+  - var indexPageLinks = ['index.html', '#about', '#services', 'cost.html', '#contacts'];
+  - var outerPageLinks = ['index.html', 'index.html#about', 'index.html#services', 'cost.html', 'index.html#contacts'];
   if isIndexPage
     - var links = indexPageLinks
   else
@@ -14,8 +14,7 @@ mixin menu(isIndexPage=false)
       li: a(href= links[1] data-scroll) О нас
       li: a(href= links[2] data-scroll) Услуги
       li: a(href= links[3] data-scroll) Стоимость
-      li: a(href= links[4] data-scroll) Отзывы
-      li: a(href= links[5] data-scroll) Контакты
+      li: a(href= links[4] data-scroll) Контакты
 
 mixin location(isLocationIcon= true, isMetroIconLarge= false, txt= 'Минск, ул. Энгельса, дом 34, офис 305')
   .location
@@ -134,7 +133,7 @@ mixin modalForm
                 </svg>
           .form__control
             span.form__error
-            input#modal-form-phone.form__input(name="form-phone" type="tel" placeholder="Ваш телефон")
+            input#modal-form-phone.form__input(name="form-phone" type="text" placeholder="Ваш телефон")
             label(for="modal-form-phone").modal__icon-wrapper
               +icon('modal__icon', 'calling')
           +callbackBtn('Отправить заявку')
@@ -155,10 +154,10 @@ mixin form(formID, placeholders, names, btnTxt)
         input#form-name.form__input(name= names.name type="text" placeholder= placeholders.name)
       .form__control
         span.form__error
-        input#form-phone.form__input(name= names.phone type="tel" placeholder= placeholders.phone)
+        input#form-phone.form__input(name= names.phone type="text" placeholder= placeholders.phone)
       .form__control
         span.form__error
-        input#form-email.form__input(name= names.email type="email" placeholder= placeholders.email)
+        input#form-email.form__input(name= names.email type="text" placeholder= placeholders.email)
     .form__control
       span.form__error
       textarea#form-message.form__input(name= names.msg maxlength="250" placeholder= placeholders.msg)

@@ -1,3 +1,5 @@
+import initSwiper from './sliders';
+
 import {
   validateFormContacts,
   validateFormModal,
@@ -13,6 +15,8 @@ import {
 import controlModal from './modal';
 import smoothScroll from './smoothScroll';
 import antiSoska from './antiSoska';
+
+initSwiper();
 
 controlHeaderAdaptive();
 lockHeader();

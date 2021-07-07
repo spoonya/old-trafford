@@ -14,7 +14,7 @@ const ERRORS = {
   emptyEmail: 'Введите E-mail',
   emptyMsg: 'Введите сообщение',
   invalidEmail: 'Некорректный E-mail',
-  invalidPhone: 'Некорректный номер',
+  invalidPhone: 'Введите номер в формате +375',
   unchecked: 'Поле должно быть отмечено',
   maxMessageLength: 'Не более 250 символов',
   minMessageLength: 'Не менее 16 символов'

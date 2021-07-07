@@ -32,7 +32,7 @@
   }
 
   @include media-tablet-sm {
-    align-self: auto;
+    display: none;
   }
 }
 

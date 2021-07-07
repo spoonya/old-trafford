@@ -104,9 +104,19 @@
   top: -30px;
   right: -50px;
 
+  &:hover {
+    .modal__close-icon {
+      fill: $color-primary-alpha;
+    }
+  }
+
   &-icon {
     width: 20px;
     height: 20px;
+
+    fill: $color-primary-gamma;
+
+    transition: fill 0.1s linear;
   }
 
   @include media-tablet-lg {

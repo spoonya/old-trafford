@@ -7,27 +7,30 @@ mixin title(title)
 
 mixin descripItem(arrTitle, icon, arrTxt, arrList)
   li.descrip__item
-    .descrip__wrapper
-      .descrip__feat
-        p= arrTitle[0]
-        +icon('descrip__icon', icon)
-        p= arrTitle[1]
-      .descrip__txt
-        for text in arrTxt
-          p= text
-        if arrList
-          ul
-            for text in arrList
-              li= text
+    .descrip__feat
+      p= arrTitle[0]
+      +icon('descrip__icon', icon)
+      p= arrTitle[1]
+    .descrip__txt
+      for text in arrTxt
+        p= text
+      if arrList
+        ul
+          for text in arrList
+            li= text
 
 mixin providerItem(txt)
-  li.provider__item
+  li.provider__item.swiper-slide
     +icon('provider__icon', 'checked')
     p.provider__txt= txt
 
 mixin plusesItem(txt)
   li.pluses__item
-    +icon('pluses__icon', 'plus')
+    .pluses__icon
+      <svg width="24" height="29" viewBox="0 0 24 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="15" r="11.5" stroke="#D5251F"/>
+        <path d="M8.322 15.43V14.618H11.556V11.048H12.41V14.618H15.63V15.43H12.41V19H11.556V15.43H8.322Z" fill="#D5251F"/>
+      </svg>
     p.pluses__txt= txt
 
 mixin feeItem(link, img, num, txt)
@@ -39,14 +42,15 @@ mixin feeItem(link, img, num, txt)
       h3.fee__title= txt
 
 mixin featuresItem(icon, title, txt)
-  li.features__item
+  li.features__item.swiper-slide
     +icon('features__icon', icon)
     h3.features__item-title= title
     p.features__item-txt= txt
 
-mixin clientsItem(img)
+mixin clientsItem(img, link)
   li.clients__item
-    img.clients__img(src=`images/index/clients/${img}`, alt="")
+    a.clients__link(href= link)
+      img.clients__img(src=`images/index/clients/${img}`, alt="")
 
 mixin workItem(icon, num, txt)
   li.work__item

@@ -1,5 +1,5 @@
 .features {
-  padding: 8.2rem 0 10.4rem;
+  padding-bottom: 10.4rem;
 }
 
 .features__list {
@@ -8,17 +8,32 @@
   justify-content: space-between;
 
   padding-top: 5.5rem;
+
+  @include media-tablet-sm {
+    flex-wrap: nowrap;
+
+    margin-bottom: 30px;
+  }
 }
 
 .features__item {
   width: 31.5%;
 
   margin-bottom: 3rem;
-  padding: 4.7rem 3.5rem 7.4rem 3.5rem;
+  padding: 4.7rem 3.5rem 2.6rem 3.5rem;
 
   border: 1px solid $color-tertiary-beta;
+  border-radius: 10px;
 
   text-align: center;
+
+  @include media-tablet-sm {
+    flex-wrap: nowrap;
+
+    padding: 4.7rem 1.5rem 2.6rem 1.5rem;
+
+    margin-bottom: 30px;
+  }
 }
 
 .features__icon {
@@ -29,7 +44,7 @@
 }
 
 .features__item-title {
-  margin-bottom: 2.7rem;
+  margin-bottom: 1.7rem;
 
   font-weight: 500;
 }

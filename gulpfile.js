@@ -5,6 +5,7 @@ const pug2html = require('./gulp/tasks/pug2html');
 const styles = require('./gulp/tasks/styles');
 const script = require('./gulp/tasks/script');
 const fonts = require('./gulp/tasks/fonts');
+const favicon = require('./gulp/tasks/favicon');
 const imageMinify = require('./gulp/tasks/imageMinify');
 const clean = require('./gulp/tasks/clean');
 const copyDependencies = require('./gulp/tasks/copyDependencies');
@@ -23,6 +24,7 @@ const dev = gulp.parallel(
   styles,
   script,
   fonts,
+  favicon,
   imageMinify,
   svgSprite
 );

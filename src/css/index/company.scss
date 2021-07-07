@@ -1,5 +1,5 @@
 .company {
-  padding: 8.2rem 0;
+  padding-bottom: 4.5rem;
 
   background-repeat: no-repeat;
   background-position: center;
@@ -51,6 +51,9 @@
 }
 
 .company__info {
+  display: flex;
+  flex-direction: column;
+
   max-width: 70rem;
 }
 
@@ -63,4 +66,11 @@
       margin-bottom: 2.1rem;
     }
   }
+}
+
+.company__icon {
+  width: 63px;
+  height: 63px;
+
+  align-self: flex-end;
 }
