@@ -44,7 +44,7 @@ const DOM_ELEMENTS = {
   menuLinks: [...document.querySelectorAll('.header__menu a')],
   header: document.querySelector('#header'),
   introSection: document.querySelector('#intro'),
-  companySection: document.querySelector('#about'),
+  companySection: document.querySelector('#about .container'),
   introSectionButtons: document.querySelector('.intro__buttons'),
   introCallback: document.querySelector('#intro .callback'),
   companyTitle: document.querySelector('.company__title'),

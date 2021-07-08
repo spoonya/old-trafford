@@ -22,6 +22,8 @@ function moveHeaderPhonesEl() {
 }
 
 function moveIntroCallback() {
+  if (!DOM_ELEMENTS.introCallback) return;
+
   if (isMediaBreakpoint()) {
     DOM_ELEMENTS.descripSection.prepend(DOM_ELEMENTS.introCallback);
   } else {
@@ -30,6 +32,8 @@ function moveIntroCallback() {
 }
 
 function moveCompanyTitle() {
+  if (!DOM_ELEMENTS.companyTitle) return;
+
   if (isMediaBreakpoint(991.98)) {
     DOM_ELEMENTS.companySection.prepend(DOM_ELEMENTS.companyTitle);
   } else {
