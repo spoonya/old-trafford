@@ -17,16 +17,17 @@ html(lang="ru")
         title ООО ОлдТраффорд
       link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
       link(rel="stylesheet" href="css/style.min.css")
+      script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
   body
     include ../includes/common/mixins
+    include footer
     block header
       include header
     .page
       block content
       block footer
-        include footer
+        +footer
       +modalForm
       #overlay.overlay
       block scripts
-        script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
         script(src='scripts/main.min.js')

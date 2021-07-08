@@ -3,8 +3,10 @@
 
   background-color: $color-tertiary-beta;
 
-  @include media-tablet-sm {
-    padding: 47rem 0 0.9rem;
+  &--main {
+    @include media-tablet-sm {
+      padding: 47rem 0 0.9rem;
+    }
   }
 }
 

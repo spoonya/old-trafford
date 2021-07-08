@@ -1,9 +1,13 @@
 extends common/layout
 
 include includes/index/mixins
+include common/footer
 
 block menu
   +menu(true)
+
+block footer
+  +footer('footer--main')
 
 block content
   main
@@ -62,8 +66,8 @@ block content
           +plusesItem('Наличие дополнительных услуг.')
 
     //Fee
-    section#services.fee
-      nav#swiper-fee.swiper-container
+    nav#services.fee
+      #swiper-fee.swiper-container
         ul.fee__list.swiper-wrapper
           +feeItem('service-complex', 'fee-1.jpg', '01', 'Комплексное бухгалтерское обслуживание')
           +feeItem('service-onetime', 'fee-2.jpg', '02', 'Налоговое консультирование и разовые услуги')
