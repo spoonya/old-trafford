@@ -17,6 +17,10 @@
 
   @include media-laptop {
     min-height: 50rem;
+
+    &--main {
+      min-height: 58rem;
+    }
   }
 
   @media only screen and (orientation: landscape) and (max-width: $media-lg) {
@@ -62,7 +66,7 @@
 
   z-index: 1;
 
-  max-width: 36.8rem;
+  max-width: 368px;
   width: 100%;
 
   padding: 3.8rem 3rem 4.1rem 4.2rem;
@@ -84,7 +88,7 @@
   }
 
   @include media-smartphone-sm {
-    max-width: 34rem;
+    max-width: 36rem;
   }
 
   .phones {

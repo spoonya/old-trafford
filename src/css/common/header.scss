@@ -36,6 +36,8 @@
       }
     }
   }
+
+  @include phones('column');
 }
 
 .header__title {
@@ -228,7 +230,19 @@
   align-items: center;
 
   @include media-tablet-sm {
+    justify-content: space-between;
+
+    margin-right: 20px;
+
     width: 100%;
+  }
+
+  @include media-smartphone-sm {
+    .phones {
+      p {
+        font-size: 14px;
+      }
+    }
   }
 }
 
@@ -262,8 +276,8 @@
 
   line-height: 1.4;
 
-  @include media-laptop {
-    font-size: 12px;
+  @include media-tablet-sm {
+    display: none;
   }
 }
 
@@ -288,10 +302,6 @@
     padding: 40px 0;
 
     display: none;
-  }
-
-  .phones {
-    @include phones('column');
   }
 
   .header__icon {

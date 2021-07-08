@@ -16,10 +16,10 @@ block content
       .container
         .intro__inner
           h2.intro__title Профессиональные бухгалтерские услуги
-          h3.intro__subtitle Полный спектр бухгалтерских услуг и налоговое консультирование любого вида деятельности
+          h3.intro__subtitle Полный спектр бухгалтерских услуг для любого вида деятельности
           .intro__buttons
             a.intro__link(href="#details" data-scroll) Подробнее
-            +callbackBtn('Рассчитать стоимость услуг')
+            +callbackBtn('Рассчитать стоимость услуг', 'callback--intro')
 
     // Descrip
     section#details.descrip
@@ -117,18 +117,18 @@ block content
         +title('Нам уже доверили свою бухгалтерию')
         #swiper-clients.swiper-container
           ul.clients__list.swiper-wrapper
-            +clientsItem('client-1.jpg', '#')
-            +clientsItem('client-2.jpg', '#')
-            +clientsItem('client-3.jpg', '#')
-            +clientsItem('client-4.jpg', '#')
-            +clientsItem('client-5.jpg', '#')
-            +clientsItem('client-6.jpg', '#')
-            +clientsItem('client-7.jpg', '#')
-            +clientsItem('client-8.jpg', '#')
-            +clientsItem('client-9.jpg', '#')
-            +clientsItem('client-10.jpg', '#')
-            +clientsItem('client-11.jpg', '#')
-            +clientsItem('client-12.jpg', '#')
+            +clientsItem('client-1.jpg', '#', 'Veto')
+            +clientsItem('client-2.jpg', '#', 'Food Garden')
+            +clientsItem('client-3.jpg', '#', 'Валекасо')
+            +clientsItem('client-4.jpg', '#', 'Simpladent')
+            +clientsItem('client-5.jpg', '#', 'BMW Market')
+            +clientsItem('client-6.jpg', '#', 'Белкиоск')
+            +clientsItem('client-7.jpg', '#', 'Eco Prost')
+            +clientsItem('client-8.jpg', '#', 'Пульс цен')
+            +clientsItem('client-9.jpg', '#', 'Ihde Dental')
+            +clientsItem('client-10.jpg', '#', 'Закваски')
+            +clientsItem('client-11.jpg', '#', 'Пил снаб')
+            +clientsItem('client-12.jpg', '#', 'НикМаСтройСервис')
           .swiper-pagination
 
     //Work

@@ -16,12 +16,12 @@ header#header.header
         .header__logo-content
           img.header__logo(src="images/index/header/logo.svg", alt="Олд Траффорд")
           h2.header__subtitle Бухгалтерское обслуживание бизнеса и физических лиц
-        button#burger.burger
+        button#burger.burger(aria-label="Бургер-меню")
           span
       address#header-info.header__info
         .header__info-inner
           +location
           +phones
         +callbackBtn('Обратный звонок')
-      a(href="fanzone.html").header__club
+      a(href="fanzone.html" aria-label="Клуб поддержки Manchester United").header__club
         img.header__club-img(src="images/index/header/club.png", alt="Minsk Reds Supporters Club")

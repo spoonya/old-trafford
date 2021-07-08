@@ -46,8 +46,8 @@ mixin phones
         img.phones__icon.phones__icon--mts.icon(src="images/common/mts.png", alt="")
         p.phones__num +375 (29) 878-76-56
 
-mixin callbackBtn(txt='Оставить заявку')
-  button(data-modal-target="#modal").callback= txt
+mixin callbackBtn(txt= 'Оставить заявку', modif= null)
+  button.callback(data-modal-target="#modal" class= modif)= txt
 
 mixin consult(title, subtitle)
   .container

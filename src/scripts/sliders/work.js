@@ -1,7 +1,7 @@
 const swiperWork = new Swiper('#swiper-work', {
   slidesPerColumnFill: 'row',
 
-  // spaceBetween: 50,
+  spaceBetween: 10,
 
   allowTouchMove: false,
 

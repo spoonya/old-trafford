@@ -1,4 +1,5 @@
 import { CLASSES, DOM_ELEMENTS } from '../constants';
+import isMediaBreakpoint from '../helpers/isMedia';
 
 const animationConfig = {
   duration: 150,
@@ -6,18 +7,8 @@ const animationConfig = {
   iterations: 1
 };
 
-function isBurgerOpen() {
+function isBurgerOpened() {
   if (!DOM_ELEMENTS.burger.classList.contains(CLASSES.active)) {
-    return false;
-  }
-
-  return true;
-}
-
-function isMediaBreakpoint() {
-  const mediaBreakpoint = 767.98;
-
-  if (document.documentElement.clientWidth > mediaBreakpoint) {
     return false;
   }
 
@@ -72,16 +63,7 @@ function removeBurger() {
   }, animationConfig.duration);
 }
 
-function moveHeaderInfoEl() {
-  if (isMediaBreakpoint()) {
-    DOM_ELEMENTS.headerTop.append(DOM_ELEMENTS.headerInfo);
-  } else {
-    DOM_ELEMENTS.headerBot.append(DOM_ELEMENTS.headerInfo);
-  }
-}
-
 function controlHeaderAdaptive() {
-  moveHeaderInfoEl();
   toggleBurger();
 
   DOM_ELEMENTS.menuLinks.forEach((link) => {
@@ -89,11 +71,11 @@ function controlHeaderAdaptive() {
   });
 
   window.addEventListener('resize', () => {
-    moveHeaderInfoEl();
-
-    if (!isMediaBreakpoint()) removeBurger();
+    setTimeout(() => {
+      if (!isMediaBreakpoint()) removeBurger();
+    }, 100);
   });
 }
 
 export default controlHeaderAdaptive;
-export { isBurgerOpen };
+export { isBurgerOpened };

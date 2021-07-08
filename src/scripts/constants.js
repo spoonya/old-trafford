@@ -5,7 +5,8 @@ const CLASSES = {
   active: 'active',
   modal: 'modal',
   errorEl: 'form__error',
-  formControlEl: 'form__control'
+  formControlEl: 'form__control',
+  phones: 'phones'
 };
 
 const ERRORS = {
@@ -43,6 +44,12 @@ const DOM_ELEMENTS = {
   menuLinks: [...document.querySelectorAll('.header__menu a')],
   header: document.querySelector('#header'),
   introSection: document.querySelector('#intro'),
+  companySection: document.querySelector('#about'),
+  introSectionButtons: document.querySelector('.intro__buttons'),
+  introCallback: document.querySelector('#intro .callback'),
+  companyTitle: document.querySelector('.company__title'),
+  companyInfo: document.querySelector('.company__info'),
+  descripSection: document.querySelector('#details'),
   overlay: document.querySelector('#overlay'),
   body: document.querySelector('body'),
   html: document.querySelector('html'),
@@ -50,7 +57,12 @@ const DOM_ELEMENTS = {
   headerTopWrapper: document.querySelector('#header-top-wrapper'),
   headerTop: document.querySelector('#header-top'),
   headerBot: document.querySelector('#header-bot'),
-  burger: document.querySelector('#burger')
+  burger: document.querySelector('#burger'),
+  headerPhones: document.querySelector('.header .phones'),
+  headerMobileNums: [...document.querySelectorAll('.header .phones li')].slice(
+    -2
+  ),
+  headerLogoContent: document.querySelector('.header__logo-content')
 };
 
 const DATA_ATTR = {

@@ -5,6 +5,10 @@
   background-position: center;
   background-size: cover;
 
+  @include media-tablet-lg {
+    padding: 12rem 0 15rem;
+  }
+
   @include media-tablet-sm {
     padding: 10rem 0 6.5rem;
   }
@@ -49,18 +53,6 @@
   justify-content: center;
   flex-wrap: wrap;
 
-  .callback {
-    @include button(1.47em, 1.75em);
-
-    color: $color-primary-alpha;
-    background-color: none;
-    margin-bottom: 0;
-
-    &:hover {
-      color: $color-primary-beta;
-    }
-  }
-
   @include media-smartphone-lg {
     flex-direction: column;
     align-items: initial;
@@ -74,8 +66,13 @@
 
   margin-right: 3rem;
 
-  @include media-smartphone-lg {
+  @include media-tablet-sm {
+    width: 284px;
+
     margin-right: 0;
+  }
+
+  @include media-smartphone-lg {
     margin-bottom: 2rem;
   }
 }

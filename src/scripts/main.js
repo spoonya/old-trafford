@@ -13,6 +13,8 @@ import {
   controlHeaderAdaptive
 } from './header';
 
+import relocateElements from './relocateElements';
+
 import controlModal from './modal';
 import smoothScroll from './smoothScroll';
 import antiSoska from './antiSoska';
@@ -24,6 +26,8 @@ selectActiveMenuLink();
 validateFormVeto();
 validateFormContacts();
 validateFormModal();
+
+relocateElements();
 
 controlModal();
 

@@ -4,6 +4,16 @@
   @include media-tablet-lg {
     padding: 8.2rem 0 5rem;
   }
+
+  @include media-tablet-sm {
+    padding: 4rem 0 5rem;
+  }
+
+  .callback--intro {
+    display: block;
+
+    margin: 0 auto 50px;
+  }
 }
 
 .descrip__title {

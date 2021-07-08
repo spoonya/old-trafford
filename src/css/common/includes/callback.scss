@@ -4,4 +4,16 @@
   &:not(:last-child) {
     margin-bottom: 2.8rem;
   }
+
+  &--intro {
+    @include button(1.47em, 1.75em);
+
+    color: $color-primary-alpha;
+    background-color: none;
+    margin-bottom: 0;
+
+    &:hover {
+      color: $color-primary-beta;
+    }
+  }
 }
