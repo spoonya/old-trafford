@@ -62,7 +62,8 @@ const DOM_ELEMENTS = {
   headerMobileNums: [...document.querySelectorAll('.header .phones li')].slice(
     -2
   ),
-  headerLogoContent: document.querySelector('.header__logo-content')
+  headerLogoContent: document.querySelector('.header__logo-content'),
+  callbackBtnFixed: document.querySelector('#callback-fixed')
 };
 
 const DATA_ATTR = {

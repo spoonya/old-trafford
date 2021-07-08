@@ -1,5 +1,14 @@
 import { CLASSES, DOM_ELEMENTS, DATA_ATTR } from './constants';
 import { isBurgerOpened } from './header/burger';
+import isMobile from './helpers/isMobile';
+
+function controlCallbackFixed() {
+  if (isMobile()) {
+    DOM_ELEMENTS.callbackBtnFixed.classList.add(CLASSES.active);
+  } else {
+    DOM_ELEMENTS.callbackBtnFixed.classList.remove(CLASSES.active);
+  }
+}
 
 function openModal(modal) {
   if (!modal) return;
@@ -23,6 +32,8 @@ function closeModal(modal) {
 function controlModal() {
   const openModalButtons = document.querySelectorAll(DATA_ATTR.modal);
   const closeModalButtons = document.querySelectorAll(DATA_ATTR.modalClose);
+
+  controlCallbackFixed();
 
   openModalButtons.forEach((button) => {
     button.addEventListener('click', () => {

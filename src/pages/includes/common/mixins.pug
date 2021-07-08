@@ -49,6 +49,10 @@ mixin phones
 mixin callbackBtn(txt= 'Оставить заявку', modif= null)
   button.callback(data-modal-target="#modal" class= modif)= txt
 
+mixin callbackBtnFixed
+  button#callback-fixed.callback-fixed(data-modal-target="#modal")
+    +icon('callback-fixed__icon', 'dialog')
+
 mixin consult(title, subtitle)
   .container
     section.consult
