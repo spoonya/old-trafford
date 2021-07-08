@@ -9,13 +9,22 @@
   justify-content: space-between;
 
   padding-top: 5.5rem;
+
+  @include media-tablet-lg {
+    margin-bottom: 50px;
+  }
 }
 
 .clients__item {
   padding: 0 1rem;
-  margin-bottom: 2.7rem;
   max-width: 100%;
   width: auto;
+
+  @include media-tablet-lg {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
 }
 
 .clients__link {

@@ -1,3 +1,7 @@
+.swiper-slide {
+  height: auto;
+}
+
 .swiper-container-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
@@ -21,7 +25,7 @@
     }
   }
 
-  @include media-tablet-sm {
+  @include media-tablet-lg {
     display: block;
   }
 }

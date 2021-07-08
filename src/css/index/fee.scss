@@ -1,21 +1,22 @@
 .fee {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
   padding-bottom: 8rem;
 }
 
 .fee__list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+
+  @include media-tablet-lg {
+    margin-bottom: 50px;
+  }
 }
 
 .fee__item {
   position: relative;
+}
 
-  width: 25%;
+.fee__link {
+  width: 100%;
 
   color: $color-primary-gamma;
 
@@ -53,6 +54,10 @@
   position: relative;
 
   object-fit: cover;
+
+  @include media-tablet-lg {
+    max-height: 30rem;
+  }
 }
 
 .fee__title-wrapper {

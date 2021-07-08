@@ -1,5 +1,11 @@
 .pluses {
   padding-bottom: 6.3rem;
+
+  @include media-smartphone-lg {
+    .decorator {
+      width: 120px;
+    }
+  }
 }
 
 .pluses__title {
@@ -19,11 +25,21 @@
   flex-wrap: wrap;
 
   padding-top: 3rem;
+
+  @include media-tablet-lg {
+    justify-content: space-between;
+
+    padding-top: 4rem;
+  }
 }
 
 .pluses__item {
   display: flex;
   width: 48%;
+
+  @include media-smartphone-lg {
+    width: 100%;
+  }
 }
 
 .pluses__icon {
@@ -33,8 +49,6 @@
   max-height: 24px;
 
   margin-right: 1.6rem;
-
-  // fill: $color-primary-alpha;
 }
 
 .pluses__txt {

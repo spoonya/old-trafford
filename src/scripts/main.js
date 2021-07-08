@@ -1,4 +1,5 @@
-import initSwiper from './sliders';
+// eslint-disable-next-line no-unused-vars
+import * as sliders from './sliders';
 
 import {
   validateFormContacts,
@@ -15,8 +16,6 @@ import {
 import controlModal from './modal';
 import smoothScroll from './smoothScroll';
 import antiSoska from './antiSoska';
-
-initSwiper();
 
 controlHeaderAdaptive();
 lockHeader();

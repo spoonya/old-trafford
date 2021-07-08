@@ -4,22 +4,20 @@
 
 .features__list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 
   padding-top: 5.5rem;
 
-  @include media-tablet-sm {
-    flex-wrap: nowrap;
+  @include media-tablet-lg {
+    margin-bottom: 50px;
 
-    margin-bottom: 30px;
+    padding-top: 4rem;
   }
 }
 
 .features__item {
   width: 31.5%;
 
-  margin-bottom: 3rem;
   padding: 4.7rem 3.5rem 2.6rem 3.5rem;
 
   border: 1px solid $color-tertiary-beta;
@@ -31,8 +29,6 @@
     flex-wrap: nowrap;
 
     padding: 4.7rem 1.5rem 2.6rem 1.5rem;
-
-    margin-bottom: 30px;
   }
 }
 

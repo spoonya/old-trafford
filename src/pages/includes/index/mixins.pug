@@ -6,7 +6,7 @@ mixin title(title)
   +decorator('decorator--small')
 
 mixin descripItem(arrTitle, icon, arrTxt, arrList)
-  li.descrip__item
+  li.descrip__item.swiper-slide
     .descrip__feat
       p= arrTitle[0]
       +icon('descrip__icon', icon)
@@ -34,12 +34,13 @@ mixin plusesItem(txt)
     p.pluses__txt= txt
 
 mixin feeItem(link, img, num, txt)
-  a.fee__item(href= `${link}.html`)
-    .fee__img-wrapper
-      img.fee__img(src=`images/index/fee/${img}`, alt="")
-    .fee__title-wrapper
-      span.fee__num= num
-      h3.fee__title= txt
+  li.fee__item.swiper-slide
+    a.fee__link(href= `${link}.html`)
+      .fee__img-wrapper
+        img.fee__img(src=`images/index/fee/${img}`, alt="")
+      .fee__title-wrapper
+        span.fee__num= num
+        h3.fee__title= txt
 
 mixin featuresItem(icon, title, txt)
   li.features__item.swiper-slide
@@ -48,12 +49,12 @@ mixin featuresItem(icon, title, txt)
     p.features__item-txt= txt
 
 mixin clientsItem(img, link)
-  li.clients__item
+  li.clients__item.swiper-slide
     a.clients__link(href= link)
       img.clients__img(src=`images/index/clients/${img}`, alt="")
 
 mixin workItem(icon, num, txt)
-  li.work__item
+  li.work__item.swiper-slide
     .work__img
       +icon('work__icon', icon)
       span.work__num= num
