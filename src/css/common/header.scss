@@ -273,6 +273,10 @@
 
   font-style: normal;
 
+  &.active {
+    display: flex;
+  }
+
   @include media-tablet-lg {
     flex-direction: column;
     align-items: unset;
@@ -282,6 +286,8 @@
     align-items: center;
 
     padding: 40px 0;
+
+    display: none;
   }
 
   .phones {
