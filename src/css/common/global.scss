@@ -163,7 +163,21 @@ body {
   justify-content: space-between;
   min-height: 100vh;
 
+  margin-top: 21.2rem;
+
   overflow-x: hidden;
+
+  @include media-tablet-lg {
+    margin-top: 215px;
+  }
+
+  @include media-tablet-sm {
+    margin-top: 76px;
+  }
+
+  @include media-smartphone-sm {
+    margin-top: 68px;
+  }
 }
 
 .overlay {

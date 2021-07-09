@@ -10,14 +10,17 @@ function moveHeaderInfoEl() {
 }
 
 function moveHeaderPhonesEl() {
-  const phonesContainer = document.createElement('ul');
-  phonesContainer.classList.add(CLASSES.phones);
-  phonesContainer.append(...DOM_ELEMENTS.headerMobileNums);
-
   if (isMediaBreakpoint()) {
+    const phones = DOM_ELEMENTS.headerLogoContent.querySelector('.phones');
+    if (phones) phones.remove();
+
+    const phonesContainer = document.createElement('ul');
+    phonesContainer.classList.add(CLASSES.phones);
+    phonesContainer.append(...DOM_ELEMENTS.headerMobileNums);
+
     DOM_ELEMENTS.headerLogoContent.append(phonesContainer);
   } else {
-    DOM_ELEMENTS.headerPhones.append(phonesContainer);
+    DOM_ELEMENTS.headerPhones.append(...DOM_ELEMENTS.headerMobileNums);
   }
 }
 

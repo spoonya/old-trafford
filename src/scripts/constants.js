@@ -2,6 +2,7 @@ const CLASSES = {
   active: 'active',
   error: 'error',
   errorEl: 'form__error',
+  fixed: 'fixed',
   formControlEl: 'form__control',
   modal: 'modal',
   phones: 'phones',
@@ -65,7 +66,8 @@ const DOM_ELEMENTS = {
   headerMobileNums: [...document.querySelectorAll('.header .phones li')].slice(
     -2
   ),
-  headerLogoContent: document.querySelector('.header__logo-content')
+  headerLogoContent: document.querySelector('.header__logo-content'),
+  page: document.querySelector('.page')
 };
 
 const DATA_ATTR = {

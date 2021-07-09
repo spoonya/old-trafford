@@ -45,6 +45,7 @@ function activateAnimation(onClose = false) {
 function toggleBurger() {
   DOM_ELEMENTS.burger.addEventListener('click', () => {
     activateAnimation();
+
     DOM_ELEMENTS.burger.classList.toggle(CLASSES.active);
     DOM_ELEMENTS.headerInfo.classList.add(CLASSES.active);
     DOM_ELEMENTS.headerTopWrapper.classList.toggle(CLASSES.active);

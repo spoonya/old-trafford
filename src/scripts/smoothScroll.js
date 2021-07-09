@@ -9,11 +9,9 @@ function smoothScroll() {
     if (this.hash !== '' && this.pathname === window.location.pathname) {
       $(DOM_ELEMENTS.html, DOM_ELEMENTS.body).animate(
         {
-          scrollTop:
-            $(href).offset().top -
-            (DOM_ELEMENTS.header.offsetHeight + stickyHeaderHeight)
+          scrollTop: $(href).offset().top - stickyHeaderHeight
         },
-        '300'
+        '200'
       );
 
       e.preventDefault();

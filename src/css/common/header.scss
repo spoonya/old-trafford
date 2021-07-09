@@ -1,7 +1,17 @@
 .header {
-  background-color: $color-primary-beta;
+  position: relative;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 8;
+
   display: flex;
   flex-direction: column;
+
+  background-color: $color-primary-beta;
 
   @include media-tablet-sm {
     flex-direction: column-reverse;
@@ -11,11 +21,10 @@
     }
   }
 
-  &.sticky {
+  &.fixed {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 8;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
       rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 
