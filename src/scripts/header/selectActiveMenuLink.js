@@ -1,7 +1,7 @@
 import { CLASSES, DOM_ELEMENTS, LOCATION } from '../constants';
-import { isIndexPage } from '../helpers';
 
 export default function selectActiveMenuLink() {
+  const indexPathName = '/index.html';
   const contactsPathName = '/contacts.html';
   const servicePathNames = [
     '/service-onetime.html',
@@ -14,6 +14,17 @@ export default function selectActiveMenuLink() {
     DOM_ELEMENTS.menuLinks.find((link) => link.textContent === textContent);
 
   const setActive = (linkEl) => linkEl.classList.add(CLASSES.active);
+
+  function isIndexPage() {
+    if (
+      LOCATION.curLocation === LOCATION.origin ||
+      LOCATION.curPathName === indexPathName
+    ) {
+      return true;
+    }
+
+    return false;
+  }
 
   const isServicePage = () => {
     if (servicePathNames.includes(LOCATION.curPathName)) {

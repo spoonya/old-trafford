@@ -78,8 +78,7 @@ const LOCATION = {
   curLocation: window.location.href,
   curPathName: window.location.pathname,
   origin: `${window.location.origin}/`,
-  hash: window.location,
-  indexPathName: '/index.html'
+  hash: window.location.hash
 };
 
 export {
