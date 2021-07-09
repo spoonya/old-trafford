@@ -4,13 +4,8 @@ header#header.header
   h1.header__title Олд Траффорд - Бухгалтерские услуги в Минске
   #header-top-wrapper.header__top-wrapper.container
     #header-top.header__top
-      nav.header__menu
-        ul
-          li: a(href='index.html') Главная
-          li: a(href='#about' data-scroll) О нас
-          li: a(href='#services' data-scroll) Услуги
-          li: a(href='cost.html') Стоимость
-          li: a(href='#contacts' data-scroll) Контакты
+      block menu
+        +menu
       a.header__mail(href="mailto:buhsale@mail.ru")
         +icon('header__icon icon', 'message')
         p buhsale@mail.ru

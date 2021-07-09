@@ -105,34 +105,14 @@
   margin-bottom: 2rem;
 }
 
+.descrip__details {
+  &[open] &-icon {
+    transform: rotate(90deg);
+  }
+}
+
 .descrip__summary {
-  display: none;
-  align-items: center;
-
-  width: fit-content;
-
-  margin: 0 auto 10px;
-
-  cursor: pointer;
-  list-style: none;
-
-  span {
-    color: $color-primary-alpha;
-    border-bottom: 1px dashed $color-primary-alpha;
-    text-align: center;
-    font-size: 14px;
-
-    margin-right: 7px;
-  }
-
-  @include media-tablet-lg {
-    display: flex;
-  }
-
-  &-icon {
-    width: 10px;
-    height: 10px;
-  }
+  @include details-summary();
 }
 
 .descrip__txt {

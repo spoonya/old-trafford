@@ -1,1 +1,2 @@
-export { default as controlDescripSpoiler } from './descrip';
+export { default as spoilerDescrip } from './descrip';
+export { default as spoilerCompany } from './company';

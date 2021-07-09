@@ -5,6 +5,11 @@ mixin title(title)
   h2.title= title
   +decorator('decorator--small')
 
+mixin summary(className)
+  summary(class= className)
+    span подробнее
+    +icon(`${className}-icon`, 'summary-arrow')
+
 mixin descripItem(arrTitle, icon, arrTxt, arrList)
   li.descrip__item.swiper-slide
     .descrip__feat
@@ -12,9 +17,7 @@ mixin descripItem(arrTitle, icon, arrTxt, arrList)
       +icon('descrip__icon', icon)
       p= arrTitle[1]
     details.descrip__details(open)
-      summary.descrip__summary
-        span подробнее
-        +icon('descrip__summary-icon', 'summary-arrow')
+      +summary('descrip__summary')
       .descrip__txt
         for text in arrTxt
           p= text

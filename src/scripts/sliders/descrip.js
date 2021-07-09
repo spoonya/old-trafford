@@ -1,4 +1,4 @@
-import { closeAllSpoilers } from '../spoilers/descrip';
+import { spoilerDescrip } from '../spoilers';
 
 const swiperDescrip = new Swiper('#swiper-descrip', {
   slidesPerColumnFill: 'row',
@@ -22,7 +22,7 @@ const swiperDescrip = new Swiper('#swiper-descrip', {
       }, 50);
     },
     slideChange() {
-      closeAllSpoilers();
+      spoilerDescrip.closeAllSpoilers();
     }
   },
 

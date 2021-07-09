@@ -1,3 +1,18 @@
+mixin menu(isIndexPage=false)
+  - var indexPageLinks = ['index.html', '#about', '#services', 'cost.html', '#contacts'];
+  - var outerPageLinks = ['index.html', 'index.html#about', 'index.html#services', 'cost.html', 'index.html#contacts'];
+  if isIndexPage
+    - var links = indexPageLinks
+  else
+    - var links = outerPageLinks
+  nav.header__menu
+    ul
+      li: a(href= links[0] data-scroll) Главная
+      li: a(href= links[1] data-scroll) О нас
+      li: a(href= links[2] data-scroll) Услуги
+      li: a(href= links[3] data-scroll) Стоимость
+      li: a(href= links[4] data-scroll) Контакты
+
 mixin icon(className, name)
   svg(class= className): use(xlink:href="images/sprite.svg#" + name)
 

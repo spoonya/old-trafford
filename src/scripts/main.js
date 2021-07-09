@@ -3,7 +3,7 @@ import * as sliders from './sliders';
 
 import { addToWindowEvtListener } from './helpers';
 
-import { controlDescripSpoiler } from './spoilers';
+import { spoilerDescrip, spoilerCompany } from './spoilers';
 
 import {
   validateFormContacts,
@@ -37,14 +37,13 @@ relocateElements();
 
 controlModal();
 
-controlDescripSpoiler();
-
 smoothScroll();
 
 addToWindowEvtListener('resize', [
   removeBurgerOnMedia,
   relocateElements,
-  controlDescripSpoiler
+  spoilerDescrip.controlSpoiler.bind(spoilerDescrip),
+  spoilerCompany.controlSpoiler.bind(spoilerCompany)
 ]);
 
 antiSoska();

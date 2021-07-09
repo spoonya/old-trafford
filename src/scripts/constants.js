@@ -43,11 +43,12 @@ const FORMS = {
 const DOM_ELEMENTS = {
   body: document.querySelector('body'),
   burger: document.querySelector('#burger'),
+  callbackBtnFixed: document.querySelector('#callback-fixed'),
   companyInfo: document.querySelector('.company__info'),
   companySection: document.querySelector('#about .container'),
   companyTitle: document.querySelector('.company__title'),
-  callbackBtnFixed: document.querySelector('#callback-fixed'),
   descripSection: document.querySelector('#details'),
+  detailsCompany: document.querySelectorAll('.company__details'),
   detailsDescrip: document.querySelectorAll('.descrip__details'),
   header: document.querySelector('#header'),
   headerBot: document.querySelector('#header-bot'),
