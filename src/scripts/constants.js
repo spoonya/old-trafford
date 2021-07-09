@@ -1,24 +1,24 @@
 const CLASSES = {
-  success: 'success',
-  error: 'error',
-  scrollHidden: 'scroll-hidden',
   active: 'active',
-  modal: 'modal',
+  error: 'error',
   errorEl: 'form__error',
   formControlEl: 'form__control',
-  phones: 'phones'
+  modal: 'modal',
+  phones: 'phones',
+  scrollHidden: 'scroll-hidden',
+  success: 'success'
 };
 
 const ERRORS = {
-  emptyName: 'Введите имя',
-  emptyPhone: 'Введите номер',
   emptyEmail: 'Введите E-mail',
   emptyMsg: 'Введите сообщение',
+  emptyName: 'Введите имя',
+  emptyPhone: 'Введите номер',
   invalidEmail: 'Некорректный E-mail',
   invalidPhone: 'Введите номер в формате +375',
-  unchecked: 'Поле должно быть отмечено',
   maxMessageLength: 'Не более 250 символов',
-  minMessageLength: 'Не менее 16 символов'
+  minMessageLength: 'Не менее 16 символов',
+  unchecked: 'Поле должно быть отмечено'
 };
 
 const FORM_ELEMENTS = {
@@ -41,35 +41,44 @@ const FORMS = {
 };
 
 const DOM_ELEMENTS = {
-  menuLinks: [...document.querySelectorAll('.header__menu a')],
-  header: document.querySelector('#header'),
-  introSection: document.querySelector('#intro'),
-  companySection: document.querySelector('#about .container'),
-  introSectionButtons: document.querySelector('.intro__buttons'),
-  introCallback: document.querySelector('#intro .callback'),
-  companyTitle: document.querySelector('.company__title'),
-  companyInfo: document.querySelector('.company__info'),
-  descripSection: document.querySelector('#details'),
-  overlay: document.querySelector('#overlay'),
   body: document.querySelector('body'),
-  html: document.querySelector('html'),
-  headerInfo: document.querySelector('#header-info'),
-  headerTopWrapper: document.querySelector('#header-top-wrapper'),
-  headerTop: document.querySelector('#header-top'),
-  headerBot: document.querySelector('#header-bot'),
   burger: document.querySelector('#burger'),
+  companyInfo: document.querySelector('.company__info'),
+  companySection: document.querySelector('#about .container'),
+  companyTitle: document.querySelector('.company__title'),
+  callbackBtnFixed: document.querySelector('#callback-fixed'),
+  descripSection: document.querySelector('#details'),
+  detailsDescrip: document.querySelectorAll('.descrip__details'),
+  header: document.querySelector('#header'),
+  headerBot: document.querySelector('#header-bot'),
+  headerInfo: document.querySelector('#header-info'),
   headerPhones: document.querySelector('.header .phones'),
+  headerTop: document.querySelector('#header-top'),
+  headerTopWrapper: document.querySelector('#header-top-wrapper'),
+  html: document.querySelector('html'),
+  introCallback: document.querySelector('#intro .callback'),
+  introSection: document.querySelector('#intro'),
+  introSectionButtons: document.querySelector('.intro__buttons'),
+  menuLinks: [...document.querySelectorAll('.header__menu a')],
+  overlay: document.querySelector('#overlay'),
   headerMobileNums: [...document.querySelectorAll('.header .phones li')].slice(
     -2
   ),
-  headerLogoContent: document.querySelector('.header__logo-content'),
-  callbackBtnFixed: document.querySelector('#callback-fixed')
+  headerLogoContent: document.querySelector('.header__logo-content')
 };
 
 const DATA_ATTR = {
   modal: '[data-modal-target]',
   modalClose: '[data-close-button]',
   scroll: '[data-scroll]'
+};
+
+const LOCATION = {
+  curLocation: window.location.href,
+  curPathName: window.location.pathname,
+  origin: `${window.location.origin}/`,
+  hash: window.location,
+  indexPathName: '/index.html'
 };
 
 export {
@@ -79,5 +88,6 @@ export {
   FORM_MODAL_ELEMENTS,
   FORMS,
   DOM_ELEMENTS,
-  DATA_ATTR
+  DATA_ATTR,
+  LOCATION
 };

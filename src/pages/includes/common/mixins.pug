@@ -1,21 +1,6 @@
 mixin icon(className, name)
   svg(class= className): use(xlink:href="images/sprite.svg#" + name)
 
-mixin menu(isIndexPage=false)
-  - var indexPageLinks = ['index.html', '#about', '#services', 'cost.html', '#contacts'];
-  - var outerPageLinks = ['index.html', 'index.html#about', 'index.html#services', 'cost.html', 'index.html#contacts'];
-  if isIndexPage
-    - var links = indexPageLinks
-  else
-    - var links = outerPageLinks
-  nav.header__menu
-    ul
-      li: a(href= links[0] data-scroll) Главная
-      li: a(href= links[1] data-scroll) О нас
-      li: a(href= links[2] data-scroll) Услуги
-      li: a(href= links[3] data-scroll) Стоимость
-      li: a(href= links[4] data-scroll) Контакты
-
 mixin location(isLocationIcon= true, isMetroIconLarge= false, txt= 'Минск, ул. Энгельса, дом 34, офис 305')
   .location
     a.location__address(href="https://yandex.ru/maps/?um=constructor%3A2a696978720ea53ebd9e73ad180c28869d75ec04b1c62260721b4917e3c98ebd&source=constructorLink" rel="noreferrer" target="_blank")
@@ -50,7 +35,7 @@ mixin callbackBtn(txt= 'Оставить заявку', modif= null)
   button.callback(data-modal-target="#modal" class= modif)= txt
 
 mixin callbackBtnFixed
-  button#callback-fixed.callback-fixed(data-modal-target="#modal")
+  button#callback-fixed.callback-fixed(data-modal-target="#modal" aria-label="Открыть форму обратной связи")
     +icon('callback-fixed__icon', 'dialog')
 
 mixin consult(title, subtitle)
@@ -147,7 +132,7 @@ mixin modalForm
               input#modal-form-agreement.form__checkbox(name="form-agreement" type="checkbox")
               span.form__checkbox-styled
               span.form__checkbox-txt Нажимая на кнопку “Отправить заявку”, вы соглашаетесь на обработку данных
-      button(data-close-button aria-label="Close Modal")#modal-close.modal__close
+      button(data-close-button aria-label="Закрыть форму обратной связи")#modal-close.modal__close
         +icon('modal__close-icon', 'close')
 
 mixin form(formID, placeholders, names, btnTxt)

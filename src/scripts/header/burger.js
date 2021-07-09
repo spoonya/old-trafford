@@ -1,5 +1,5 @@
 import { CLASSES, DOM_ELEMENTS } from '../constants';
-import isMediaBreakpoint from '../helpers/isMedia';
+import { isMediaBreakpoint } from '../helpers';
 
 const animationConfig = {
   duration: 150,
@@ -63,19 +63,17 @@ function removeBurger() {
   }, animationConfig.duration);
 }
 
+function removeBurgerOnMedia() {
+  if (!isMediaBreakpoint()) removeBurger();
+}
+
 function controlHeaderAdaptive() {
   toggleBurger();
 
   DOM_ELEMENTS.menuLinks.forEach((link) => {
     link.addEventListener('click', removeBurger);
   });
-
-  window.addEventListener('resize', () => {
-    setTimeout(() => {
-      if (!isMediaBreakpoint()) removeBurger();
-    }, 100);
-  });
 }
 
 export default controlHeaderAdaptive;
-export { isBurgerOpened };
+export { isBurgerOpened, removeBurgerOnMedia };

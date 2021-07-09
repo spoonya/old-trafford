@@ -1,3 +1,5 @@
+import { closeAllSpoilers } from '../spoilers/descrip';
+
 const swiperDescrip = new Swiper('#swiper-descrip', {
   slidesPerColumnFill: 'row',
 
@@ -18,6 +20,9 @@ const swiperDescrip = new Swiper('#swiper-descrip', {
       setTimeout(() => {
         swiperDescrip.update();
       }, 50);
+    },
+    slideChange() {
+      closeAllSpoilers();
     }
   },
 

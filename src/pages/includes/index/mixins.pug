@@ -11,13 +11,17 @@ mixin descripItem(arrTitle, icon, arrTxt, arrList)
       p= arrTitle[0]
       +icon('descrip__icon', icon)
       p= arrTitle[1]
-    .descrip__txt
-      for text in arrTxt
-        p= text
-      if arrList
-        ul
-          for text in arrList
-            li= text
+    details.descrip__details(open)
+      summary.descrip__summary
+        span подробнее
+        +icon('descrip__summary-icon', 'summary-arrow')
+      .descrip__txt
+        for text in arrTxt
+          p= text
+        if arrList
+          ul
+            for text in arrList
+              li= text
 
 mixin providerItem(txt)
   li.provider__item.swiper-slide

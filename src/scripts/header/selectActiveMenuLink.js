@@ -1,12 +1,7 @@
-import { DOM_ELEMENTS } from '../constants';
+import { CLASSES, DOM_ELEMENTS, LOCATION } from '../constants';
+import { isIndexPage } from '../helpers';
 
 export default function selectActiveMenuLink() {
-  const curLocation = window.location.href;
-  const curPathName = window.location.pathname;
-  const origin = `${window.location.origin}/`;
-  const { hash } = window.location;
-
-  const indexPathName = '/index.html';
   const contactsPathName = '/contacts.html';
   const servicePathNames = [
     '/service-onetime.html',
@@ -18,18 +13,10 @@ export default function selectActiveMenuLink() {
   const findLinkByContent = (textContent) =>
     DOM_ELEMENTS.menuLinks.find((link) => link.textContent === textContent);
 
-  const setActive = (linkEl) => linkEl.classList.add('active');
-
-  const isIndexPage = () => {
-    if (curLocation === origin || curPathName === indexPathName) {
-      return true;
-    }
-
-    return false;
-  };
+  const setActive = (linkEl) => linkEl.classList.add(CLASSES.active);
 
   const isServicePage = () => {
-    if (servicePathNames.includes(curPathName)) {
+    if (servicePathNames.includes(LOCATION.curPathName)) {
       return true;
     }
 
@@ -37,7 +24,7 @@ export default function selectActiveMenuLink() {
   };
 
   const isContactsPage = () => {
-    if (contactsPathName === curPathName) {
+    if (contactsPathName === LOCATION.curPathName) {
       return true;
     }
 
@@ -63,7 +50,10 @@ export default function selectActiveMenuLink() {
   }
 
   for (let i = 0; i < DOM_ELEMENTS.menuLinks.length; i++) {
-    if (!hash && DOM_ELEMENTS.menuLinks[i].href === curLocation) {
+    if (
+      !LOCATION.hash &&
+      DOM_ELEMENTS.menuLinks[i].href === LOCATION.curLocation
+    ) {
       setActive(DOM_ELEMENTS.menuLinks[i]);
 
       return;

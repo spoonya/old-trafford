@@ -1,6 +1,10 @@
 // eslint-disable-next-line no-unused-vars
 import * as sliders from './sliders';
 
+import { addToWindowEvtListener } from './helpers';
+
+import { controlDescripSpoiler } from './spoilers';
+
 import {
   validateFormContacts,
   validateFormModal,
@@ -12,6 +16,8 @@ import {
   lockHeader,
   controlHeaderAdaptive
 } from './header';
+
+import { removeBurgerOnMedia } from './header/burger';
 
 import relocateElements from './relocateElements';
 
@@ -31,6 +37,14 @@ relocateElements();
 
 controlModal();
 
+controlDescripSpoiler();
+
 smoothScroll();
+
+addToWindowEvtListener('resize', [
+  removeBurgerOnMedia,
+  relocateElements,
+  controlDescripSpoiler
+]);
 
 antiSoska();

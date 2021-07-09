@@ -1,5 +1,5 @@
 import { CLASSES, DOM_ELEMENTS } from './constants';
-import isMediaBreakpoint from './helpers/isMedia';
+import { isMediaBreakpoint } from './helpers';
 
 function moveHeaderInfoEl() {
   if (isMediaBreakpoint()) {
@@ -47,11 +47,5 @@ function relocateElements() {
   moveIntroCallback();
   moveCompanyTitle();
 }
-
-window.addEventListener('resize', () => {
-  setTimeout(() => {
-    relocateElements();
-  }, 100);
-});
 
 export default relocateElements;
