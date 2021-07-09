@@ -106,8 +106,12 @@
 }
 
 .descrip__details {
-  &[open] &-icon {
-    transform: rotate(90deg);
+  &[open] {
+    .descrip__summary {
+      &-icon {
+        transform: rotate(90deg);
+      }
+    }
   }
 }
 
