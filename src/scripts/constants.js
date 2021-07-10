@@ -1,5 +1,6 @@
 const CLASSES = {
   active: 'active',
+  elementFade: 'element-fade',
   error: 'error',
   errorEl: 'form__error',
   fixed: 'fixed',
@@ -7,6 +8,7 @@ const CLASSES = {
   modal: 'modal',
   phones: 'phones',
   scrollHidden: 'scroll-hidden',
+  show: 'show',
   success: 'success'
 };
 
@@ -67,7 +69,9 @@ const DOM_ELEMENTS = {
     -2
   ),
   headerLogoContent: document.querySelector('.header__logo-content'),
-  page: document.querySelector('.page')
+  page: document.querySelector('.page'),
+  work: document.querySelector('.work'),
+  workItems: document.querySelectorAll('.work__item')
 };
 
 const DATA_ATTR = {

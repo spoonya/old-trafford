@@ -255,21 +255,19 @@
   }
 }
 
-.header__logo {
+.header__logo-link {
   max-width: 132px;
 
   margin-right: 3.8rem;
 
   @include media-laptop {
-    margin-right: 2.5rem;
-
     max-width: 100px;
+    margin-right: 2.5rem;
   }
 
   @include media-tablet-sm {
-    margin-right: 1.5rem;
-
     max-width: 70px;
+    margin-right: 1.5rem;
   }
 
   @include media-smartphone-sm {
