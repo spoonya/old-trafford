@@ -5,8 +5,6 @@ import { isMobile } from './helpers';
 function controlCallbackFixed() {
   if (isMobile()) {
     DOM_ELEMENTS.callbackBtnFixed.classList.add(CLASSES.active);
-  } else {
-    DOM_ELEMENTS.callbackBtnFixed.classList.remove(CLASSES.active);
   }
 }
 

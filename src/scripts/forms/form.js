@@ -52,37 +52,49 @@ class Form {
   _checkUsername(username, usernameValue) {
     if (!usernameValue) {
       this._setError(username, ERRORS.emptyName);
-    } else {
-      this._setSuccess(username);
+
+      return false;
     }
+
+    this._setSuccess(username);
+
+    return true;
   }
 
   _checkUserPhone(userPhone, userPhoneValue) {
     if (!userPhoneValue) {
       this._setError(userPhone, ERRORS.emptyPhone);
 
-      return;
+      return false;
     }
 
     if (userPhoneValue && !this._validatePhone(userPhoneValue)) {
       this._setError(userPhone, ERRORS.invalidPhone);
-    } else {
-      this._setSuccess(userPhone);
+
+      return false;
     }
+
+    this._setSuccess(userPhone);
+
+    return true;
   }
 
   _checkUserEmail(userEmail, userEmailValue, isRequired = false) {
     if (isRequired && !userEmailValue) {
       this._setError(userEmail, ERRORS.emptyEmail);
 
-      return;
+      return false;
     }
 
     if (userEmailValue && !this._validateEmail(userEmailValue)) {
       this._setError(userEmail, ERRORS.invalidEmail);
-    } else {
-      this._setSuccess(userEmail);
+
+      return false;
     }
+
+    this._setSuccess(userEmail);
+
+    return true;
   }
 
   _checkUserMessage(userMessage, userMessageValue, isRequired = false) {
@@ -92,70 +104,86 @@ class Form {
     if (isRequired && !userMessageValue) {
       this._setError(userMessage, ERRORS.emptyMsg);
 
-      return;
+      return false;
     }
 
     if (userMessageValue.length && userMessageValue.length > maxMessageLength) {
       this._setError(userMessage, ERRORS.maxMessageLength);
 
-      return;
+      return false;
     }
 
     if (userMessageValue.length && userMessageValue.length < minMessageLength) {
       this._setError(userMessage, ERRORS.minMessageLength);
 
-      return;
+      return false;
     }
 
     this._setSuccess(userMessage);
+
+    return true;
   }
 
   _checkAgreement(checkbox) {
     if (!checkbox.checked) {
       this._setError(checkbox, ERRORS.unchecked);
-    } else {
-      this._setSuccess(checkbox);
+
+      return false;
     }
+
+    this._setSuccess(checkbox);
+
+    return true;
   }
 
   validate(config) {
     if (!this.form) return;
 
     this.form.addEventListener('submit', (e) => {
-      e.preventDefault();
+      const isValid = [];
 
       if (config.username.isCheck) {
-        this._checkUsername(
-          this.formElements.username,
-          this.formElements.username.value.trim()
+        isValid.push(
+          this._checkUsername(
+            this.formElements.username,
+            this.formElements.username.value.trim()
+          )
         );
       }
 
       if (config.userPhone.isCheck) {
-        this._checkUserPhone(
-          this.formElements.userPhone,
-          this.formElements.userPhone.value.trim()
+        isValid.push(
+          this._checkUserPhone(
+            this.formElements.userPhone,
+            this.formElements.userPhone.value.trim()
+          )
         );
       }
 
       if (config.userEmail.isCheck) {
-        this._checkUserEmail(
-          this.formElements.userEmail,
-          this.formElements.userEmail.value.trim(),
-          config.userEmail.isRequired
+        isValid.push(
+          this._checkUserEmail(
+            this.formElements.userEmail,
+            this.formElements.userEmail.value.trim(),
+            config.userEmail.isRequired
+          )
         );
       }
 
       if (config.userMessage.isCheck)
-        this._checkUserMessage(
-          this.formElements.userMsg,
-          this.formElements.userMsg.value.trim(),
-          config.userMessage.isRequired
+        isValid.push(
+          this._checkUserMessage(
+            this.formElements.userMsg,
+            this.formElements.userMsg.value.trim(),
+            config.userMessage.isRequired
+          )
         );
 
       if (config.userAgreement.isCheck) {
-        this._checkAgreement(this.formElements.userAgreement);
+        isValid.push(this._checkAgreement(this.formElements.userAgreement));
       }
+
+      if (isValid.includes(false)) e.preventDefault();
     });
   }
 }
