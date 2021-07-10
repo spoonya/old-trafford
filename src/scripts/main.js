@@ -25,6 +25,7 @@ import controlModal from './modal';
 import smoothScroll from './smoothScroll';
 import observeForFadeIn from './fadeIn';
 import antiSoska from './antiSoska';
+import initMap from './map';
 
 controlHeaderAdaptive();
 lockHeader();
@@ -41,6 +42,9 @@ controlModal();
 smoothScroll();
 
 observeForFadeIn();
+
+// eslint-disable-next-line no-undef
+ymaps.ready(initMap);
 
 addToWindowEvtListener('resize', [
   removeBurgerOnMedia,

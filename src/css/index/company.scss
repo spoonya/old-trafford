@@ -123,6 +123,8 @@
 
     content: '';
 
+    pointer-events: none;
+
     top: -145px;
     right: 50%;
     transform: translateX(50%);

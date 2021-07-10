@@ -8,16 +8,25 @@ html(lang="ru")
       meta(content="ie=edge" http-equiv="x-ua-compatible")
       meta(name='msapplication-TileColor' content='#da532c')
       meta(name='theme-color' content='#ffffff')
+
       link(rel='apple-touch-icon' sizes='180x180' href='favicon/apple-touch-icon.png')
       link(rel='icon' type='image/png' sizes='32x32' href='favicon/favicon-32x32.png')
       link(rel='icon' type='image/png' sizes='16x16' href='favicon/favicon-16x16.png')
       link(rel='manifest' href='favicon/site.webmanifest')
       link(rel='mask-icon' href='favicon/safari-pinned-tab.svg' color='#5bbad5')
-      block title
-        title ООО ОлдТраффорд
+
       link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
       link(rel="stylesheet" href="css/style.min.css")
+      link(rel="preload" href="fonts/Museo300.ttf" as="font" crossorigin="anonymous")
+      link(rel="preload" href="fonts/Museo500.ttf" as="font" crossorigin="anonymous")
+      link(rel="preload" href="fonts/Trajan400.ttf" as="font" crossorigin="anonymous")
+      link(rel="preload" href="fonts/Trajan600.ttf" as="font" crossorigin="anonymous")
+
       script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+      script(src="https://api-maps.yandex.ru/2.1/?apikey=1985392a-85b0-4ba4-9307-1b6d4c094ac8&lang=ru_RU")
+
+      block title
+        title ООО ОлдТраффорд
   body
     include ../includes/common/mixins
     include footer

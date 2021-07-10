@@ -64,6 +64,7 @@ const DOM_ELEMENTS = {
   introSection: document.querySelector('#intro'),
   introSectionButtons: document.querySelector('.intro__buttons'),
   menuLinks: [...document.querySelectorAll('.header__menu a')],
+  map: document.querySelector('#map'),
   overlay: document.querySelector('#overlay'),
   headerMobileNums: [...document.querySelectorAll('.header .phones li')].slice(
     -2

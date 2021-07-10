@@ -1,3 +1,7 @@
+.map * {
+  touch-action: auto;
+}
+
 .map {
   position: relative;
 
@@ -20,22 +24,6 @@
 
     &--main {
       min-height: 58rem;
-    }
-  }
-
-  @media only screen and (orientation: landscape) and (max-width: $media-lg) {
-    width: 85%;
-    margin: 0 auto;
-
-    &--main {
-      width: 100%;
-    }
-  }
-
-  @media only screen and (orientation: landscape) and (max-width: $media-md) {
-    &--main {
-      width: 85%;
-      margin: 0 auto;
     }
   }
 
