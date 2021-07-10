@@ -34,6 +34,18 @@
 
   line-height: 1.4;
   color: $color-primary-omega;
+
+  @include media-tablet-sm {
+    max-width: 60rem;
+  }
+
+  @include media-smartphone-lg {
+    max-width: 38rem;
+  }
+
+  @include media-smartphone-sm {
+    max-width: 28rem;
+  }
 }
 
 .cost__price {
@@ -45,15 +57,9 @@
 }
 
 .cost__decorator {
-  flex: 1;
-
-  position: relative;
-  bottom: 3px;
+  position: absolute;
 
   height: 2px;
-  min-width: 5rem;
-
-  margin-right: 2.7rem;
 
   background-color: $color-tertiary-beta;
 }
