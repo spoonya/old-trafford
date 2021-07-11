@@ -24,15 +24,15 @@ const swiperProvider = new Swiper('#swiper-provider', {
   breakpoints: {
     320: {
       slidesPerGroup: 1,
-      slidesPerColumn: 2,
+      slidesPerColumn: 4,
       slidesPerView: 1,
 
       allowTouchMove: true
     },
-    768: {
-      slidesPerGroup: 1,
-      slidesPerColumn: 4,
-      slidesPerView: 1,
+    480: {
+      slidesPerGroup: 2,
+      slidesPerColumn: 2,
+      slidesPerView: 2,
 
       allowTouchMove: true
     },

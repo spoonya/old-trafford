@@ -128,6 +128,10 @@ button {
   }
 }
 
+details summary::-webkit-details-marker {
+  display: none;
+}
+
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
