@@ -69,6 +69,8 @@
 
   &.active {
     display: block;
+
+    animation: fadeIn 0.15s linear;
   }
 
   @include media-tablet-sm {
@@ -385,12 +387,12 @@
   }
 }
 
-@keyframes dropDown {
+@keyframes fadeIn {
   0% {
-    transform: translateY(-30%);
+    opacity: 0;
   }
 
   100% {
-    transform: translateY(0);
+    opacity: 1;
   }
 }

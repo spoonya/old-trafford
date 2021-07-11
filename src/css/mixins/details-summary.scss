@@ -1,8 +1,6 @@
 @mixin details-summary {
   display: none;
-  align-items: center;
-
-  width: fit-content;
+  text-align: center;
 
   margin: 0 auto 10px;
 
@@ -18,11 +16,13 @@
   }
 
   @include media-tablet-lg {
-    display: flex;
+    display: block;
   }
 
   &-icon {
     width: 10px;
     height: 10px;
+
+    vertical-align: middle;
   }
 }
