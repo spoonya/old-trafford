@@ -217,65 +217,65 @@ body {
 .element-fade {
   opacity: 0;
 
-  transition: opacity 0.5s linear;
+  // &:nth-child(1) {
+  //   transition-delay: 0s;
+  // }
 
-  &:nth-child(1) {
-    transition-delay: 0s;
-  }
+  // &:nth-child(2) {
+  //   transition-delay: 0.5s;
+  // }
 
-  &:nth-child(2) {
-    transition-delay: 0.5s;
-  }
+  // &:nth-child(3) {
+  //   transition-delay: 1s;
+  // }
 
-  &:nth-child(3) {
-    transition-delay: 1s;
-  }
-
-  &:nth-child(4) {
-    transition-delay: 1.5s;
-  }
+  // &:nth-child(4) {
+  //   transition-delay: 1.5s;
+  // }
 
   &.show {
     opacity: 1;
+
+    transition: opacity 0.5s linear;
   }
 
-  @include media-tablet-lg {
-    transition: opacity 0.2s linear;
+  // @include media-tablet-lg {
+  //   transition: opacity 0.2s linear;
 
-    &:nth-child(1) {
-      transition-delay: 0.2s;
-    }
+  //   &:nth-child(1) {
+  //     transition-delay: 0.2s;
+  //   }
 
-    &:nth-child(2) {
-      transition-delay: 0.4s;
-    }
+  //   &:nth-child(2) {
+  //     transition-delay: 0.4s;
+  //   }
 
-    &:nth-child(3) {
-      transition-delay: 0.2s;
-    }
+  //   &:nth-child(3) {
+  //     transition-delay: 0.2s;
+  //   }
 
-    &:nth-child(4) {
-      transition-delay: 0.4s;
-    }
-  }
+  //   &:nth-child(4) {
+  //     transition-delay: 0.4s;
+  //   }
+  // }
 
-  @include media-smartphone-sm {
-    transition: opacity 0.1s linear;
+  // @include media-smartphone-sm {
+  //   transition: opacity 0.1s linear;
 
-    &:nth-child(1) {
-      transition-delay: 0s;
-    }
+  //   &:nth-child(1) {
+  //     transition-delay: 0s;
+  //   }
 
-    &:nth-child(2) {
-      transition-delay: 0s;
-    }
+  //   &:nth-child(2) {
+  //     transition-delay: 0s;
+  //   }
 
-    &:nth-child(3) {
-      transition-delay: 0s;
-    }
+  //   &:nth-child(3) {
+  //     transition-delay: 0s;
+  //   }
 
-    &:nth-child(4) {
-      transition-delay: 0s;
-    }
-  }
+  //   &:nth-child(4) {
+  //     transition-delay: 0s;
+  //   }
+  // }
 }

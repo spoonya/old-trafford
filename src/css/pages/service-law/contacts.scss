@@ -85,22 +85,18 @@
 
   transition: color 0.05s linear;
 
+  color: $color-secondary-gamma;
+
   &:not(:last-child) {
     margin-right: 4rem;
   }
 
   &:hover {
-    p {
-      color: $color-secondary-psi;
-    }
+    color: $color-secondary-psi;
   }
 
   p {
-    color: $color-secondary-gamma;
     font-size: 1.8rem;
-  }
-
-  @include media-tablet-lg {
   }
 }
 

@@ -47,15 +47,24 @@ const DOM_ELEMENTS = {
   body: document.querySelector('body'),
   burger: document.querySelector('#burger'),
   callbackBtnFixed: document.querySelector('#callback-fixed'),
+  clientItems: document.querySelectorAll('.clients__item'),
   companyInfo: document.querySelector('.company__info'),
   companySection: document.querySelector('#about .container'),
   companyTitle: document.querySelector('.company__title'),
+  descripItems: document.querySelectorAll('.descrip__item'),
   descripSection: document.querySelector('#details'),
   detailsCompany: document.querySelectorAll('.company__details'),
+  detailsContacts: document.querySelectorAll('.contacts__details'),
   detailsDescrip: document.querySelectorAll('.descrip__details'),
+  featuresItems: document.querySelectorAll('.features__item'),
+  feeItems: document.querySelectorAll('.fee__item'),
   header: document.querySelector('#header'),
   headerBot: document.querySelector('#header-bot'),
+  headerMobileNums: [...document.querySelectorAll('.header .phones li')].slice(
+    -2
+  ),
   headerInfo: document.querySelector('#header-info'),
+  headerLogoContent: document.querySelector('.header__logo-content'),
   headerPhones: document.querySelector('.header .phones'),
   headerTop: document.querySelector('#header-top'),
   headerTopWrapper: document.querySelector('#header-top-wrapper'),
@@ -63,14 +72,11 @@ const DOM_ELEMENTS = {
   introCallback: document.querySelector('#intro .callback'),
   introSection: document.querySelector('#intro'),
   introSectionButtons: document.querySelector('.intro__buttons'),
-  menuLinks: [...document.querySelectorAll('.header__menu a')],
   map: document.querySelector('#map'),
+  menuLinks: [...document.querySelectorAll('.header__menu a')],
   overlay: document.querySelector('#overlay'),
-  headerMobileNums: [...document.querySelectorAll('.header .phones li')].slice(
-    -2
-  ),
-  headerLogoContent: document.querySelector('.header__logo-content'),
   page: document.querySelector('.page'),
+  providerItems: document.querySelectorAll('.provider__item'),
   work: document.querySelector('.work'),
   workItems: document.querySelectorAll('.work__item')
 };

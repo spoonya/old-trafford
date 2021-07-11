@@ -1,3 +1,5 @@
+import { DOM_ELEMENTS } from '../constants';
+
 const swiperClients = new Swiper('#swiper-clients', {
   slidesPerColumnFill: 'row',
 
@@ -10,7 +12,8 @@ const swiperClients = new Swiper('#swiper-clients', {
   observeParents: true,
 
   pagination: {
-    el: '.swiper-pagination'
+    el: '.swiper-pagination',
+    clickable: true
   },
 
   on: {
@@ -37,8 +40,8 @@ const swiperClients = new Swiper('#swiper-clients', {
       allowTouchMove: true
     },
     992: {
-      slidesPerColumn: 3,
       slidesPerView: 4,
+      slidesPerColumn: DOM_ELEMENTS.clientItems.length,
 
       allowTouchMove: false
     }

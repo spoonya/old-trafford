@@ -3,7 +3,7 @@ import * as sliders from './sliders';
 
 import { addToWindowEvtListener } from './helpers';
 
-import { spoilerDescrip, spoilerCompany } from './spoilers';
+import { spoilerDescrip, spoilerCompany, spoilerContacts } from './spoilers';
 
 import {
   validateFormContacts,
@@ -54,8 +54,10 @@ addToWindowEvtListener('resize', [
   removeBurgerOnMedia,
   relocateElements,
   drawDecorator,
+  observeForFadeIn,
   spoilerDescrip.controlSpoiler.bind(spoilerDescrip),
-  spoilerCompany.controlSpoiler.bind(spoilerCompany)
+  spoilerCompany.controlSpoiler.bind(spoilerCompany),
+  spoilerContacts.controlSpoiler.bind(spoilerContacts)
 ]);
 
 antiSoska();

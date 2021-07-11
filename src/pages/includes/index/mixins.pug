@@ -64,7 +64,7 @@ mixin clientsItem(img, link, label)
       img.clients__img(src=`images/index/clients/${img}`, alt="")
 
 mixin workItem(icon, num, txt)
-  li.work__item.swiper-slide.element-fade
+  li.work__item.swiper-slide
     .work__img
       +icon('work__icon', icon)
       span.work__num= num

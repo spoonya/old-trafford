@@ -25,7 +25,7 @@
 
   max-width: 107.7rem;
 
-  padding: 1.5rem 0 2rem;
+  padding-top: 1.5rem;
 }
 
 .contacts__item {
@@ -56,4 +56,47 @@
   &:hover {
     color: $color-primary-alpha;
   }
+}
+
+.contacts__info {
+  padding-bottom: 3.3rem;
+
+  max-width: 111.8rem;
+}
+
+.contacts__info-item {
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+
+    @include media-tablet-lg {
+      margin-bottom: 2rem;
+    }
+  }
+
+  p {
+    line-height: 1.4;
+  }
+}
+
+.contacts__info-title {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.contacts__details {
+  text-align: left;
+}
+
+.contacts__details {
+  &[open] {
+    .contacts__summary {
+      &-icon {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+.contacts__summary {
+  @include details-summary;
 }

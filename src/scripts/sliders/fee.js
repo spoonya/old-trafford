@@ -1,3 +1,5 @@
+import { DOM_ELEMENTS } from '../constants';
+
 const swiperFee = new Swiper('#swiper-fee', {
   slidesPerColumnFill: 'row',
 
@@ -8,7 +10,8 @@ const swiperFee = new Swiper('#swiper-fee', {
   observeParents: true,
 
   pagination: {
-    el: '.swiper-pagination'
+    el: '.swiper-pagination',
+    clickable: true
   },
 
   on: {
@@ -35,7 +38,7 @@ const swiperFee = new Swiper('#swiper-fee', {
       allowTouchMove: true
     },
     992: {
-      slidesPerView: 4,
+      slidesPerView: DOM_ELEMENTS.feeItems.length,
       slidesPerColumn: 1,
 
       allowTouchMove: false

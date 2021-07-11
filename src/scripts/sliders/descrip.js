@@ -1,4 +1,5 @@
 import { spoilerDescrip } from '../spoilers';
+import { DOM_ELEMENTS } from '../constants';
 
 const swiperDescrip = new Swiper('#swiper-descrip', {
   slidesPerColumnFill: 'row',
@@ -12,7 +13,8 @@ const swiperDescrip = new Swiper('#swiper-descrip', {
   observeParents: true,
 
   pagination: {
-    el: '.swiper-pagination'
+    el: '.swiper-pagination',
+    clickable: true
   },
 
   on: {
@@ -35,9 +37,8 @@ const swiperDescrip = new Swiper('#swiper-descrip', {
       allowTouchMove: true
     },
     992: {
-      slidesPerGroup: 1,
       slidesPerView: 1,
-      slidesPerColumn: 3,
+      slidesPerColumn: DOM_ELEMENTS.descripItems.length,
 
       allowTouchMove: false
     }

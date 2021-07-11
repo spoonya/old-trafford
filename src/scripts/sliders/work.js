@@ -1,3 +1,5 @@
+import { DOM_ELEMENTS } from '../constants';
+
 const swiperWork = new Swiper('#swiper-work', {
   slidesPerColumnFill: 'row',
 
@@ -10,7 +12,8 @@ const swiperWork = new Swiper('#swiper-work', {
   observeParents: true,
 
   pagination: {
-    el: '.swiper-pagination'
+    el: '.swiper-pagination',
+    clickable: true
   },
 
   on: {
@@ -37,8 +40,8 @@ const swiperWork = new Swiper('#swiper-work', {
       allowTouchMove: true
     },
     992: {
-      slidesPerView: 4,
       slidesPerColumn: 1,
+      slidesPerView: DOM_ELEMENTS.workItems.length,
 
       allowTouchMove: false
     }
