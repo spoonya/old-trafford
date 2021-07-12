@@ -1,4 +1,4 @@
-import { DOM_ELEMENTS } from '../constants';
+import { DOM } from '../constants';
 
 const swiperWork = new Swiper('#swiper-work', {
   slidesPerColumnFill: 'row',
@@ -41,7 +41,7 @@ const swiperWork = new Swiper('#swiper-work', {
     },
     992: {
       slidesPerColumn: 1,
-      slidesPerView: DOM_ELEMENTS.workItems.length,
+      slidesPerView: DOM.workItems.length,
 
       allowTouchMove: false
     }

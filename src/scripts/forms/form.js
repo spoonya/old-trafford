@@ -1,7 +1,7 @@
 import parsePhoneNumber, { isValidPhoneNumber } from 'libphonenumber-js';
 import { ERRORS, CLASSES } from '../constants';
 
-class Form {
+class FormValidation {
   constructor(form, formElements) {
     this.form = form;
     this.formElements = formElements;
@@ -136,7 +136,7 @@ class Form {
     return true;
   }
 
-  validate(config) {
+  validateOnSubmit(config) {
     if (!this.form) return;
 
     this.form.addEventListener('submit', (e) => {
@@ -188,4 +188,4 @@ class Form {
   }
 }
 
-export default Form;
+export default FormValidation;

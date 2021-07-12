@@ -1,8 +1,8 @@
-import { CLASSES, DOM_ELEMENTS } from '../constants';
+import { CLASSES, DOM } from '../constants';
 import { isMediaBreakpoint } from '../helpers';
 
 function isBurgerOpened() {
-  if (!DOM_ELEMENTS.burger.classList.contains(CLASSES.active)) {
+  if (!DOM.burger.classList.contains(CLASSES.active)) {
     return false;
   }
 
@@ -10,19 +10,19 @@ function isBurgerOpened() {
 }
 
 function toggleBurger() {
-  DOM_ELEMENTS.burger.addEventListener('click', () => {
-    DOM_ELEMENTS.burger.classList.toggle(CLASSES.active);
-    DOM_ELEMENTS.headerInfo.classList.add(CLASSES.active);
-    DOM_ELEMENTS.headerTopWrapper.classList.toggle(CLASSES.active);
-    DOM_ELEMENTS.body.classList.toggle(CLASSES.scrollHidden);
+  DOM.burger.addEventListener('click', () => {
+    DOM.burger.classList.toggle(CLASSES.active);
+    DOM.headerInfo.classList.add(CLASSES.active);
+    DOM.headerTopWrapper.classList.toggle(CLASSES.active);
+    DOM.body.classList.toggle(CLASSES.scrollHidden);
   });
 }
 
 function removeBurger() {
-  DOM_ELEMENTS.burger.classList.remove(CLASSES.active);
-  DOM_ELEMENTS.headerInfo.classList.remove(CLASSES.active);
-  DOM_ELEMENTS.headerTopWrapper.classList.remove(CLASSES.active);
-  DOM_ELEMENTS.body.classList.remove(CLASSES.scrollHidden);
+  DOM.burger.classList.remove(CLASSES.active);
+  DOM.headerInfo.classList.remove(CLASSES.active);
+  DOM.headerTopWrapper.classList.remove(CLASSES.active);
+  DOM.body.classList.remove(CLASSES.scrollHidden);
 }
 
 function removeBurgerOnMedia() {
@@ -32,7 +32,7 @@ function removeBurgerOnMedia() {
 function controlHeaderAdaptive() {
   toggleBurger();
 
-  DOM_ELEMENTS.menuLinks.forEach((link) => {
+  DOM.menuLinks.forEach((link) => {
     link.addEventListener('click', removeBurger);
   });
 }

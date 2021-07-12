@@ -1,54 +1,75 @@
-import { CLASSES, DOM_ELEMENTS } from './constants';
+import { CLASSES, DOM } from './constants';
 import { isMediaBreakpoint } from './helpers';
 
 function moveHeaderInfoEl() {
   if (isMediaBreakpoint()) {
-    DOM_ELEMENTS.headerTop.append(DOM_ELEMENTS.headerInfo);
+    DOM.headerTop.append(DOM.headerInfo);
   } else {
-    DOM_ELEMENTS.headerBot.append(DOM_ELEMENTS.headerInfo);
+    DOM.headerBot.append(DOM.headerInfo);
   }
 }
 
-function moveHeaderPhonesEl() {
-  if (isMediaBreakpoint()) {
-    const phones = DOM_ELEMENTS.headerLogoContent.querySelector('.phones');
+function createWrapperForMobileNums() {
+  const phonesContainer = document.createElement('ul');
+  phonesContainer.classList.add(CLASSES.phones);
+
+  phonesContainer.append(...DOM.headerMobileNums);
+
+  return phonesContainer;
+}
+
+function movePhonesOnScroll(isPageYOffset = false) {
+  if (!isMediaBreakpoint()) {
+    const phones = DOM.headerTopRight.querySelector(`.${CLASSES.phones}`);
     if (phones) phones.remove();
 
-    const phonesContainer = document.createElement('ul');
-    phonesContainer.classList.add(CLASSES.phones);
-    phonesContainer.append(...DOM_ELEMENTS.headerMobileNums);
+    createWrapperForMobileNums();
 
-    DOM_ELEMENTS.headerLogoContent.append(phonesContainer);
+    DOM.headerTopRight.prepend(createWrapperForMobileNums(phones));
+  }
+
+  if (!isPageYOffset) {
+    DOM.headerPhones.append(...DOM.headerMobileNums);
+  }
+}
+
+function movePhonesOnResize() {
+  if (isMediaBreakpoint()) {
+    const phones = DOM.headerLogoContent.querySelector(`.${CLASSES.phones}`);
+    if (phones) phones.remove();
+
+    DOM.headerLogoContent.append(createWrapperForMobileNums());
   } else {
-    DOM_ELEMENTS.headerPhones.append(...DOM_ELEMENTS.headerMobileNums);
+    DOM.headerPhones.append(...DOM.headerMobileNums);
   }
 }
 
 function moveIntroCallback() {
-  if (!DOM_ELEMENTS.introCallback) return;
+  if (!DOM.introCallback) return;
 
   if (isMediaBreakpoint()) {
-    DOM_ELEMENTS.descripSection.prepend(DOM_ELEMENTS.introCallback);
+    DOM.descripSection.prepend(DOM.introCallback);
   } else {
-    DOM_ELEMENTS.introSectionButtons.append(DOM_ELEMENTS.introCallback);
+    DOM.introSectionButtons.append(DOM.introCallback);
   }
 }
 
 function moveCompanyTitle() {
-  if (!DOM_ELEMENTS.companyTitle) return;
+  if (!DOM.companyTitle) return;
 
   if (isMediaBreakpoint(991.98)) {
-    DOM_ELEMENTS.companySection.prepend(DOM_ELEMENTS.companyTitle);
+    DOM.companySection.prepend(DOM.companyTitle);
   } else {
-    DOM_ELEMENTS.companyInfo.prepend(DOM_ELEMENTS.companyTitle);
+    DOM.companyInfo.prepend(DOM.companyTitle);
   }
 }
 
 function relocateElements() {
   moveHeaderInfoEl();
-  moveHeaderPhonesEl();
+  movePhonesOnResize();
   moveIntroCallback();
   moveCompanyTitle();
 }
 
 export default relocateElements;
+export { movePhonesOnScroll };

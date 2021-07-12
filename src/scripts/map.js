@@ -1,9 +1,9 @@
 import { isMobile, isMediaBreakpoint } from './helpers';
-import { DOM_ELEMENTS } from './constants';
+import { DOM } from './constants';
 
 function setCenter(address) {
   const centerMobile = address;
-  const centerDesktop = [53.897626, 27.5635];
+  const centerDesktop = [53.897626, 27.555];
 
   if (isMediaBreakpoint()) {
     return centerMobile;
@@ -13,7 +13,7 @@ function setCenter(address) {
 }
 
 function initMap() {
-  if (!DOM_ELEMENTS.map) return;
+  if (!DOM.map) return;
 
   const address = [53.897626, 27.565856];
 
@@ -21,7 +21,7 @@ function initMap() {
     'map',
     {
       center: setCenter(address),
-      zoom: 17
+      zoom: 15
     },
     { yandexMapDisablePoiInteractivity: true }
   );

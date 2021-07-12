@@ -1,4 +1,4 @@
-import { DOM_ELEMENTS } from '../constants';
+import { DOM } from '../constants';
 
 const swiperClients = new Swiper('#swiper-clients', {
   slidesPerColumnFill: 'row',
@@ -41,7 +41,7 @@ const swiperClients = new Swiper('#swiper-clients', {
     },
     992: {
       slidesPerView: 4,
-      slidesPerColumn: DOM_ELEMENTS.clientItems.length,
+      slidesPerColumn: DOM.clientItems.length,
 
       allowTouchMove: false
     }

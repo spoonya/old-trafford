@@ -43,7 +43,7 @@ const FORMS = {
   formModal: document.querySelector('#modal-form')
 };
 
-const DOM_ELEMENTS = {
+const DOM = {
   body: document.querySelector('body'),
   burger: document.querySelector('#burger'),
   callbackBtnFixed: document.querySelector('#callback-fixed'),
@@ -64,6 +64,7 @@ const DOM_ELEMENTS = {
     -2
   ),
   headerInfo: document.querySelector('#header-info'),
+  headerTopRight: document.querySelector('#header-top-right'),
   headerLogoContent: document.querySelector('.header__logo-content'),
   headerPhones: document.querySelector('.header .phones'),
   headerTop: document.querySelector('#header-top'),
@@ -100,7 +101,7 @@ export {
   FORM_ELEMENTS,
   FORM_MODAL_ELEMENTS,
   FORMS,
-  DOM_ELEMENTS,
+  DOM,
   DATA_ATTR,
   LOCATION
 };

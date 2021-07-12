@@ -1,4 +1,4 @@
-import { DOM_ELEMENTS } from '../constants';
+import { DOM } from '../constants';
 
 const swiperProvider = new Swiper('#swiper-provider', {
   slidesPerColumnFill: 'row',

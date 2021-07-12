@@ -1,4 +1,4 @@
-import { CLASSES, DOM_ELEMENTS, LOCATION } from '../constants';
+import { CLASSES, DOM, LOCATION } from '../constants';
 
 export default function selectActiveMenuLink() {
   const indexPathName = '/index.html';
@@ -11,7 +11,7 @@ export default function selectActiveMenuLink() {
   ];
 
   const findLinkByContent = (textContent) =>
-    DOM_ELEMENTS.menuLinks.find((link) => link.textContent === textContent);
+    DOM.menuLinks.find((link) => link.textContent === textContent);
 
   const setActive = (linkEl) => linkEl.classList.add(CLASSES.active);
 
@@ -60,12 +60,9 @@ export default function selectActiveMenuLink() {
     return;
   }
 
-  for (let i = 0; i < DOM_ELEMENTS.menuLinks.length; i++) {
-    if (
-      !LOCATION.hash &&
-      DOM_ELEMENTS.menuLinks[i].href === LOCATION.curLocation
-    ) {
-      setActive(DOM_ELEMENTS.menuLinks[i]);
+  for (let i = 0; i < DOM.menuLinks.length; i++) {
+    if (!LOCATION.hash && DOM.menuLinks[i].href === LOCATION.curLocation) {
+      setActive(DOM.menuLinks[i]);
 
       return;
     }

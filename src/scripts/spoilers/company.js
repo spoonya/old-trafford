@@ -1,7 +1,7 @@
 import Spoiler from './spoiler';
-import { DOM_ELEMENTS } from '../constants';
+import { DOM } from '../constants';
 
-const spoilerCompany = new Spoiler(DOM_ELEMENTS.detailsCompany);
+const spoilerCompany = new Spoiler(DOM.detailsCompany);
 
 spoilerCompany.init();
 

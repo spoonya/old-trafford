@@ -1,17 +1,18 @@
-import { DOM_ELEMENTS, CLASSES } from '../constants';
+import { DOM, CLASSES } from '../constants';
+import { movePhonesOnScroll } from '../relocateElements';
 
 function getHeaderHeight() {
-  return DOM_ELEMENTS.header.offsetHeight;
+  return DOM.header.offsetHeight;
 }
 
 function getIntroHeight() {
-  return DOM_ELEMENTS.introSection.offsetHeight;
+  return DOM.introSection.offsetHeight;
 }
 
 function calcOffset() {
   let offset;
 
-  if (DOM_ELEMENTS.introSection) {
+  if (DOM.introSection) {
     offset = getIntroHeight() + getHeaderHeight();
   } else {
     offset = getHeaderHeight();
@@ -22,16 +23,15 @@ function calcOffset() {
 
 function lockHeader() {
   let offset = calcOffset();
+  movePhonesOnScroll(window.pageYOffset > offset);
 
   window.addEventListener('resize', () => {
     offset = calcOffset();
   });
 
   window.addEventListener('scroll', () => {
-    DOM_ELEMENTS.header.classList.toggle(
-      CLASSES.fixed,
-      window.pageYOffset > offset
-    );
+    DOM.header.classList.toggle(CLASSES.fixed, window.pageYOffset > offset);
+    movePhonesOnScroll(window.pageYOffset > offset);
   });
 }
 

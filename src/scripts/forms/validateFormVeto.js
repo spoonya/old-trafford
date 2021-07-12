@@ -4,7 +4,7 @@ import Form from './form';
 function validateFormVeto() {
   const form = new Form(FORMS.formVeto, FORM_ELEMENTS);
 
-  form.validate({
+  form.validateOnSubmit({
     username: { isCheck: true },
     userPhone: { isCheck: true },
     userEmail: { isCheck: true, isRequired: false },

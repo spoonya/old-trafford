@@ -1,5 +1,5 @@
 import $ from '../local_modules/jquery/dist/jquery.min';
-import { DOM_ELEMENTS, DATA_ATTR } from './constants';
+import { DOM, DATA_ATTR } from './constants';
 
 function smoothScroll() {
   $(DATA_ATTR.scroll).on('click', function (e) {
@@ -7,7 +7,7 @@ function smoothScroll() {
     const stickyHeaderHeight = 70;
 
     if (this.hash !== '' && this.pathname === window.location.pathname) {
-      $(DOM_ELEMENTS.html, DOM_ELEMENTS.body).animate(
+      $(DOM.html, DOM.body).animate(
         {
           scrollTop: $(href).offset().top - stickyHeaderHeight
         },

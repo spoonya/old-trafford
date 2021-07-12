@@ -1,10 +1,10 @@
 import { FORMS, FORM_ELEMENTS } from '../constants';
-import Form from './form';
+import FormValidation from './form';
 
 function validateFormContacts() {
-  const form = new Form(FORMS.formContacts, FORM_ELEMENTS);
+  const form = new FormValidation(FORMS.formContacts, FORM_ELEMENTS);
 
-  form.validate({
+  form.validateOnSubmit({
     username: { isCheck: true },
     userPhone: { isCheck: true },
     userEmail: { isCheck: true, isRequired: true },

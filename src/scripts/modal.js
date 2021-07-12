@@ -1,30 +1,30 @@
-import { CLASSES, DOM_ELEMENTS, DATA_ATTR } from './constants';
+import { CLASSES, DOM, DATA_ATTR } from './constants';
 import { isBurgerOpened } from './header/burger';
 import { isMobile } from './helpers';
 
 function controlCallbackFixed() {
   if (isMobile()) {
-    DOM_ELEMENTS.callbackBtnFixed.classList.add(CLASSES.active);
+    DOM.callbackBtnFixed.classList.add(CLASSES.active);
   }
 }
 
 function openModal(modal) {
   if (!modal) return;
 
-  DOM_ELEMENTS.body.classList.add(CLASSES.scrollHidden);
+  DOM.body.classList.add(CLASSES.scrollHidden);
   modal.classList.add(CLASSES.active);
-  DOM_ELEMENTS.overlay.classList.add(CLASSES.active);
+  DOM.overlay.classList.add(CLASSES.active);
 }
 
 function closeModal(modal) {
   if (!modal) return;
 
   if (!isBurgerOpened()) {
-    DOM_ELEMENTS.body.classList.remove(CLASSES.scrollHidden);
+    DOM.body.classList.remove(CLASSES.scrollHidden);
   }
 
   modal.classList.remove(CLASSES.active);
-  DOM_ELEMENTS.overlay.classList.remove(CLASSES.active);
+  DOM.overlay.classList.remove(CLASSES.active);
 }
 
 function controlModal() {
@@ -40,7 +40,7 @@ function controlModal() {
     });
   });
 
-  DOM_ELEMENTS.overlay.addEventListener('click', () => {
+  DOM.overlay.addEventListener('click', () => {
     const modals = document.querySelectorAll(
       `.${CLASSES.modal}.${CLASSES.active}`
     );

@@ -4,7 +4,7 @@ import Form from './form';
 function validateFormModal() {
   const form = new Form(FORMS.formModal, FORM_MODAL_ELEMENTS);
 
-  form.validate({
+  form.validateOnSubmit({
     username: { isCheck: true },
     userPhone: { isCheck: true },
     userEmail: { isCheck: false },
