@@ -1,8 +1,10 @@
+import { CLASSES } from '../constants';
 import { isMediaBreakpoint } from '../helpers';
 
 class Spoiler {
-  constructor(spoilers) {
+  constructor(spoilers, custom = null) {
     this.spoilers = spoilers;
+    this.custom = custom;
   }
 
   _isSpoilerOpen(spoiler) {
@@ -17,6 +19,59 @@ class Spoiler {
     } else {
       label.textContent = 'подробнее';
     }
+  }
+
+  closeAll() {
+    if (!this.spoilers) return;
+
+    this.spoilers.forEach((spoiler) => {
+      if (spoiler.open) spoiler.open = false;
+    });
+
+    this._controlSpoilerLabel();
+  }
+
+  _onToggle(e) {
+    if (e.target.open) {
+      document.querySelectorAll('details[open]').forEach((el) => {
+        if (el === e.target) {
+          e.target.querySelector('summary span').textContent = 'скрыть';
+
+          return;
+        }
+
+        el.open = false;
+        el.querySelector('summary span').textContent = 'подробнее';
+      });
+    }
+  }
+
+  _closeAllExceptLast() {
+    this.spoilers.forEach((spoiler) =>
+      spoiler.addEventListener('toggle', this._onToggle)
+    );
+  }
+
+  _addClickEvtCustom() {
+    this.custom.forEach((obj) => {
+      const spoilerBtn = obj.spoiler.querySelector('summary');
+
+      spoilerBtn.addEventListener('click', () => {
+        if (!this._isSpoilerOpen(obj.spoiler)) {
+          document
+            .querySelectorAll(`.${obj.spoilerContent.className}`)
+            .forEach((item) => item.classList.remove(CLASSES.active));
+          obj.spoilerContent.classList.add(CLASSES.active);
+
+          obj.spoilerContent.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        } else {
+          obj.spoilerContent.classList.remove(CLASSES.active);
+        }
+      });
+    });
   }
 
   _addClickEvt() {
@@ -42,16 +97,6 @@ class Spoiler {
     });
   }
 
-  closeAllSpoilers() {
-    if (!this.spoilers) return;
-
-    this.spoilers.forEach((spoiler) => {
-      if (spoiler.open) spoiler.open = false;
-    });
-
-    this._controlSpoilerLabel();
-  }
-
   controlSpoiler() {
     if (!this.spoilers) return;
 
@@ -71,6 +116,9 @@ class Spoiler {
   init() {
     this._addClickEvt();
     this.controlSpoiler();
+    this._closeAllExceptLast();
+
+    if (this.custom) this._addClickEvtCustom();
   }
 }
 

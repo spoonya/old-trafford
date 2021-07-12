@@ -23,12 +23,10 @@ function movePhonesOnScroll(isPageYOffset = false) {
     const phones = DOM.headerTopRight.querySelector(`.${CLASSES.phones}`);
     if (phones) phones.remove();
 
-    createWrapperForMobileNums();
-
-    DOM.headerTopRight.prepend(createWrapperForMobileNums(phones));
+    DOM.headerTopRight.prepend(createWrapperForMobileNums());
   }
 
-  if (!isPageYOffset) {
+  if (!isPageYOffset && !isMediaBreakpoint()) {
     DOM.headerPhones.append(...DOM.headerMobileNums);
   }
 }
@@ -39,7 +37,7 @@ function movePhonesOnResize() {
     if (phones) phones.remove();
 
     DOM.headerLogoContent.append(createWrapperForMobileNums());
-  } else {
+  } else if (!DOM.header.classList.contains(CLASSES.fixed)) {
     DOM.headerPhones.append(...DOM.headerMobileNums);
   }
 }

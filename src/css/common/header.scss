@@ -111,6 +111,8 @@
 .header__menu {
   @include media-tablet-sm {
     border-bottom: 1px solid $color-tertiary-beta;
+
+    width: 100%;
   }
 
   ul {

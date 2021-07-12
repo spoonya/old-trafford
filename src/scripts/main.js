@@ -3,7 +3,12 @@ import * as sliders from './sliders';
 
 import { addToWindowEvtListener } from './helpers';
 
-import { spoilerDescrip, spoilerCompany, spoilerContacts } from './spoilers';
+import {
+  spoilerDescrip,
+  spoilerCompany,
+  spoilerContacts,
+  spoilerOnetime
+} from './spoilers';
 
 import {
   validateFormContacts,

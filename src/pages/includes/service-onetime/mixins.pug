@@ -1,11 +1,14 @@
-mixin onetimeFacesList(arrItems)
+mixin onetimeFacesList(arrItems, id)
   ul.onetime__faces
     for item in arrItems
       li
         +icon('onetime__faces-icon', item.icon)
         .onetime__faces-content
-          p= item.txt
-          a(href= item.link data-scroll) узнать подробнее
+          .onetime__faces-top
+            h3.onetime__faces-title= item.txt
+            a.onetime__faces-link(href= item.link data-scroll) узнать подробнее
+          details.onetime__details(id= item.id open)
+            +summary('onetime__summary')
 
 mixin onetimeCallback(title, txt)
   .onetime__callback

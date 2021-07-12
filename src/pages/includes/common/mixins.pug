@@ -53,8 +53,8 @@ mixin callbackBtnFixed
   button#callback-fixed.callback-fixed(data-modal-target="#modal" aria-label="Открыть форму обратной связи")
     +icon('callback-fixed__icon', 'dialog')
 
-mixin consult(title, subtitle)
-  .container
+mixin consult(title, subtitle, modif= null)
+  .container(class= modif)
     section.consult
       img.consult__img(src="images/common/phone.png", alt="")
       .consult__info

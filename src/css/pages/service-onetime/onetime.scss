@@ -4,4 +4,20 @@
   @include media-tablet-lg {
     padding-bottom: 1rem;
   }
+
+  #service-onetime-individual {
+    .consult {
+      margin-top: 3.9rem;
+    }
+  }
+}
+
+.onetime__block {
+  @include media-tablet-lg {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
 }

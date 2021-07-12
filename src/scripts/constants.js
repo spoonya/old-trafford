@@ -5,6 +5,7 @@ const CLASSES = {
   errorEl: 'form__error',
   fixed: 'fixed',
   formControlEl: 'form__control',
+  inactvie: 'inactive',
   modal: 'modal',
   phones: 'phones',
   scrollHidden: 'scroll-hidden',
@@ -56,6 +57,9 @@ const DOM = {
   detailsCompany: document.querySelectorAll('.company__details'),
   detailsContacts: document.querySelectorAll('.contacts__details'),
   detailsDescrip: document.querySelectorAll('.descrip__details'),
+  detailsOnetime: document.querySelectorAll('.onetime__details'),
+  detailsOnetimeIndivid: document.querySelector('#onetime-details-individ'),
+  detailsOnetimeLegal: document.querySelector('#onetime-details-legal'),
   featuresItems: document.querySelectorAll('.features__item'),
   feeItems: document.querySelectorAll('.fee__item'),
   header: document.querySelector('#header'),
@@ -78,6 +82,8 @@ const DOM = {
   overlay: document.querySelector('#overlay'),
   page: document.querySelector('.page'),
   providerItems: document.querySelectorAll('.provider__item'),
+  serviceOnetimeLegal: document.querySelector('#service-onetime-legal'),
+  serviceOnetimeIndivid: document.querySelector('#service-onetime-individ'),
   work: document.querySelector('.work'),
   workItems: document.querySelectorAll('.work__item')
 };

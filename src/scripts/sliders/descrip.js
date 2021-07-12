@@ -24,7 +24,7 @@ const swiperDescrip = new Swiper('#swiper-descrip', {
       }, 50);
     },
     slideChange() {
-      spoilerDescrip.closeAllSpoilers();
+      spoilerDescrip.closeAll();
     }
   },
 
