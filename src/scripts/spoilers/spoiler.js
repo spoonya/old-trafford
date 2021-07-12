@@ -2,9 +2,10 @@ import { CLASSES } from '../constants';
 import { isMediaBreakpoint } from '../helpers';
 
 class Spoiler {
-  constructor(spoilers, custom = null) {
+  constructor(spoilers, custom = null, isOnlyOneOpen = false) {
     this.spoilers = spoilers;
     this.custom = custom;
+    this.isOnlyOneOpen = isOnlyOneOpen;
   }
 
   _isSpoilerOpen(spoiler) {
@@ -22,8 +23,6 @@ class Spoiler {
   }
 
   closeAll() {
-    if (!this.spoilers) return;
-
     this.spoilers.forEach((spoiler) => {
       if (spoiler.open) spoiler.open = false;
     });
@@ -75,8 +74,6 @@ class Spoiler {
   }
 
   _addClickEvt() {
-    if (!this.spoilers) return;
-
     this.spoilers.forEach((spoiler) => {
       const summary = spoiler.querySelector('summary');
       const label = spoiler.querySelector('span');
@@ -88,8 +85,6 @@ class Spoiler {
   }
 
   _controlSpoilerLabel() {
-    if (!this.spoilers) return;
-
     this.spoilers.forEach((spoiler) => {
       const label = spoiler.querySelector('span');
 
@@ -98,8 +93,6 @@ class Spoiler {
   }
 
   controlSpoiler() {
-    if (!this.spoilers) return;
-
     if (isMediaBreakpoint(991.98)) {
       this.spoilers.forEach((spoiler) => {
         spoiler.open = false;
@@ -114,10 +107,12 @@ class Spoiler {
   }
 
   init() {
+    if (!this.spoilers.length) return;
+
     this._addClickEvt();
     this.controlSpoiler();
-    this._closeAllExceptLast();
 
+    if (this.isOnlyOneOpen) this._closeAllExceptLast();
     if (this.custom) this._addClickEvtCustom();
   }
 }
