@@ -1,9 +1,6 @@
 import smoothscroll from 'smoothscroll-polyfill';
 
-// eslint-disable-next-line no-unused-vars
-import * as sliders from './sliders';
-
-import { addToWindowEvtListener } from './helpers';
+import { addResizeEvtListener } from './helpers';
 
 import { spoilerDescrip, spoilerCompany, spoilerContacts } from './spoilers';
 
@@ -54,7 +51,7 @@ drawDecorator();
 // eslint-disable-next-line no-undef
 ymaps.ready(initMap);
 
-addToWindowEvtListener('resize', [
+addResizeEvtListener([
   removeBurgerOnMedia,
   relocateElements,
   drawDecorator,

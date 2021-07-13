@@ -1,9 +1,9 @@
-function addToWindowEvtListener(evt, funcArray) {
-  window.addEventListener(evt, () => {
+function addResizeEvtListener(funcArray) {
+  window.addEventListener('resize', () => {
     setTimeout(() => {
       funcArray.forEach((func) => func());
     }, 100);
   });
 }
 
-export default addToWindowEvtListener;
+export default addResizeEvtListener;

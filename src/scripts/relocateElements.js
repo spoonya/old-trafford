@@ -4,9 +4,11 @@ import { isMediaBreakpoint } from './helpers';
 function moveHeaderInfoEl() {
   if (isMediaBreakpoint()) {
     DOM.headerTop.append(DOM.headerInfo);
-  } else {
-    DOM.headerBot.append(DOM.headerInfo);
+
+    return;
   }
+
+  DOM.headerBot.append(DOM.headerInfo);
 }
 
 function createWrapperForMobileNums() {
@@ -19,14 +21,24 @@ function createWrapperForMobileNums() {
 }
 
 function movePhonesOnScroll(isPageYOffset = false) {
-  if (!isMediaBreakpoint()) {
+  if (!isMediaBreakpoint() && isPageYOffset) {
     const phones = DOM.headerTopRight.querySelector(`.${CLASSES.phones}`);
-    if (phones) phones.remove();
 
-    DOM.headerTopRight.prepend(createWrapperForMobileNums());
+    if (phones && phones.contains(...DOM.headerMobileNums)) return;
+
+    if (phones) {
+      phones.prepend(...DOM.headerMobileNums);
+    } else {
+      DOM.headerTopRight.prepend(createWrapperForMobileNums());
+    }
+
+    return;
   }
 
-  if (!isPageYOffset && !isMediaBreakpoint()) {
+  if (
+    !isMediaBreakpoint() &&
+    !DOM.headerPhones.contains(...DOM.headerMobileNums)
+  ) {
     DOM.headerPhones.append(...DOM.headerMobileNums);
   }
 }
@@ -37,7 +49,11 @@ function movePhonesOnResize() {
     if (phones) phones.remove();
 
     DOM.headerLogoContent.append(createWrapperForMobileNums());
-  } else if (!DOM.header.classList.contains(CLASSES.fixed)) {
+
+    return;
+  }
+
+  if (!DOM.header.classList.contains(CLASSES.fixed)) {
     DOM.headerPhones.append(...DOM.headerMobileNums);
   }
 }
@@ -48,7 +64,11 @@ function moveIntroCallback() {
   if (isMediaBreakpoint()) {
     DOM.descripSection.prepend(DOM.introCallback);
     DOM.introCallback.classList.add(CLASSES.active);
-  } else {
+
+    return;
+  }
+
+  if (!DOM.introSectionButtons.contains(DOM.introCallback)) {
     DOM.introSectionButtons.append(DOM.introCallback);
   }
 }
@@ -58,7 +78,11 @@ function moveCompanyTitle() {
 
   if (isMediaBreakpoint(991.98)) {
     DOM.companySection.prepend(DOM.companyTitle);
-  } else {
+
+    return;
+  }
+
+  if (!DOM.companyInfo.contains(DOM.companyTitle)) {
     DOM.companyInfo.prepend(DOM.companyTitle);
   }
 }
