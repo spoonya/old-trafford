@@ -24,6 +24,14 @@
 
   text-align: center;
 
+  &:nth-child(3) {
+    margin-top: 0 !important;
+  }
+
+  @include media-tablet-lg {
+    margin-top: 0 !important;
+  }
+
   @include media-tablet-sm {
     flex-wrap: nowrap;
 

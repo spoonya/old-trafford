@@ -45,6 +45,10 @@
   border-radius: 20px;
 
   @include media-tablet-lg {
+    margin-top: 0 !important;
+  }
+
+  @include media-tablet-lg {
     flex-direction: column;
     justify-content: unset;
   }
