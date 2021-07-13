@@ -2,7 +2,7 @@ import { CLASSES } from './constants';
 import { isMobile, isMediaBreakpoint } from './helpers';
 import { swiperProvider, swiperWork } from './sliders';
 
-IntersectionObserver.prototype.POLL_INTERVAL = 100;
+require('intersection-observer');
 
 function onEntry(entry) {
   entry.forEach((change) => {
@@ -32,6 +32,7 @@ function increaseDelay(delay) {
 
 function setObserver(elements) {
   let delay = 0;
+  observer.POLL_INTERVAL = 100;
 
   elements.forEach((el) => {
     el.classList.add(CLASSES.elementFade);

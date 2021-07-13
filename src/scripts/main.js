@@ -3,8 +3,6 @@ import smoothscroll from 'smoothscroll-polyfill';
 // eslint-disable-next-line no-unused-vars
 import * as sliders from './sliders';
 
-// kick off the polyfill!
-
 import { addToWindowEvtListener } from './helpers';
 
 import { spoilerDescrip, spoilerCompany, spoilerContacts } from './spoilers';
@@ -32,8 +30,6 @@ import antiSoska from './antiSoska';
 import initMap from './map';
 
 import drawDecorator from './costDecorator';
-
-require('intersection-observer');
 
 smoothscroll.polyfill();
 
