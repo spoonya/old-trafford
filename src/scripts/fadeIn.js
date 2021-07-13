@@ -2,6 +2,8 @@ import { CLASSES } from './constants';
 import { isMobile, isMediaBreakpoint } from './helpers';
 import { swiperProvider, swiperWork } from './sliders';
 
+IntersectionObserver.prototype.POLL_INTERVAL = 100;
+
 function onEntry(entry) {
   entry.forEach((change) => {
     if (change.isIntersecting) {

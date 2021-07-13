@@ -33,6 +33,8 @@ import initMap from './map';
 
 import drawDecorator from './costDecorator';
 
+require('intersection-observer');
+
 smoothscroll.polyfill();
 
 controlHeaderAdaptive();
