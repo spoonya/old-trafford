@@ -64,7 +64,8 @@
   "dependencies": {
     "jquery": "^3.5.0",
     "libphonenumber-js": "^1.9.20",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "smoothscroll-polyfill": "^0.4.4"
   },
   "editorconfig-cli": [
     "*.json",

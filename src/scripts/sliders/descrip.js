@@ -37,6 +37,7 @@ const swiperDescrip = new Swiper('#swiper-descrip', {
       allowTouchMove: true
     },
     992: {
+      slidesPerGroup: 1,
       slidesPerView: 1,
       slidesPerColumn: DOM.descripItems.length,
 

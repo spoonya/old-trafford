@@ -35,6 +35,10 @@
   line-height: 1.4;
   color: $color-primary-omega;
 
+  @include media-tablet-lg {
+    max-width: 70rem;
+  }
+
   @include media-tablet-sm {
     max-width: 60rem;
   }
