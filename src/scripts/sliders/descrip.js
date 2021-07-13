@@ -12,11 +12,6 @@ const swiperDescrip = new Swiper('#swiper-descrip', {
   observer: true,
   observeParents: true,
 
-  autoplay: {
-    delay: 5000,
-    pauseOnMouseEnter: true
-  },
-
   pagination: {
     el: '.swiper-pagination',
     clickable: true
