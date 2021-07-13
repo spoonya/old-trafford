@@ -72,9 +72,17 @@ class Spoiler {
             .forEach((item) => item.classList.remove(CLASSES.active));
           obj.spoilerContent.classList.add(CLASSES.active);
 
+          if (DOM.onetimeCallback) {
+            DOM.onetimeCallback.classList.add(CLASSES.inactvie);
+          }
+
           this._scrollIntoView(obj.spoilerContent);
         } else {
           obj.spoilerContent.classList.remove(CLASSES.active);
+
+          if (DOM.onetimeCallback) {
+            DOM.onetimeCallback.classList.remove(CLASSES.inactvie);
+          }
         }
       });
     });

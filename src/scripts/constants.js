@@ -80,6 +80,7 @@ const DOM = {
   map: document.querySelector('#map'),
   menuLinks: [...document.querySelectorAll('.header__menu a')],
   overlay: document.querySelector('#overlay'),
+  onetimeCallback: document.querySelector('#onetime-callback'),
   page: document.querySelector('.page'),
   providerItems: document.querySelectorAll('.provider__item'),
   serviceOnetimeLegal: document.querySelector('#service-onetime-legal'),

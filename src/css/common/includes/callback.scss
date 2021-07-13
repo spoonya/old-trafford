@@ -32,8 +32,8 @@
   right: 10px;
   bottom: 10px;
 
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
 
   background-color: lighten($color-quaternary-beta, 1.5);
 
@@ -45,13 +45,6 @@
 
   &:hover {
     border-color: $color-primary-alpha;
-  }
-
-  &__icon {
-    width: 20px;
-    height: 20px;
-
-    vertical-align: middle;
   }
 
   &.active {

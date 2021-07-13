@@ -7,8 +7,10 @@
 
   @include media-tablet-lg {
     padding: 1rem 0 3.5rem;
+  }
 
-    // order: 3;
+  &.inactive {
+    display: none;
   }
 }
 

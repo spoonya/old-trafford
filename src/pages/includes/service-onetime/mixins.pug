@@ -10,8 +10,8 @@ mixin onetimeFacesList(arrItems, id)
           details.onetime__details(id= item.id)
             +summary('onetime__summary')
 
-mixin onetimeCallback(title, txt)
-  .onetime__callback
+mixin onetimeCallback(title, txt, id= null)
+  .onetime__callback(id= id)
     h3.onetime__callback-title= title
     p.onetime__callback-txt= txt
     +callbackBtn
