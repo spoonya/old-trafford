@@ -23,12 +23,13 @@ class Spoiler {
   }
 
   _scrollIntoView(el) {
-    el.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
+    const elPos = el.getBoundingClientRect().top;
+    const offsetPosition = elPos - DOM.header.clientHeight;
 
-    window.scrollBy(0, -DOM.header.offsetHeight);
+    window.scrollBy({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
   }
 
   closeAll() {
