@@ -1,4 +1,4 @@
-import { CLASSES } from '../constants';
+import { CLASSES, DOM } from '../constants';
 import { isMediaBreakpoint } from '../helpers';
 
 class Spoiler {
@@ -20,6 +20,15 @@ class Spoiler {
     } else {
       label.textContent = 'подробнее';
     }
+  }
+
+  _scrollIntoView(el) {
+    el.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+
+    window.scrollBy(0, -DOM.header.offsetHeight);
   }
 
   closeAll() {
@@ -62,10 +71,7 @@ class Spoiler {
             .forEach((item) => item.classList.remove(CLASSES.active));
           obj.spoilerContent.classList.add(CLASSES.active);
 
-          obj.spoilerContent.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
+          this._scrollIntoView(obj.spoilerContent);
         } else {
           obj.spoilerContent.classList.remove(CLASSES.active);
         }

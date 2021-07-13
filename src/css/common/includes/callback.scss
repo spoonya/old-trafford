@@ -15,6 +15,10 @@
     &:hover {
       color: $color-primary-beta;
     }
+
+    @include media-tablet-sm {
+      display: none;
+    }
   }
 }
 

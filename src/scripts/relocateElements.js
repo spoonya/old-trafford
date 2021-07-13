@@ -47,6 +47,7 @@ function moveIntroCallback() {
 
   if (isMediaBreakpoint()) {
     DOM.descripSection.prepend(DOM.introCallback);
+    DOM.introCallback.classList.add(CLASSES.active);
   } else {
     DOM.introSectionButtons.append(DOM.introCallback);
   }

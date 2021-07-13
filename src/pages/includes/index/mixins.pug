@@ -43,9 +43,11 @@ mixin plusesItem(txt)
       </svg>
     p.pluses__txt= txt
 
-mixin feeItem(link, img, num, txt)
+mixin feeItem(link, img, num, txt, disclaimer= null)
   li.fee__item.swiper-slide
     a.fee__link(href= `${link}.html`)
+      if disclaimer
+        p.fee__disclaimer= disclaimer
       .fee__img-wrapper
         img.fee__img(src=`images/index/fee/${img}`, alt="")
       .fee__title-wrapper

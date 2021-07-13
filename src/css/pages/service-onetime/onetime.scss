@@ -12,6 +12,11 @@
   }
 }
 
+.onetime__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .onetime__block {
   @include media-tablet-lg {
     display: none;
