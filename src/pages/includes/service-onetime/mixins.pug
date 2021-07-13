@@ -7,7 +7,7 @@ mixin onetimeFacesList(arrItems, id)
           .onetime__faces-top
             h3.onetime__faces-title= item.txt
             a.onetime__faces-link(href= item.link data-scroll) узнать подробнее
-          details.onetime__details(id= item.id open)
+          details.onetime__details(id= item.id)
             +summary('onetime__summary')
 
 mixin onetimeCallback(title, txt)

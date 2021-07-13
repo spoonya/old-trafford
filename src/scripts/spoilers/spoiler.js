@@ -110,8 +110,7 @@ class Spoiler {
     if (!this.spoilers.length) return;
 
     this._addClickEvt();
-    this.controlSpoiler();
-
+    if (!this.isOnlyOneOpen) this.controlSpoiler();
     if (this.isOnlyOneOpen) this._closeAllExceptLast();
     if (this.custom) this._addClickEvtCustom();
   }
