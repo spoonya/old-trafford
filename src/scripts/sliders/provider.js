@@ -1,5 +1,3 @@
-import { DOM } from '../constants';
-
 const swiperProvider = new Swiper('#swiper-provider', {
   slidesPerColumnFill: 'row',
 

@@ -6,6 +6,7 @@ class Spoiler {
     this.spoilers = spoilers;
     this.custom = custom;
     this.isOnlyOneOpen = isOnlyOneOpen;
+    this.isOnMedia = false;
   }
 
   _isSpoilerOpen(spoiler) {
@@ -108,11 +109,17 @@ class Spoiler {
   }
 
   controlSpoiler() {
+    if (isMediaBreakpoint(991.98) && this.isOnMedia) return;
+
     if (isMediaBreakpoint(991.98)) {
+      this.isOnMedia = true;
+
       this.spoilers.forEach((spoiler) => {
         spoiler.open = false;
       });
     } else {
+      this.isOnMedia = false;
+
       this.spoilers.forEach((spoiler) => {
         spoiler.open = true;
       });
