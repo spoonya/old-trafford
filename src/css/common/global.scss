@@ -227,3 +227,13 @@ body {
     transition: opacity 0.5s linear;
   }
 }
+
+.lozad {
+  opacity: 0;
+
+  transition: opacity 0.1s linear;
+
+  &--loaded {
+    opacity: 1;
+  }
+}

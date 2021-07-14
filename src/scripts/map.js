@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import { isMobile, isMediaBreakpoint } from './helpers';
 import { DOM } from './constants';
 
@@ -51,4 +52,27 @@ function initMap() {
   map.controls.remove('geolocationControl');
 }
 
-export default initMap;
+let map_loaded = false;
+
+function loadMapLazy() {
+  if (!map_loaded) {
+    map_loaded = true;
+
+    ymaps.ready(initMap);
+  }
+}
+
+const optionsMap = {
+  once: true,
+  passive: true,
+  capture: true
+};
+
+function addEventsForLazyMap() {
+  DOM.map.addEventListener('click', loadMapLazy, optionsMap);
+  DOM.map.addEventListener('mouseover', loadMapLazy, optionsMap);
+  DOM.map.addEventListener('touchstart', loadMapLazy, optionsMap);
+  DOM.map.addEventListener('touchmove', loadMapLazy, optionsMap);
+}
+
+export default addEventsForLazyMap;

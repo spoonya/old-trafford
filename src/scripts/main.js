@@ -26,7 +26,7 @@ import controlModal from './modal';
 import smoothScroll from './smoothScroll';
 import observeForFadeIn from './fadeIn';
 import antiSoska from './antiSoska';
-import initMap from './map';
+import addEventsForLazyMap from './map';
 
 import drawDecorator from './costDecorator';
 
@@ -52,8 +52,7 @@ observeForFadeIn();
 
 drawDecorator();
 
-// eslint-disable-next-line no-undef
-ymaps.ready(initMap);
+addEventsForLazyMap();
 
 addResizeEvtListener([
   removeBurgerOnMedia,
