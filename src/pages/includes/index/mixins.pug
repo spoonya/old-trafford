@@ -49,7 +49,7 @@ mixin feeItem(link, img, num, txt, disclaimer= null)
       if disclaimer
         p.fee__disclaimer= disclaimer
       .fee__img-wrapper
-        img.fee__img(src=`images/index/fee/${img}`, alt="")
+        img.fee__img.lozad(data-src=`images/index/fee/${img}` width="300" height="300" data-placeholder-background="#f1f1f1" alt="")
       .fee__title-wrapper
         span.fee__num= num
         h3.fee__title= txt
@@ -63,7 +63,7 @@ mixin featuresItem(icon, title, txt)
 mixin clientsItem(img, link, label)
   li.clients__item.swiper-slide
     a.clients__link(href= link aria-label= label)
-      img.clients__img(src=`images/index/clients/${img}`, alt="")
+      img.clients__img.lozad(data-src=`images/index/clients/${img}` alt="")
 
 mixin workItem(icon, num, txt)
   li.work__item.swiper-slide

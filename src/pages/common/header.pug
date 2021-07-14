@@ -15,7 +15,7 @@ header#header.header
     #header-bot.header__bottom.container
       .header__logo-wrapper
         .header__logo-content
-          a.header__logo-link(href="index.html"): img.header__logo(src="images/index/header/logo.svg", alt="Олд Траффорд")
+          a.header__logo-link(href="index.html"): img.header__logo.lozad(data-src="images/index/header/logo.svg", alt="Олд Траффорд" width="100" height="80")
           h2.header__subtitle Бухгалтерское обслуживание бизнеса и физических лиц
         button#burger.burger(aria-label="Бургер-меню")
           span
@@ -25,4 +25,4 @@ header#header.header
           +phones
         +callbackBtn('Обратный звонок')
       a(href="fanzone.html" aria-label="Клуб поддержки Manchester United").header__club
-        img.header__club-img(src="images/index/header/club.png", alt="Minsk Reds Supporters Club")
+        img.header__club-img.lozad(data-src="images/index/header/club.png", alt="Minsk Reds Supporters Club")

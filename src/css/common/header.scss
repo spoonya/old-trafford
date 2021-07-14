@@ -16,9 +16,15 @@
   @include media-tablet-sm {
     flex-direction: column-reverse;
 
+    height: 76px;
+
     .decorator {
       display: none;
     }
+  }
+
+  @include media-smartphone-sm {
+    height: 68px;
   }
 
   &.fixed {

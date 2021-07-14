@@ -1,5 +1,7 @@
 import smoothscroll from 'smoothscroll-polyfill';
 
+import lazyLoadObserver from './lazyload';
+
 import { addResizeEvtListener } from './helpers';
 
 import { spoilerDescrip, spoilerCompany, spoilerContacts } from './spoilers';
@@ -29,6 +31,8 @@ import initMap from './map';
 import drawDecorator from './costDecorator';
 
 smoothscroll.polyfill();
+
+lazyLoadObserver.observe();
 
 controlHeaderAdaptive();
 lockHeader();
