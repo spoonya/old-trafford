@@ -69,6 +69,8 @@ const optionsMap = {
 };
 
 function addEventsForLazyMap() {
+  if (!DOM.map) return;
+
   DOM.map.addEventListener('click', loadMapLazy, optionsMap);
   DOM.map.addEventListener('mouseover', loadMapLazy, optionsMap);
   DOM.map.addEventListener('touchstart', loadMapLazy, optionsMap);

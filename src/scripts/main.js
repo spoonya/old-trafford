@@ -4,7 +4,7 @@ import lazyLoadObserver from './lazyload';
 
 import { addResizeEvtListener } from './helpers';
 
-import { spoilerDescrip, spoilerCompany, spoilerContacts } from './spoilers';
+import { spoilerDescrip, spoilerCompany } from './spoilers';
 
 import {
   validateFormContacts,
@@ -60,8 +60,7 @@ addResizeEvtListener([
   drawDecorator,
   observeForFadeIn,
   spoilerDescrip.controlSpoiler.bind(spoilerDescrip),
-  spoilerCompany.controlSpoiler.bind(spoilerCompany),
-  spoilerContacts.controlSpoiler.bind(spoilerContacts)
+  spoilerCompany.controlSpoiler.bind(spoilerCompany)
 ]);
 
 antiSoska();

@@ -1,10 +1,12 @@
 import parsePhoneNumber, { isValidPhoneNumber } from 'libphonenumber-js';
 import { ERRORS, CLASSES } from '../constants';
+import { closeModal } from '../modal';
 
 class FormValidation {
-  constructor(form, formElements) {
+  constructor(form, formElements, isModal = false) {
     this.form = form;
     this.formElements = formElements;
+    this.isModal = isModal;
   }
 
   _validateEmail(email) {
@@ -183,7 +185,15 @@ class FormValidation {
         isValid.push(this._checkAgreement(this.formElements.userAgreement));
       }
 
-      if (isValid.includes(false)) e.preventDefault();
+      if (isValid.includes(false)) {
+        e.preventDefault();
+
+        return;
+      }
+
+      if (this.isModal) {
+        closeModal(e.target.closest(`.${CLASSES.modal}`));
+      }
     });
   }
 }
