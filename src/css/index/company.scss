@@ -53,10 +53,18 @@
       margin-bottom: 1rem;
 
       font-size: 2.2rem;
+
+      @include media-tablet-lg {
+        font-size: 16px;
+      }
     }
 
     p:last-child {
       font-size: 1.6rem;
+
+      @include media-tablet-lg {
+        font-size: 14px;
+      }
     }
   }
 }
@@ -73,6 +81,14 @@
 
   @include media-tablet-lg {
     max-width: unset;
+
+    text-align: center;
+  }
+
+  @include media-tablet-sm {
+    font-size: 2rem;
+
+    margin-bottom: 1rem;
 
     text-align: center;
   }
@@ -153,6 +169,10 @@
   p {
     &:not(:last-child) {
       margin-bottom: 2.1rem;
+    }
+
+    @include media-tablet-lg {
+      font-size: 14px;
     }
   }
 }
