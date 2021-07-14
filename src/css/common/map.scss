@@ -5,7 +5,7 @@
 .map {
   position: relative;
 
-  min-height: 55rem;
+  min-height: 70rem;
 
   background-color: $color-tertiary-beta;
 
@@ -73,7 +73,7 @@
   }
 
   @include media-tablet-sm {
-    top: 70%;
+    top: 80%;
     left: 50%;
 
     transform: translateX(-50%);

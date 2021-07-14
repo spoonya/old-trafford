@@ -1,0 +1,9 @@
+.swal2-html-container {
+  font: 20px $font-primary !important;
+}
+
+.swal2-styled.swal2-confirm {
+  font: 16px $font-primary !important;
+  background-color: $color-primary-alpha !important;
+  padding: 10px 30px;
+}

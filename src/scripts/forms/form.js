@@ -1,4 +1,5 @@
 import parsePhoneNumber, { isValidPhoneNumber } from 'libphonenumber-js';
+import Swal from 'sweetalert2';
 import { ERRORS, CLASSES } from '../constants';
 import { closeModal } from '../modal';
 
@@ -12,6 +13,7 @@ class FormValidation {
   _validateEmail(email) {
     const regex =
       /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
+
     return regex.test(String(email).toLowerCase());
   }
 
@@ -138,6 +140,29 @@ class FormValidation {
     return true;
   }
 
+  _showAlert() {
+    Swal.fire({
+      text: 'Ваша заявка успешно отправлена',
+      icon: 'success',
+      confirmButtonText: 'ок'
+    });
+  }
+
+  _clearInputs() {
+    Object.values(this.formElements).forEach((input) => {
+      input.value = '';
+
+      if (input.type === 'checkbox') {
+        input.checked = false;
+      }
+
+      this._selectFormControl(input).classList.remove(
+        CLASSES.success,
+        CLASSES.error
+      );
+    });
+  }
+
   validateOnSubmit(config) {
     if (!this.form) return;
 
@@ -190,6 +215,9 @@ class FormValidation {
 
         return;
       }
+
+      this._showAlert();
+      this._clearInputs();
 
       if (this.isModal) {
         closeModal(e.target.closest(`.${CLASSES.modal}`));

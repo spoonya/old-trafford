@@ -4,7 +4,7 @@ import { DOM } from './constants';
 
 function setCenter(address) {
   const centerMobile = address;
-  const centerDesktop = [53.897626, 27.555];
+  const centerDesktop = [53.8978, 27.56];
 
   if (isMediaBreakpoint()) {
     return centerMobile;
@@ -22,7 +22,7 @@ function initMap() {
     'map',
     {
       center: setCenter(address),
-      zoom: 15
+      zoom: 16
     },
     { yandexMapDisablePoiInteractivity: true }
   );
