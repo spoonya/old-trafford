@@ -63,7 +63,7 @@ mixin featuresItem(icon, title, txt)
 mixin clientsItem(img, link, label)
   li.clients__item.swiper-slide
     a.clients__link(href= link aria-label= label)
-      img.clients__img.lozad(data-src=`images/index/clients/${img}` alt="")
+    img.clients__img.lozad(data-src=`images/index/clients/${img}` width="200" height="80" alt="")
 
 mixin workItem(icon, num, txt)
   li.work__item.swiper-slide
