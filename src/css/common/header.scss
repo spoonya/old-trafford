@@ -16,15 +16,9 @@
   @include media-tablet-sm {
     flex-direction: column-reverse;
 
-    height: 76px;
-
     .decorator {
       display: none;
     }
-  }
-
-  @include media-smartphone-sm {
-    height: 68px;
   }
 
   &.fixed {
@@ -121,6 +115,14 @@
     width: 100%;
   }
 
+  &-link-media {
+    display: none;
+
+    @include media-tablet-sm {
+      display: inline-block;
+    }
+  }
+
   ul {
     display: flex;
 
@@ -203,7 +205,13 @@
   @include media-tablet-sm {
     padding: 1rem 0;
 
+    height: 76px;
+
     border-bottom: 1px solid $color-quaternary-beta;
+  }
+
+  @include media-smartphone-sm {
+    height: 68px;
   }
 
   .callback {

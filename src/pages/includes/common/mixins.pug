@@ -1,6 +1,6 @@
 mixin menu(isIndexPage=false)
-  - var indexPageLinks = ['index.html', '#about', '#services', 'cost.html', '#contacts'];
-  - var outerPageLinks = ['index.html', 'index.html#about', 'index.html#services', 'cost.html', 'index.html#contacts'];
+  - var indexPageLinks = ['index.html', '#about', '#services', 'cost.html', '#contacts', 'fanzone.html'];
+  - var outerPageLinks = ['index.html', 'index.html#about', 'index.html#services', 'cost.html', 'index.html#contacts', 'fanzone.html'];
   if isIndexPage
     - var links = indexPageLinks
   else
@@ -12,6 +12,7 @@ mixin menu(isIndexPage=false)
       li: a(href= links[2] data-scroll) Услуги
       li: a(href= links[3]) Стоимость
       li: a(href= links[4] data-scroll) Контакты
+      li.header__menu-link-media: a(href= links[5]) MU Fanzone
 
 mixin icon(className, name)
   svg(class= className): use(xlink:href="images/sprite.svg#" + name)
