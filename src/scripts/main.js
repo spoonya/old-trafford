@@ -25,7 +25,6 @@ import relocateElements from './relocateElements';
 import controlModal from './modal';
 import smoothScroll from './smoothScroll';
 import observeForFadeIn from './fadeIn';
-import antiSoska from './antiSoska';
 import addEventsForLazyMap from './map';
 
 import drawDecorator from './costDecorator';
@@ -62,5 +61,3 @@ addResizeEvtListener([
   spoilerDescrip.controlSpoiler.bind(spoilerDescrip),
   spoilerCompany.controlSpoiler.bind(spoilerCompany)
 ]);
-
-antiSoska();
