@@ -48,6 +48,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @include media-tablet-sm {
+    background-position-x: 80%;
+  }
 }
 
 .map__info {
