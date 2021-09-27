@@ -3,18 +3,15 @@ const imagemin = require('gulp-imagemin');
 
 module.exports = function imageMinify() {
   return gulp
-    .src('src/images/**/*.{gif,png,jpg,jpeg,svg,webp}')
+    .src('src/images/**/*.{gif,png,jpg,jpeg,webp,svg}')
     .pipe(
       imagemin([
         imagemin.gifsicle({ interlaced: true }),
         imagemin.mozjpeg({
-          quality: 90,
+          quality: 75,
           progressive: true
         }),
-        imagemin.optipng({ optimizationLevel: 2 }),
-        imagemin.svgo({
-          plugins: [{ removeViewBox: true }, { cleanupIDs: false }]
-        })
+        imagemin.optipng({ optimizationLevel: 4 })
       ])
     )
     .pipe(gulp.dest('build/images'));

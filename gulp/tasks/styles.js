@@ -10,7 +10,7 @@ const rename = require('gulp-rename');
 
 module.exports = function styles() {
   return gulp
-    .src('src/css/*.scss')
+    .src('src/sass/*.scss')
     .pipe(plumber())
     .pipe(
       gulpStylelint({
@@ -44,7 +44,7 @@ module.exports = function styles() {
         }
       )
     )
-    .pipe(sourcemaps.write())
     .pipe(rename({ suffix: '.min' }))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('build/css'));
 };
